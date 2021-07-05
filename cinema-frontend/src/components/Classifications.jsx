@@ -12,6 +12,7 @@ const Classifications = () => {
     return (
         <div className="mt-4">
             <h1> Film Classifications </h1>
+            <h4>For more information on  the film ratings system go <a href="https://www.bbfc.co.uk/">here</a></h4>
             <br />
             <Container fluid>
                 <Row className="mt-4">
