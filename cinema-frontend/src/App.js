@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/home/Home';
+import Screens from './components/Screens';
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/discussion">
 
+        </Route>
+        <Route path="/screens">
+          <Screens />
         </Route>
       </Switch>
     </Router >
