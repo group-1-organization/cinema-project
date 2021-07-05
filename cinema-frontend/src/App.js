@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/home/Home';
+import Opening from './components/Opening';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
         </Route>
         <Route path="/openingtimes">
-
+          <Opening />
         </Route>
         <Route path="/classifications">
 
