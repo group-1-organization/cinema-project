@@ -1,1 +1,1 @@
-# cinema-project
+# Cinema Project
