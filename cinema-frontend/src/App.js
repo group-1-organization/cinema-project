@@ -8,6 +8,7 @@ import Screens from './components/Screens';
 import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
+import Listings from './components/listings/Listings';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/listing">
-
+          <Listings />
         </Route>
         <Route path="/upcoming">
 
@@ -46,7 +47,7 @@ function App() {
         </Route>
         <Route path="/aboutus">
           <AboutUs />
-    
+
         </Route>
       </Switch>
     </Router >
