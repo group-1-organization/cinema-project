@@ -9,6 +9,8 @@ import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
 import Footer from './components/Footer';
+import Listings from './components/listings/Listings';
+import Places from './components/Places';
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/listing">
-
+            <Listings />
             </Route>
             <Route path="/upcoming">
 
@@ -39,7 +41,7 @@ function App() {
               <GettingThere />
             </Route>
             <Route path="/placestogo">
-
+            <Places />
             </Route>
             <Route path="/discussion">
 
