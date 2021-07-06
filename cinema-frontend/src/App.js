@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/home/Home';
 import Opening from './components/Opening';
+import AboutUs from './components/AboutUs';
+import Classifications from './components/Classifications';
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
           <Opening />
         </Route>
         <Route path="/classifications">
-
+          <Classifications />
         </Route>
         <Route path="/gettingthere">
 
@@ -36,6 +38,9 @@ function App() {
         </Route>
         <Route path="/discussion">
 
+        </Route>
+        <Route path="/aboutus">
+          <AboutUs />
         </Route>
       </Switch>
     </Router >
