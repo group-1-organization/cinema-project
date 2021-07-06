@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker'
 
-const { apiKey } = require('../../const.json');
+// const { apiKey } = require('../../const.json');
 
 const GettingThere = () => {
     return (
@@ -34,7 +34,7 @@ const GettingThere = () => {
             </p>
             <br />
             <h2>Map</h2>
-            <div style={{ height: '650px', width: '100%' }}>
+            {/* <div style={{ height: '650px', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: apiKey }}
                     defaultCenter={{
@@ -47,7 +47,7 @@ const GettingThere = () => {
                         lng={-2.092680}
                         text="QA Marker" />
                 </GoogleMapReact>
-            </div>
+            </div> */}
         </Container >
     )
 }

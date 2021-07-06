@@ -9,6 +9,7 @@ import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
 import Places from './components/Places';
+import Bookings from './components/Bookings';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
 
         </Route>
         <Route path="/bookings">
-
+          <Bookings />
         </Route>
         <Route path="/openingtimes">
           <Opening />
