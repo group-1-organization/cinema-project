@@ -12,8 +12,26 @@ const Bookings = () => {
 
     useEffect(() => {
         console.log(selectedMovie.toString());
-        setTimes(selectedMovie.showings);
+        setTimes(Movieselected.showings);
+        console.log(times);
+
     }, [selectedMovie])
+
+    const Movieselected = {
+        "_id": "60e4376ca5855b3fec4b256a",
+        "actors": [
+            "UPDATED",
+            "updatethis2"
+        ],
+        "showings": [
+            "18:00",
+            "20:00"
+        ],
+        "title": "newtitle",
+        "poster": "newposter",
+        "director": "update this",
+        "__v": 1
+    }
 
 
     const movie = [{
@@ -48,6 +66,18 @@ const Bookings = () => {
 
     return (
         <Container>
+            <Jumbotron>
+                <center>
+                    <h1>Booking</h1>
+                    <p>
+                        Enter your details below to  get the relevent data
+                    </p>
+                    <p>
+                        <Button variant="outline-dark" href="/gettingthere">Getting Here</Button>
+                    </p>
+                </center>
+
+            </Jumbotron>
             <Form>
                 <Form.Group controlId="SelectMovie">
                     <Form.Label>Select a Movie</Form.Label>
@@ -62,9 +92,8 @@ const Bookings = () => {
                     <Form.Label>Select Time</Form.Label>
                     <Form.Control as="select">
                         <option>Choose a Movie</option>
-                        {times.forEach((showings) => {
-                            console.log(showings);
-                            // return <option >{showings}</option>
+                        {times.map((showing) => {
+                            return <option >{showing}</option>
                         })}
                     </Form.Control>
                 </Form.Group>
