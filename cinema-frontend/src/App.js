@@ -8,6 +8,7 @@ import Screens from './components/Screens';
 import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
+import Places from './components/Places';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <GettingThere />
         </Route>
         <Route path="/placestogo">
+          <Places />
 
         </Route>
         <Route path="/discussion">
@@ -46,7 +48,7 @@ function App() {
         </Route>
         <Route path="/aboutus">
           <AboutUs />
-    
+
         </Route>
       </Switch>
     </Router >
