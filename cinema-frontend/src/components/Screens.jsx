@@ -13,6 +13,7 @@ const Screens = () => {
                 <h1>Screens</h1>
             </div>
             <Container>
+                <br />
                 <h2>Standard screens</h2>
                 <div>
                     <p>Our standard screens feature a typical seating plan with ample leg room, and an excellent soundscape</p>

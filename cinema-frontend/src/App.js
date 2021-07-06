@@ -12,47 +12,49 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/listing">
+    <div class='page-container'>
+      <div class='content-wrap'>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/listing">
 
-          </Route>
-          <Route path="/upcoming">
+            </Route>
+            <Route path="/upcoming">
 
-          </Route>
-          <Route path="/bookings">
+            </Route>
+            <Route path="/bookings">
 
-          </Route>
-          <Route path="/openingtimes">
-            <Opening />
-          </Route>
-          <Route path="/classifications">
-            <Classifications />
-          </Route>
-          <Route path="/gettingthere">
-            <GettingThere />
-          </Route>
-          <Route path="/placestogo">
+            </Route>
+            <Route path="/openingtimes">
+              <Opening />
+            </Route>
+            <Route path="/classifications">
+              <Classifications />
+            </Route>
+            <Route path="/gettingthere">
+              <GettingThere />
+            </Route>
+            <Route path="/placestogo">
 
-          </Route>
-          <Route path="/discussion">
+            </Route>
+            <Route path="/discussion">
 
-          </Route>
-          <Route path="/screens">
-            <Screens />
-          </Route>
-          <Route path="/aboutus">
-            <AboutUs />
+            </Route>
+            <Route path="/screens">
+              <Screens />
+            </Route>
+            <Route path="/aboutus">
+              <AboutUs />
 
-          </Route>
-        </Switch>
-      </Router >
-
+            </Route>
+          </Switch>
+        </Router >
+      </div>
+      <br />
       <Footer />
     </div>
   );
