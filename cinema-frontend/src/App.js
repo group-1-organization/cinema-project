@@ -2,9 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/home/Home';
+import Screens from './components/Screens';
 import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
+
 
 
 function App() {
@@ -39,8 +41,12 @@ function App() {
         <Route path="/discussion">
 
         </Route>
+        <Route path="/screens">
+          <Screens />
+        </Route>
         <Route path="/aboutus">
           <AboutUs />
+    
         </Route>
       </Switch>
     </Router >
