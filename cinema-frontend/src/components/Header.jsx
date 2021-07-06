@@ -39,6 +39,9 @@ const Header = () => {
                     <Nav.Item>
                         <Link to="/discussion" className="nav-link">Discussion Board</Link>
                     </Nav.Item>
+                    <Nav.Item>
+                        <Link to="/screens" className="nav-link">Screens</Link>
+                    </Nav.Item>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />

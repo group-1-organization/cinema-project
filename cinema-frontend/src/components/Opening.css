@@ -1,0 +1,31 @@
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #0e254d;
+    color: white;
+    font-size: 30px;
+}
+
+.hours {
+    text-align: right;
+}
+
+.col-m-6 {
+    width: 50%;
+    float: left;
+    font-size: large;
+}
+
+.col-mr-6 {
+    width: 40%;
+    float: right;
+    font-size: large;
+}
+
+.col-m-12 {
+    width: 20%;
+}
+
+.font-colour {
+    color: white;
+}
