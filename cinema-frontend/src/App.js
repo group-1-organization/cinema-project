@@ -8,6 +8,7 @@ import Screens from './components/Screens';
 import Opening from './components/Opening';
 import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
+import Listings from './components/listings/Listings';
 import Places from './components/Places';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/listing">
-
+          <Listings />
         </Route>
         <Route path="/upcoming">
 
