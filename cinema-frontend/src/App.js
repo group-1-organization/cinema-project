@@ -11,6 +11,7 @@ import Classifications from './components/Classifications';
 import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
 import Places from './components/Places';
+import Bookings from './components/Bookings';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             </Route>
             <Route path="/bookings">
 
+<<<<<<< HEAD
             </Route>
             <Route path="/openingtimes">
               <Opening />
@@ -51,6 +53,23 @@ function App() {
             </Route>
             <Route path="/aboutus">
               <AboutUs />
+=======
+        </Route>
+        <Route path="/bookings">
+          <Bookings />
+        </Route>
+        <Route path="/openingtimes">
+          <Opening />
+        </Route>
+        <Route path="/classifications">
+          <Classifications />
+        </Route>
+        <Route path="/gettingthere">
+          <GettingThere />
+        </Route>
+        <Route path="/placestogo">
+          <Places />
+>>>>>>> booking
 
             </Route>
           </Switch>
