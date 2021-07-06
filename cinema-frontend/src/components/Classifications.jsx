@@ -1,4 +1,8 @@
-import { Container, Row, Col, Collapse, Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Collapse from 'react-bootstrap/Collapse';
 import { useState } from 'react';
 
 const Classifications = () => {
@@ -7,12 +11,12 @@ const Classifications = () => {
     const [pgOpen, setPgOpen] = useState(false);
     const [twelveOpen, setTwelveOpen] = useState(false);
     const [fifteenOpen, setFifteenOpen] = useState(false);
-    const [eighteenOpen, setEighteenOpenOpen] = useState(false);
+    const [eighteenOpen, setEighteenOpen] = useState(false);
 
     return (
         <div className="mt-4">
             <h1> Film Classifications </h1>
-            <h4>For more information on  the film ratings system go <a href="https://www.bbfc.co.uk/">here</a></h4>
+            <h4>For more information on  the film ratings system go <a href="https://www.bbfc.co.uk/" target="_blank" rel="noreferrer">here</a></h4>
             <br />
             <Container fluid>
                 <Row className="mt-4">
@@ -73,8 +77,6 @@ const Classifications = () => {
                             </div>
                         </Collapse>
                     </Col >
-
-
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
@@ -133,7 +135,6 @@ const Classifications = () => {
                             </div>
                         </Collapse>
                     </Col>
-
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
@@ -146,7 +147,7 @@ const Classifications = () => {
                             No one younger than 18 may see an 18 film in a cinema. No one younger than 18 may
                             rent or buy an 18 rated video work. Adults should be free to choose their own
                             entertainment. Exceptions are below:</p>
-                        <Button onClick={() => setEighteenOpenOpen(!eighteenOpen)}>More Information</Button>
+                        <Button onClick={() => setEighteenOpen(!eighteenOpen)}>More Information</Button>
                         <Collapse in={eighteenOpen}>
                             <div>
                                 <ul>
@@ -158,7 +159,6 @@ const Classifications = () => {
                         </Collapse>
                     </Col>
                 </Row>
-                <br />
                 <Row className="mt-4">
                     <Col sm={2}>
                         <img src="r18.png" width="200rem" alt="r18" />
