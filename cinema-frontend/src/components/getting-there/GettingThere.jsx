@@ -1,12 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import GoogleMapReact from 'google-map-react';
+import Marker from './Marker'
 
 const GettingThere = () => {
     return (
         <Container>
             <h1>Getting there page</h1>
-            <Image src="https://via.placeholder.com/1600x900" fluid />
+            <Image src="cinema.jpg" fluid />
             <h2>Address</h2>
             <p>
                 Bentley Bridge Park <br />
@@ -35,10 +36,14 @@ const GettingThere = () => {
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyDFw8vMVCX9ReqcWpQxChnUiw77JC7Qitk" }}
                     defaultCenter={{
-                        lat: 52.596327,
-                        lng: -2.092650
+                        lat: 52.596324,
+                        lng: -2.092680
                     }}
                     defaultZoom={17} >
+                    <Marker
+                        lat={52.596324}
+                        lng={-2.092680}
+                        text="My Marker" />
                 </GoogleMapReact>
             </div>
         </Container >
