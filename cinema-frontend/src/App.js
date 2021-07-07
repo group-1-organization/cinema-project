@@ -23,7 +23,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/listing">
-            <Listings />
+              <Listings />
             </Route>
             <Route path="/upcoming">
 
@@ -41,7 +41,7 @@ function App() {
               <GettingThere />
             </Route>
             <Route path="/placestogo">
-            <Places />
+              <Places />
             </Route>
             <Route path="/discussion">
 
