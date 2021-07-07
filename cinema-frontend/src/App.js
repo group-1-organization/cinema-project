@@ -11,6 +11,8 @@ import Classifications from './components/Classifications';
 import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
 import Places from './components/Places';
+import Discussion from './components/discussion-board/Discussion';
+import Topic from './components/discussion-board/Topic';
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/listing">
-            <Listings />
+              <Listings />
             </Route>
             <Route path="/upcoming">
 
@@ -41,10 +43,10 @@ function App() {
               <GettingThere />
             </Route>
             <Route path="/placestogo">
-            <Places />
+              <Places />
             </Route>
             <Route path="/discussion">
-
+              <Discussion />
             </Route>
             <Route path="/screens">
               <Screens />
@@ -52,6 +54,9 @@ function App() {
             <Route path="/aboutus">
               <AboutUs />
 
+            </Route>
+            <Route path="/topic/:id" >
+              <Topic />
             </Route>
           </Switch>
         </Router >
