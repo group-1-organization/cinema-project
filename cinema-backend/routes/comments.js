@@ -6,6 +6,7 @@ const Comment = require('../models/Comment');
 //create comment
 router.post('/comments', async (req, res) => {
     try {
+        console.log(req.body);
         const comment = new Comment({
             topicId: req.body.topicId,
             comment: req.body.comment,
@@ -23,7 +24,7 @@ router.post('/comments', async (req, res) => {
 //get all topics
 router.get('/comments/:id', async (req, res) => {
     try {
-        const comments = await Comment.find({ topicId: req.params.id });
+        const comments = await Comment.find({ topicId: req.params.id }).sort({ 'createdAt': 'desc' });
         res.send(comments);
     } catch {
         res.status(404);
