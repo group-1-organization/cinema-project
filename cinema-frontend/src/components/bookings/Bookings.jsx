@@ -3,10 +3,12 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import Modal from 'react-bootstrap/Modal'
 import axios from "axios"
 
 import ShowingsList from "./ShowingsList";
-import MovieList from "./MovieList"
+import MovieList from "./MovieList";
+import Payment from "./Payment";
 
 
 
@@ -22,10 +24,8 @@ const Bookings = () => {
     const [booking, setBooking] = useState({});
 
     useEffect(() => {
-        console.log(selectedTime);
+        // console.log(selectedTime);
     }, [selectedTime])
-
-
 
 
     const Booking = async () => {
@@ -37,22 +37,14 @@ const Bookings = () => {
             children: selectchild,
             concessions: selectConsessions,
             noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
-
-
         }
+        let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 9.00);
+        setPrice(Price);
+        booking.price = price;
         setBooking(booking);
         await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
             console.log(response));
-
-        let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 9.00);
-        setPrice(Price);
-
-
     };
-
-
-
-
 
     return (
         <Container>
