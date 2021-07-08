@@ -55,10 +55,6 @@ function App() {
             <Route path="/aboutus">
               <AboutUs />
             </Route>
-            <Route path="/payment">
-
-
-            </Route>
           </Switch>
         </Router >
       </div>
