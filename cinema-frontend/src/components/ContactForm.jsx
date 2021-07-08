@@ -2,7 +2,10 @@ import { Form } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import { Button } from "react-bootstrap";
 
+
+
 const ContactForm = () => {
+
 
     function sendEmail(e) {
         e.preventDefault();
@@ -20,7 +23,7 @@ const ContactForm = () => {
     return (
         <div>
             <Form onSubmit={sendEmail}>
-                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Group>
                     <Form.Label>Please enter you email address:</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" name="email" />
                 </Form.Group>
@@ -30,9 +33,10 @@ const ContactForm = () => {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Subject:</Form.Label>
-                    <Form.Control type="text" placeholder="Subject" name="subject" />
+                    <Form.Control placeholder="Subject" name="subject" type="text" required="true" />
+
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Group>
                     <Form.Label>Message</Form.Label>
                     <Form.Control as="textarea" rows={3} name="message" />
                 </Form.Group>
@@ -41,6 +45,7 @@ const ContactForm = () => {
                 </Button>
             </Form>
         </div>
+
     );
 }
 
