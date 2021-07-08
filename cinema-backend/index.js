@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 const movieroutes = require('./routes/movies');
 const bookingroutes = require('./routes/bookings');
+const newmovieroutes = require('./routes/newmovies')
 const cors = require("cors");
 
 
@@ -20,6 +21,8 @@ mongoose.connect('mongodb://localhost/cinema', { useNewUrlParser: true, useUnifi
         app.use('/cinema', movieroutes);
 
         app.use('/cinema', bookingroutes);
+
+        app.use('/cinema', newmovieroutes);
 
         app.listen(5000, () => {
             console.log("server has started");

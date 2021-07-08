@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
 import Places from './components/Places';
 import Bookings from './components/bookings/Bookings'
+import NewListings from './components/UpComing/NewListings';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
               <Listings />
             </Route>
             <Route path="/upcoming">
-
+              <NewListings />
             </Route>
             <Route path="/bookings">
               <Bookings />
