@@ -4,43 +4,37 @@ import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
+import Image from 'react-bootstrap/Image';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Link to="/" className="nav-link"><Image src="QA.png" width="50" /> </Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Item>
-                        <Link to="/" className="nav-link">Home</Link>
-                    </Nav.Item>
                     <Nav.Item>
                         <Link to="/listing" className="nav-link">Listings</Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Link to="/upcoming" className="nav-link">Upcoming</Link>
                     </Nav.Item>
+
                     <Nav.Item>
                         <Link to="/bookings" className="nav-link">Bookings</Link>
                     </Nav.Item>
-                    <Nav.Item>
-                        <Link to="/openingtimes" className="nav-link">Opening Times</Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Link to="/classifications" className="nav-link">Classifications</Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Link to="/gettingthere" className="nav-link">Getting There</Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Link to="/placestogo" className="nav-link">Places to go</Link>
-                    </Nav.Item>
+                    <NavDropdown title="Info" id="navbarScrollingDropdown" >
+                        <NavDropdown.Item href="/gettingthere">Getting There</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/placestogo">Places to go</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/openingtimes">Opening Times</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/classifications">Classifications</NavDropdown.Item>
+                    </NavDropdown>
                     <Nav.Item>
                         <Link to="/discussion" className="nav-link">Discussion Board</Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Link to="/screens" className="nav-link">Screens</Link>
                     </Nav.Item>
                 </Nav>
                 <Form inline>
