@@ -13,6 +13,7 @@ import Listings from './components/listings/Listings';
 import Places from './components/Places';
 import Bookings from './components/bookings/Bookings'
 import NewListings from './components/UpComing/NewListings';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
             </Route>
             <Route path="/aboutus">
               <AboutUs />
+            </Route>
+            <Route path="/contact">
+              <ContactUs />
             </Route>
           </Switch>
         </Router >
