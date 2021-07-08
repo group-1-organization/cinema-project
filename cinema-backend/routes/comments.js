@@ -9,7 +9,7 @@ router.post('/comments', async (req, res) => {
         console.log(req.body);
         const comment = new Comment({
             topicId: req.body.topicId,
-            comment: req.body.comment,
+            message: req.body.message,
             author: req.body.author
         });
         console.log("Log: " + comment);
