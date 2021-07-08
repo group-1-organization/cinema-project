@@ -10,7 +10,7 @@ import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
 import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
-import Places from './components/Places';
+import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import NewListings from './components/UpComing/NewListings';
 
@@ -56,7 +56,7 @@ function App() {
               <AboutUs />
             </Route>
             <Route path="/payment">
-              <Payment />
+
 
             </Route>
           </Switch>
