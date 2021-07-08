@@ -6,7 +6,8 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import axios from "axios"
 
 import ShowingsList from "./ShowingsList";
-import MovieList from "./MovieList"
+import MovieList from "./MovieList";
+import Payment from "../Payment";
 
 
 

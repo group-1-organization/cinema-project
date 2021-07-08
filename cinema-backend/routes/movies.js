@@ -88,4 +88,19 @@ router.delete('/movies/:id', async (req, res) => {
     }
 });
 
+router.get("/movies/find/:query", async (req, res, next) => {
+    try {
+        const searchResult = await Movie.find({
+            $or: [
+                { title: new RegExp(req.params.query, 'i') },
+                // { actors: new RegExp(req.params.query, 'i') },
+                { director: new RegExp(req.params.query, 'i') }
+            ]
+        });
+        res.send(searchResult);
+    } catch (err) {
+        next(new Error(err.message));
+    }
+});
+
 module.exports = router;

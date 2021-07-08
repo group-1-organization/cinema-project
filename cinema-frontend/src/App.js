@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
 import Places from './components/Places';
 import Bookings from './components/bookings/Bookings'
+import SearchPage from './components/SearchPage';
+import Payment from './components/Payment';
 
 function App() {
   return (
@@ -56,6 +58,10 @@ function App() {
             </Route>
             <Route path="/payment">
               <Payment />
+
+            </Route>
+            <Route path="/search/:query">
+              <SearchPage />
 
             </Route>
           </Switch>

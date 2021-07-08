@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
+import NavSearch from './NavSearch';
 
 const Header = () => {
     return (
@@ -43,10 +44,12 @@ const Header = () => {
                         <Link to="/screens" className="nav-link">Screens</Link>
                     </Nav.Item>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                <NavSearch />
+                {/* <Form className="d-flex">
+                    <FormControl type="text" placeholder="Search Term" onFocus={(disappear) => disappear.target.placeholder = ''}
+                        onBlur={(reappear) => reappear.target.placeholder = 'Search Term'} className="mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
-                </Form>
+                </Form> */}
             </Navbar.Collapse>
         </Navbar>
     )
