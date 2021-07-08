@@ -7,7 +7,7 @@ const Movie = ({ movie }) => {
     return (
         <Row key={movie._id} className="border-bottom py-3">
             <Col xs={4} sm={3} md={2} fuild>
-                <Image src="//via.placeholder.com/220x326" alt="movie poster" fluid />
+                <Image src={movie.poster} alt="movie poster" fluid />
             </Col>
             <Col sm={9} md={10}>
                 <h3>{movie.title}</h3>
