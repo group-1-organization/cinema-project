@@ -1,36 +1,26 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Movie from './Movie';
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Listings = () => {
 
-    const movies = [{
-        "_id": "60e4376ca5855b3fec4b256a",
-        "actors": [
-            "UPDATED",
-            "updatethis2"
-        ],
-        "showings": [
-            "18:00",
-            "20:00"
-        ],
-        "title": "newtitle",
-        "poster": "newposter",
-        "director": "update this"
-    }, {
-        "_id": "60e4376ca5854b3fec4b256a",
-        "actors": [
-            "UPDATED",
-            "updatethis2"
-        ],
-        "showings": [
-            "18:00",
-            "20:00"
-        ],
-        "title": "newtitle",
-        "poster": "newposter",
-        "director": "update this"
-    }];
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        getMovies();
+    }, []);
+
+
+    const getMovies = async () => {
+        await axios.get("http://localhost:5000/cinema/movies").then((response) => {
+            setMovies(response.data);
+        }).catch((error) => {
+            console.log(error);
+        })
+    };
 
     console.log(movies)
 
