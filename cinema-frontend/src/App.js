@@ -10,10 +10,15 @@ import AboutUs from './components/AboutUs';
 import Classifications from './components/Classifications';
 import Footer from './components/Footer';
 import Listings from './components/listings/Listings';
+
+import Discussion from './components/discussion-board/Discussion';
+import Topic from './components/discussion-board/Topic';
+
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import NewListings from './components/UpComing/NewListings';
 import ContactUs from './components/ContactUs';
+
 
 function App() {
   return (
@@ -47,7 +52,7 @@ function App() {
               <Places />
             </Route>
             <Route path="/discussion">
-
+              <Discussion />
             </Route>
             <Route path="/screens">
               <Screens />
@@ -57,6 +62,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <ContactUs />
+            </Route>
+            <Route path="/topic/:id" >
+              <Topic />
             </Route>
           </Switch>
         </Router >
