@@ -6,6 +6,7 @@ import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/esm/Nav';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
     return (
@@ -74,7 +75,7 @@ const AboutUs = () => {
                 <center>
                     <p>If you want to contact us directly you can do so using the Contact Page or follow the link below</p>
                     <p>Any Feedback is Welecomed</p>
-                    <Button href="/contact">Contact Us</Button>
+                    <Link to={"/contact"}><Button >Contact Us</Button></Link>
                 </center>
 
 

@@ -7,10 +7,13 @@ import { useState } from "react";
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-const Payment = ({ booking, price }) => {
+const Payment = ({ booking, price, closeModal }) => {
 
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false);
+        closeModal();
+    }
     const handleShow = () => setShow(true);
 
     const createOrder = (data, actions) => {

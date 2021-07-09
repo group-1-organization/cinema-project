@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Modal from 'react-bootstrap/Modal'
 import axios from "axios"
+import { Link } from 'react-router-dom';
 
 import ShowingsList from "./ShowingsList";
 import MovieList from "./MovieList";
@@ -23,27 +24,33 @@ const Bookings = () => {
     const [price, setPrice] = useState(0);
     const [booking, setBooking] = useState({});
 
-    useEffect(() => {
-        // console.log(selectedTime);
-    }, [selectedTime])
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const Booking = async () => {
-        let booking = {
-            movie: selectedMovie,
-            screening: selectedTime,
-            booker: selectName,
-            adults: selectAdult,
-            children: selectchild,
-            concessions: selectConsessions,
-            noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
+        if (selectedMovie == '-') {
+            console.log("select a movie");
+        } else {
+            let booking = {
+                movie: selectedMovie,
+                screening: selectedTime,
+                booker: selectName,
+                adults: selectAdult,
+                children: selectchild,
+                concessions: selectConsessions,
+                noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
+            }
+            let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 9.00);
+            setPrice(Price);
+            booking.price = price;
+            setBooking(booking);
+            await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
+                console.log(response));
+            handleShow();
         }
-        let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 9.00);
-        setPrice(Price);
-        booking.price = price;
-        setBooking(booking);
-        await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
-            console.log(response));
+
     };
 
     return (
@@ -55,7 +62,7 @@ const Bookings = () => {
                         Enter your details below to get the relevent data inputs to book
                     </p>
                     <p>
-                        <Button variant="outline-dark" href="/listing">See Movies and Showings Here</Button>
+                        <Link to={"/listing"}><Button variant="outline-dark" >See Movies and Showings Here</Button></Link>
                     </p>
                 </center>
             </Jumbotron>
@@ -91,7 +98,16 @@ const Bookings = () => {
                 </Form.Group>
                 <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
             </Form>
-            <Payment booking={booking} price={price} />
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Select your payment method</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Payment booking={booking} price={price} closeModal={handleClose} />
+                </Modal.Body>
+            </Modal>
+
         </Container>
     );
 }
