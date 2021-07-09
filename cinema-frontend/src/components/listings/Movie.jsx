@@ -14,6 +14,7 @@ const Movie = () => {
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
     const [actors, setActors] = useState(["a1", "a2"]);
+    const [showings, setShowings] = useState(["a1", "a2"]);
     const [poster, setPoster] = useState("");
 
     useEffect(() => {
@@ -22,9 +23,9 @@ const Movie = () => {
 
     const getMovie = async () => {
         await axios.get(`http://localhost:5000/cinema/movies/name/${title}`).then((response) => {
-            // http://localhost:5000/cinema/movies/name/Fast & Furious 9
             setLoaded(true);
             setActors(response.data[0].actors);
+            setShowings(response.data[0].showings);
             setPoster(response.data[0].poster);
             setMovie(response.data[0]);
         }).catch((error) => {
@@ -42,10 +43,8 @@ const Movie = () => {
     } else {
         return (
             <Container>
-                <img src="f9.jpg" alt="test" />
                 <Row key={movie._id} className="border-bottom py-3">
-                    <img src={movie.poster} alt="movie poster" />
-                    {/* <img src="https://imd.mini.icom.museum/wp-content/uploads/sites/54/2021/01/IMD_2021_POSTER_EN-683x1024.jpg" alt="movie poster" /> */}
+                    <img src={`/${movie.poster}`} width="400" height="500" alt={movie.poster} />
                 </Row>
                 <Row>
                     <Col sm={9} md={10}>
@@ -58,11 +57,11 @@ const Movie = () => {
                         <p>
                             Director : {movie.director}
                         </p>
-                        {/* <div>
-                            {movie.showings.map((showing) => (
+                        <div>
+                            {showings.map((showing) => (
                                 <Button className="mr-3" variant="primary">{showing}</Button>
                             ))}
-                        </div> */}
+                        </div>
                     </Col>
                 </Row>
             </Container>
