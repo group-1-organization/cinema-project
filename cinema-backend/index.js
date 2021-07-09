@@ -11,9 +11,8 @@ const ratingroutes = require('./routes/ratings');
 const cors = require('cors');
 const newmovieroutes = require('./routes/newmovies')
 const venueroutes = require('./routes/venues')
-const cors = require("cors");
 
-mongoose.connect('mongodb://localhost/cinema', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://James:jbmdbc@cluster0.h5n6v.mongodb.net/cinema?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         const app = express();
 
@@ -32,7 +31,7 @@ mongoose.connect('mongodb://localhost/cinema', { useNewUrlParser: true, useUnifi
         app.use('/cinema', newmovieroutes);
 
         app.use('/cinema', venueroutes)
-  
+
         app.listen(5000, () => {
             console.log("server has started");
         });
