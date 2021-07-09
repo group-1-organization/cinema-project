@@ -99,4 +99,50 @@ router.delete('/movies/:id', async (req, res) => {
     }
 });
 
+// router.get("/movies/find/:query", async (req, res, next) => {
+//     try {
+//         Movie.find((searchResult) => {
+//             $or: [
+//                 { 'title': req.params.query },
+//                 { 'actors': req.params.query },
+//                 { 'director': req.params.query }
+//             ]
+//             res.send(searchResult);
+//         });
+//     } catch {
+//         res.status(404);
+//         res.send({ error: "movie doesn't exist" });;
+//     }
+// });
+
+// router.get("/movies/find/:query", (req, res, next) => {
+//     Movie.find({
+//         title: req.params.query
+//     }, (err, result) => {
+//         if (err) {
+//             next(error);
+//         }
+//         else {
+//             res.send(result);
+//         }
+//     }
+//     )
+// })
+
+router.get("/movies/find/:query", async (req, res, next) => {
+    try {
+        const searchResult = await Movie.find({
+            $or: [
+                { title: new RegExp(req.params.query, 'i') },
+                { actors: new RegExp(req.params.query, 'i') },
+                { director: new RegExp(req.params.query, 'i') }
+            ]
+        });
+        res.send(searchResult);
+    } catch {
+        res.status(404);
+        //         res.send({ error: "movie doesn't exist" });;
+    }
+});
+
 module.exports = router;

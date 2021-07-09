@@ -16,9 +16,12 @@ import Topic from './components/discussion-board/Topic';
 
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
+import SearchPage from './components/SearchPage';
+import Payment from './components/Payment';
 import NewListings from './components/UpComing/NewListings';
 import Movie from './components/listings/Movie';
 import ContactUs from './components/ContactUs';
+
 
 function App() {
   return (
@@ -68,6 +71,10 @@ function App() {
             </Route>
             <Route path="/topic/:id" >
               <Topic />
+            </Route>
+            <Route path="/search/:query">
+              <SearchPage />
+
             </Route>
           </Switch>
         </Router >

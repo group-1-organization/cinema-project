@@ -13,6 +13,7 @@ import Payment from "./Payment";
 
 
 
+
 const Bookings = () => {
 
     const [selectedMovie, setSelectedMovie] = useState('-');
