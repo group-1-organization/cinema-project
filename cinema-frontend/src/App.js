@@ -17,8 +17,8 @@ import Topic from './components/discussion-board/Topic';
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import NewListings from './components/UpComing/NewListings';
+import Movie from './components/listings/Movie';
 import ContactUs from './components/ContactUs';
-
 
 function App() {
   return (
@@ -60,6 +60,8 @@ function App() {
             <Route path="/aboutus">
               <AboutUs />
             </Route>
+            <Route path="/movie/:title">
+              <Movie />
             <Route path="/contact">
               <ContactUs />
             </Route>

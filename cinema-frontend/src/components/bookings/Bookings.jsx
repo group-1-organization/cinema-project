@@ -98,6 +98,7 @@ const Bookings = () => {
                 </Form.Group>
                 <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
             </Form>
+
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Select your payment method</Modal.Title>
