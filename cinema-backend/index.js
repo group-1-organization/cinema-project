@@ -9,18 +9,32 @@ const commentroutes = require('./routes/comments');
 const ratingroutes = require('./routes/ratings');
 
 const cors = require('cors');
+const newmovieroutes = require('./routes/newmovies')
+const venueroutes = require('./routes/venues')
+const cors = require("cors");
 
 mongoose.connect('mongodb://localhost/cinema', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         const app = express();
+
         app.use(cors());
+
         app.use(express.json());
+
         app.use('/cinema', movieroutes);
+
         app.use('/cinema', bookingroutes);
+
         app.use('/cinema', topicroutes);
         app.use('/cinema', commentroutes);
         app.use('/cinema', ratingroutes);
+
+        app.use('/cinema', newmovieroutes);
+
+        app.use('/cinema', venueroutes)
+  
         app.listen(5000, () => {
             console.log("server has started");
         });
+
     })

@@ -1,12 +1,12 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Movie from './Movie';
+import NewMovie from './NewMovie';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const Listings = () => {
 
+const NewListings = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const Listings = () => {
 
 
     const getMovies = async () => {
-        await axios.get("http://localhost:5000/cinema/movies").then((response) => {
+        await axios.get("http://localhost:5000/cinema/newmovies").then((response) => {
             setMovies(response.data);
         }).catch((error) => {
             console.log(error);
@@ -30,10 +30,10 @@ const Listings = () => {
 
             <Row className="border-bottom"></Row>
             {movies.map((movie) => (
-                <Movie movie={movie} />
+                <NewMovie movie={movie} />
             ))}
         </Container>
     )
 }
 
-export default Listings
+export default NewListings
