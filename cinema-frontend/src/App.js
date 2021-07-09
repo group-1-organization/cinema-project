@@ -13,6 +13,7 @@ import Listings from './components/listings/Listings';
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import NewListings from './components/UpComing/NewListings';
+import Movie from './components/listings/Movie';
 
 function App() {
   return (
@@ -32,7 +33,6 @@ function App() {
             </Route>
             <Route path="/bookings">
               <Bookings />
-
             </Route>
             <Route path="/openingtimes">
               <Opening />
@@ -54,6 +54,9 @@ function App() {
             </Route>
             <Route path="/aboutus">
               <AboutUs />
+            </Route>
+            <Route path="/movie/:title">
+              <Movie />
             </Route>
           </Switch>
         </Router >

@@ -91,7 +91,7 @@ const Bookings = () => {
                 </Form.Group>
                 <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
             </Form>
-            {/* <Payment booking={booking} price={price} /> */}
+            <Payment booking={booking} price={price} />
         </Container>
     );
 }

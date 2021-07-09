@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Movie from './Movie';
+import Col from 'react-bootstrap/Col';
 import axios from 'axios';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Listings = () => {
 
@@ -13,7 +13,6 @@ const Listings = () => {
         getMovies();
     }, []);
 
-
     const getMovies = async () => {
         await axios.get("http://localhost:5000/cinema/movies").then((response) => {
             setMovies(response.data);
@@ -22,18 +21,18 @@ const Listings = () => {
         })
     };
 
-    console.log(movies)
-
     return (
-        <Container>
+        <Container fluid>
             <h1>Listings page</h1>
 
-            <Row className="border-bottom"></Row>
-            {movies.map((movie) => (
-                <Movie movie={movie} />
-            ))}
+            <Row>
+                {movies.map((movie) => (
+                    <Col sm={3}>
+                        <Link to={`/movie/${movie.title}`}><img src={movie.poster} width="300rem" /></Link>
+                    </Col>
+                ))}
+            </Row>
         </Container>
     )
 }
-
 export default Listings
