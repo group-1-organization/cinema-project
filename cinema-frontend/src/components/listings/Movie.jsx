@@ -2,8 +2,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const Movie = ({ movie }) => {
+
+
+
     return (
         <Row key={movie._id} className="border-bottom py-3">
             <Col xs={4} sm={3} md={2} fuild>
@@ -21,7 +25,7 @@ const Movie = ({ movie }) => {
                 </p>
                 <div>
                     {movie.showings.map((showing) => (
-                        <Button className="mr-3" variant="primary">{showing}</Button>
+                        <Link to={"/bookings"}  ><Button className="mr-3" variant="primary">{showing}</Button></Link>
                     ))}
                 </div>
             </Col>

@@ -33,7 +33,6 @@ function App() {
             </Route>
             <Route path="/bookings">
               <Bookings />
-
             </Route>
             <Route path="/openingtimes">
               <Opening />
