@@ -4,6 +4,7 @@ import Jumbotron from "react-bootstrap/Jumbotron"
 import Button from "react-bootstrap/Button"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from 'react-router-dom';
 
 import Venue from "./Venue"
 
@@ -38,7 +39,7 @@ const Places = () => {
                         A few local restraunts and Services close by, Check them out!!!
                     </p>
                     <p>
-                        <Button variant="outline-dark" href="/gettingthere">Getting Here</Button>
+                        <Link to={"/gettingthere"}><Button variant="outline-dark" >Getting Here</Button></Link>
                     </p>
                 </center>
 

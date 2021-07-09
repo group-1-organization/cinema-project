@@ -27,6 +27,7 @@ const ShowingsList = ({ selectedMovie, setSelectedTime }) => {
     useEffect(() => {
         if (selectedMovie != '-') {
             getMoviesByName();
+
         }
     }, [selectedMovie])
 
@@ -43,7 +44,6 @@ const ShowingsList = ({ selectedMovie, setSelectedTime }) => {
         console.log(movieTitle);
         return (
             <Form.Control as="select" onChange={(e) => { setSelectedTime(e.target.value) }}>
-                <option>-</option>
                 {movieTitle.map((shows, i) => {
                     return (
                         <option key={i}>{shows}</option>

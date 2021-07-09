@@ -5,12 +5,15 @@ import Modal from 'react-bootstrap/Modal'
 import { useState } from "react";
 //import "./Payment.css";
 
-// const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
+const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-const Payment = ({ booking, price }) => {
+const Payment = ({ booking, price, closeModal }) => {
 
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false);
+        closeModal();
+    }
     const handleShow = () => setShow(true);
 
     const createOrder = (data, actions) => {
@@ -33,10 +36,10 @@ const Payment = ({ booking, price }) => {
 
     return (
         <Container>
-            {/* <PayPalButton
+            <PayPalButton
                 createOrder={(data, actions) => createOrder(data, actions)}
                 onApprove={(data, actions) => onApprove(data, actions)}
-            /> */}
+            />
 
             <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>
