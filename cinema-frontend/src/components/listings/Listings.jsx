@@ -1,49 +1,38 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Movie from './Movie';
+import Col from 'react-bootstrap/Col';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Listings = () => {
 
-    const movies = [{
-        "_id": "60e4376ca5855b3fec4b256a",
-        "actors": [
-            "UPDATED",
-            "updatethis2"
-        ],
-        "showings": [
-            "18:00",
-            "20:00"
-        ],
-        "title": "newtitle",
-        "poster": "newposter",
-        "director": "update this"
-    }, {
-        "_id": "60e4376ca5854b3fec4b256a",
-        "actors": [
-            "UPDATED",
-            "updatethis2"
-        ],
-        "showings": [
-            "18:00",
-            "20:00"
-        ],
-        "title": "newtitle",
-        "poster": "newposter",
-        "director": "update this"
-    }];
+    const [movies, setMovies] = useState([]);
 
-    console.log(movies)
+    useEffect(() => {
+        getMovies();
+    }, []);
+
+    const getMovies = async () => {
+        await axios.get("http://localhost:5000/cinema/movies").then((response) => {
+            setMovies(response.data);
+        }).catch((error) => {
+            console.log(error);
+        })
+    };
 
     return (
-        <Container>
+        <Container fluid>
             <h1>Listings page</h1>
 
-            <Row className="border-bottom"></Row>
-            {movies.map((movie) => (
-                <Movie movie={movie} />
-            ))}
+            <Row>
+                {movies.map((movie) => (
+                    <Col sm={3}>
+                        <Link to={`/movie/${movie.title}`}><img src={movie.poster} width="300rem" /></Link>
+                    </Col>
+                ))}
+            </Row>
         </Container>
     )
 }
-
 export default Listings

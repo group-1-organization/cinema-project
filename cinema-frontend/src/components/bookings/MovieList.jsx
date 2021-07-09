@@ -34,7 +34,7 @@ const MovieList = ({ setSelectedMovie }) => {
     } else {
         return (
             <Form.Control as="select" onChange={(e) => { setSelectedMovie(e.target.value) }}>
-                <option>Select a Movie</option>
+                <option>-</option>
                 {
                     movies.map((movie) => {
                         return <option>{movie.title}</option>

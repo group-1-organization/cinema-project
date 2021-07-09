@@ -3,12 +3,18 @@ import { Container, Button } from "react-bootstrap";
 import ReactDOM from "react-dom";
 import Modal from 'react-bootstrap/Modal'
 import { useState } from "react";
+//import "./Payment.css";
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-const Payment = ({ booking }, { price }) => {
+const Payment = ({ booking, price, closeModal }) => {
 
     const [show, setShow] = useState(false);
+    const handleClose = () => {
+        setShow(false);
+        closeModal();
+    }
+    const handleShow = () => setShow(true);
 
     const createOrder = (data, actions) => {
         return actions.order.create({
@@ -35,17 +41,17 @@ const Payment = ({ booking }, { price }) => {
                 onApprove={(data, actions) => onApprove(data, actions)}
             />
 
-            <Modal show={show} size="lg">
+            <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>
                     <Modal.Title>Booking Complete</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h3>Movie</h3>
-                    <h3>Screening</h3>
-
+                    <h2>Thanks {booking.booker}, you have booked:</h2>
+                    <h3>Movie: {booking.movie}</h3>
+                    <h3>Screening: {booking.screening}</h3>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={setShow(false)}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

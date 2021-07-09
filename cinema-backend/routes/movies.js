@@ -32,6 +32,17 @@ router.get('/movies', async (req, res) => {
     }
 })
 
+//get all movie titles
+router.get('/movies/titles', async (req, res) => {
+    try {
+        const movies = await Movie.find().select('title');
+        res.send(movies);
+    } catch {
+        res.status(404);
+        res.send({ error: "bad request" });
+    }
+})
+
 //find movie by id
 router.get('/movies/:id', async (req, res) => {
     try {
