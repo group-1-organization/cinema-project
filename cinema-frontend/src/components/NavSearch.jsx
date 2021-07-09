@@ -11,8 +11,11 @@ import { useState } from "react";
 const NavSearch = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
+    //const [searchUrl, setSearchUrl] = useState("");
+
 
     const handleFilter = (e) => {
+        //setSearchUrl(`/search/${searchQuery}`);
         setSearchQuery(`/search/${e.target.value}`);
     }
 
@@ -23,10 +26,13 @@ const NavSearch = () => {
                     <FormControl type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term" onFocus={(disappear) => disappear.target.placeholder = ''}
                         onBlur={(reappear) => reappear.target.placeholder = 'Search Term'} />
                 </FormGroup>
-                <Link to={searchQuery} aria-label="search-link"><Button aria-label="search-btn" variant="outline-success" type="submit" id="movieSearchSubmit">Search Term</Button></Link>
+                <Link to={searchQuery} aria-label="search-link" ><Button aria-label="search-btn" variant="outline-success" type="button" id="movieSearchSubmit" >Search Term</Button></Link>
             </Form>
         </>
     );
 }
 
 export default NavSearch;
+
+//onChange={(event) => setSearchQuery(event.target.value)}
+//onClick={handleFilter}
