@@ -62,6 +62,7 @@ function App() {
             </Route>
             <Route path="/movie/:title">
               <Movie />
+            </Route>
             <Route path="/contact">
               <ContactUs />
             </Route>
