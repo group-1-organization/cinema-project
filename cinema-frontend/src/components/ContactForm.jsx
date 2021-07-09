@@ -24,12 +24,12 @@ const ContactForm = () => {
         <div>
             <Form onSubmit={sendEmail}>
                 <Form.Group>
-                    <Form.Label>Please enter you email address:</Form.Label>
+                    <Form.Label>Please enter your email address:</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" name="email" />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Please enter your full name:</Form.Label>
-                    <Form.Control type="text" placeholder="Full name" name="name" />
+                    <Form.Label>Please enter your name:</Form.Label>
+                    <Form.Control type="text" placeholder="Name" name="name" />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Subject:</Form.Label>
