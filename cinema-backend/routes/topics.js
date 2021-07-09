@@ -8,7 +8,7 @@ router.post('/topics', async (req, res) => {
     try {
         const topic = new Topic({
             name: req.body.name,
-            movie: req.body.movie,
+            movieName: req.body.movieName,
             author: req.body.author
         });
         console.log("Log: " + topic);
@@ -23,7 +23,7 @@ router.post('/topics', async (req, res) => {
 //get all topics
 router.get('/topics', async (req, res) => {
     try {
-        const topic = await Topic.find();
+        const topic = await Topic.find().sort({ 'createdAt': 'desc' });
         res.send(topic);
     } catch {
         res.status(404);
