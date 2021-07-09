@@ -25,13 +25,13 @@ const Header = () => {
                         <Link to={"/bookings"} className="nav-link">Bookings</Link>
                     </Nav.Item>
                     <NavDropdown title="Info" id="navbarScrollingDropdown" >
-                        <Link to={"/gettingthere"}><NavDropdown.Item>Getting There</NavDropdown.Item></Link>
+                        <NavDropdown.Item><Link to={"/gettingthere"}>Getting There</Link></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <Link to={"/placestogo"}><NavDropdown.Item >Places to go</NavDropdown.Item></Link>
+                        <NavDropdown.Item ><Link to={"/placestogo"}>Places to go</Link></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <Link to={"/openingtimes"}><NavDropdown.Item >Opening Times</NavDropdown.Item></Link>
+                        <NavDropdown.Item ><Link to={"/openingtimes"}>Opening Times</Link></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <Link to={"/classifications"}><NavDropdown.Item >Classifications</NavDropdown.Item></Link>
+                        <NavDropdown.Item ><Link to={"/classifications"}>Classifications</Link></NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Item>
                         <Link to={"/discussion"} className="nav-link">Discussion Board</Link>
