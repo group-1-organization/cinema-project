@@ -11,16 +11,16 @@ const SearchPage = () => {
     useEffect(() => {
         axios.get(`http://localhost:5000/cinema/movies/find/${query}`)
             .then((res) => {
-                const DATA = res.data;
-                console.log(DATA);
-                setData(DATA);
+                const movieData = res.data;
+                console.log(movieData);
+                setData(movieData);
             }).catch((err) => {
                 console.log(err.message);
                 setData([]);
             })
     }, [query]);
 
-    const pagePaths = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listing", "New Releases", "Discussion", "Ticket Booking"];
+    const pagePaths = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About Us", "Contact Us", "Screens", "Listing", "Upcoming", "Discussion", "Booking"];
     let pageLinksCount = 0;
 
     const pageLinks = pagePaths.map(pagePath => {
@@ -49,7 +49,7 @@ const SearchPage = () => {
 
         for (let actor of movie.actors) {
             if (actor.toLowerCase().includes(query.toLowerCase())) {
-                relevantSearchTerms.push(actor + " | ");
+                relevantSearchTerms.push(movie.actor + " | ");
             }
         }
 

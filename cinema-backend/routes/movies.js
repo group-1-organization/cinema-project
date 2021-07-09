@@ -93,13 +93,14 @@ router.get("/movies/find/:query", async (req, res, next) => {
         const searchResult = await Movie.find({
             $or: [
                 { title: new RegExp(req.params.query, 'i') },
-                // { actors: new RegExp(req.params.query, 'i') },
+                { actors: new RegExp(req.params.query, 'i') },
                 { director: new RegExp(req.params.query, 'i') }
             ]
         });
         res.send(searchResult);
-    } catch (err) {
-        next(new Error(err.message));
+    } catch {
+        res.status(404);
+        res.send({ error: "movie doesn't exist" });;
     }
 });
 
