@@ -17,7 +17,7 @@ import Topic from './components/discussion-board/Topic';
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import SearchPage from './components/SearchPage';
-import Payment from './components/Payment';
+import Payment from './components//bookings/Payment';
 import NewListings from './components/UpComing/NewListings';
 import Movie from './components/listings/Movie';
 import ContactUs from './components/ContactUs';
@@ -26,8 +26,8 @@ import ContactUs from './components/ContactUs';
 function App() {
   return (
     <div class='page-container'>
-      <div class='content-wrap'>
-        <Router>
+      <Router>
+        <div class='content-wrap'>
           <Header />
           <Switch>
             <Route exact path="/">
@@ -74,13 +74,13 @@ function App() {
             </Route>
             <Route path="/search/:query">
               <SearchPage />
-
             </Route>
           </Switch>
-        </Router >
-      </div>
-      <br />
-      <Footer />
+        </div>
+        <br />
+        <Footer />
+      </Router >
+
     </div>
   );
 }

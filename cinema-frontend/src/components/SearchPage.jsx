@@ -47,7 +47,7 @@ const SearchPage = () => {
 
         return (
             <div>
-                <Link to={`../movies/${movie.title}`}><h1>{movie.title}</h1></Link>
+                <Link to={`../movie/${movie.title}`}><h1>{movie.title}</h1></Link>
                 <p>Relevant search terms: {relevantSearchTerms}</p>
 
             </div>
