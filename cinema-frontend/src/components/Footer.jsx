@@ -17,12 +17,11 @@ const Footer = () => {
                     </Col>
                     <Col>
                         <h4>Find out more</h4>
-                        <a href="/">Home</a>
+                        <Link to={'/'}>Home</Link>
                         <br />
-                        {/* <Link to={'/aboutus'}>About Us</Link> */}
-                        <a href="/aboutus">About Us</a>
+                        <Link to={'/aboutus'}>About Us</Link>
                         <br />
-                        <a href="/contact">Contact Us</a>
+                        <Link to={'/contact'}>Contact Us</Link>
                     </Col>
                     <Col>
                         <h4>Follow Us</h4>

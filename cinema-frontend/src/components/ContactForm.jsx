@@ -33,7 +33,8 @@ const ContactForm = () => {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Subject:</Form.Label>
-                    <Form.Control placeholder="Subject" name="subject" type="text" required="true" />
+                    <Form.Control placeholder="Subject" name="subject" type="text" required=
+                        {true} />
 
                 </Form.Group>
                 <Form.Group>
