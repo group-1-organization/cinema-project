@@ -69,6 +69,9 @@ function App() {
             <Route path="/contact">
               <ContactUs />
             </Route>
+            {/* <Route path="/">
+              <Footer />
+            </Route> */}
             <Route path="/topic/:id" >
               <Topic />
             </Route>

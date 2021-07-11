@@ -1,6 +1,7 @@
 import './Footer.css'
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -16,6 +17,9 @@ const Footer = () => {
                     </Col>
                     <Col>
                         <h4>Find out more</h4>
+                        <a href="/">Home</a>
+                        <br />
+                        {/* <Link to={'/aboutus'}>About Us</Link> */}
                         <a href="/aboutus">About Us</a>
                         <br />
                         <a href="/contact">Contact Us</a>
