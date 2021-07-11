@@ -17,7 +17,7 @@ import Topic from './components/discussion-board/Topic';
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import SearchPage from './components/SearchPage';
-import Payment from './components/Payment';
+import Payment from './components//bookings/Payment';
 import NewListings from './components/UpComing/NewListings';
 import Movie from './components/listings/Movie';
 import ContactUs from './components/ContactUs';

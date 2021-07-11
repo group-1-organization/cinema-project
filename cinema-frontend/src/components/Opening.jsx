@@ -9,7 +9,7 @@ const Opening = () => {
             </div>
             <br />
             <Container>
-                <center class="font-colour">
+                <center class="op-font-colour">
                     <div class="col-m-12">
                         <p class="col-m-6">Monday: </p>
                         <p class="col-mr-6 hours">9:00-23:00</p>
