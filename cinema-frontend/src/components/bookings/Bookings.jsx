@@ -14,7 +14,7 @@ import Payment from "./Payment";
 
 
 
-const Bookings = () => {
+const Bookings = ({ time, title }) => {
 
     const [selectedMovie, setSelectedMovie] = useState('-');
     const [selectedTime, setSelectedTime] = useState('')
@@ -70,12 +70,12 @@ const Bookings = () => {
             <Form id="Bookingform">
                 <Form.Group controlId="SelectMovie">
                     <Form.Label>Select a Movie</Form.Label>
-                    <MovieList setSelectedMovie={setSelectedMovie} />
+                    <MovieList setSelectedMovie={setSelectedMovie} title={title} />
                 </Form.Group>
 
                 <Form.Group controlId="SelectTime">
                     <Form.Label>Select Time</Form.Label>
-                    <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} />
+                    <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} time={time} />
                 </Form.Group>
 
                 <Form.Group controlId="Name">

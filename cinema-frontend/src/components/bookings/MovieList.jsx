@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import Form from 'react-bootstrap/Form'
 
-const MovieList = ({ setSelectedMovie }) => {
+const MovieList = ({ setSelectedMovie, title }) => {
     const [movies, setMovies] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
@@ -24,6 +24,7 @@ const MovieList = ({ setSelectedMovie }) => {
     };
 
     if (error) {
+        console.log(error);
         return (<Form.Control as="select">
             <option> failed</option>
         </Form.Control>)
@@ -32,17 +33,24 @@ const MovieList = ({ setSelectedMovie }) => {
             <option> Select a Movie to See Times</option>
         </Form.Control>)
     } else {
+        console.log(title);
         return (
-            <Form.Control as="select" onChange={(e) => { setSelectedMovie(e.target.value) }}>
+            <Form.Control as="select" defaultValue={title} onLoad={setSelectedMovie(title)} onChange={(e) => { setSelectedMovie(e.target.value) }}>
                 <option>-</option>
-                {
-                    movies.map((movie) => {
-                        return <option>{movie.title}</option>
-                    })
-                }
-            </Form.Control >
+                {movies.map((movies, i) => {
+                    if (movies.title == title) {
+                        return (
+                            <option selected key={i} >{movies.title}</option>
+                        )
+                    } else {
+                        return (
+                            < option key={i} > {movies.title}</option>
+                        )
+                    };
+                })}
 
-        );
+            </Form.Control >
+        )
     }
 }
 
