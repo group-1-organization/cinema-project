@@ -4,12 +4,12 @@ import StandardSeating from '../standardseating.png'
 import StandardDecor from '../standarddecor.jpg'
 import PremiumDecor from '../premiumdecor.jpg'
 import PremiumSeating from '../deluxeseating.PNG'
-import './Screens.css'
+import '../App.css'
 
 const Screens = () => {
     return (
         <div>
-            <div class="header">
+            <div class="page-header">
                 <h1>Screens</h1>
             </div>
             <Container>

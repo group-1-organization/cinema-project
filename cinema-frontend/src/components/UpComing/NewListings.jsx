@@ -4,6 +4,7 @@ import NewMovie from './NewMovie';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import '../../App.css';
 
 
 const NewListings = () => {
@@ -25,14 +26,19 @@ const NewListings = () => {
     console.log(movies)
 
     return (
-        <Container>
-            <h1>Listings page</h1>
+        <div>
+            <div className="page-header">
+                <h1>Listings page</h1>
+            </div>
+            <Container>
 
-            <Row className="border-bottom"></Row>
-            {movies.map((movie) => (
-                <NewMovie movie={movie} />
-            ))}
-        </Container>
+
+                {/* <Row className="border-bottom"></Row> */}
+                {movies.map((movie) => (
+                    <NewMovie movie={movie} />
+                ))}
+            </Container>
+        </div>
     )
 }
 

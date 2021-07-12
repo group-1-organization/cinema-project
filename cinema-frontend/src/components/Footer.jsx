@@ -1,4 +1,4 @@
-import './Footer.css'
+import '../App.css'
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

@@ -2,15 +2,15 @@ import Container from 'react-bootstrap/Container';
 import { Carousel } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { CardDeck } from 'react-bootstrap';
-import './Home.css'
+import '../Styles/Home.css'
 
 const Home = () => {
     return (
         <div>
-            <div class="header">
+            <div class="logo-header">
                 <img src="BannerResize.png"
                     alt="QA Cinema banner"
-                    class="" />
+                    class="logo-center" />
             </div>
             <br />
             <Container>

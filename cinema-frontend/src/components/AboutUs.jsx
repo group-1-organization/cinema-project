@@ -7,11 +7,12 @@ import Nav from 'react-bootstrap/esm/Nav';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 const AboutUs = () => {
     return (
-        <div className="mt-4">
-            <center>
+        <div>
+            <center className="page-header">
                 <h1>About Us</h1>
             </center>
             <Container className="mt-4">

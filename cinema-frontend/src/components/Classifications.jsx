@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import { useState } from 'react';
+import '../App.css';
 
 const Classifications = () => {
 
@@ -14,8 +15,11 @@ const Classifications = () => {
     const [eighteenOpen, setEighteenOpen] = useState(false);
 
     return (
-        <div className="mt-4">
-            <h1> Film Classifications </h1>
+        <div>
+            <div class="page-header">
+                <h1> Film Classifications </h1>
+            </div>
+            <br />
             <h4>For more information on  the film ratings system go <a href="https://www.bbfc.co.uk/" target="_blank" rel="noreferrer">here</a></h4>
             <br />
             <Container fluid>

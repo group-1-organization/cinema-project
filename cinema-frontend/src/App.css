@@ -49,3 +49,20 @@
 .modal-content {
   background-color: #0e254d;
 }
+
+.footer {
+    padding: 15px;
+    text-align: center;
+    background: #0e254d;
+    color: white;
+    
+    bottom:0;
+}
+
+.page-header {
+    padding: 50px;
+    text-align: center;
+    background: #0e254d;
+    color: white;
+    font-size: 30px;
+}

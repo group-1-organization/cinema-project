@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/esm/Form';
 import Button from 'react-bootstrap/esm/Button';
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import '../Styles/NavSearch.css'
 
 
 

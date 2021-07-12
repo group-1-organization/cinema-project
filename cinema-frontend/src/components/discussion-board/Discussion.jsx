@@ -56,71 +56,77 @@ const Discussion = () => {
     useEffect(() => getMovieNames(), []);
 
     return (
-        <Container>
-            <h1>Discussion board</h1>
+        <div>
+            <div className="page-header">
+                <h1>Discussion board</h1>
+            </div>
 
-            <h3>Topics</h3>
+            <Container>
 
-            <Button variant="primary" onClick={handleShow}>
-                Create topic
-            </Button>
-            {topics.map((topic, index) => (
-                <Row key={index} className="mt-3">
-                    <Col>
-                        <Card bg="dark">
-                            <Card.Header>{topic.movieName}</Card.Header>
-                            <Card.Body>
-                                <blockquote className="blockquote mb-0">
-                                    <Link to={`/topic/${topic._id}`}>
-                                        <p>{topic.name}</p>
-                                    </Link>
-                                    <footer className="blockquote-footer">
-                                        created {moment(topic.createdAt).fromNow()} by {topic.author}
-                                    </footer>
-                                </blockquote>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            ))}
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Create a topic</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form id="topicForm">
-                        <Form.Group controlId="topicNameInput">
-                            <Form.Label>Topic</Form.Label>
-                            <Form.Control type="text" placeholder="Enter topic" value={topicName} onChange={(event) => setTopicName(event.target.value)} required pattern=".*\S+.*" title="This field is required" />
-                        </Form.Group>
+                <h3>Topics</h3>
 
-                        <Form.Group controlId="movieSelect">
-                            <Form.Label>Movie</Form.Label>
-                            <Form.Control as="select" value={movieName} onChange={(event) => { setMovieName(event.target.value) }} required>
-                                <option value="" disabled selected>Select your option</option>
-                                {movieNames.map((movieName, index) => (
-                                    <option key={index}>{movieName.title}</option>
-                                ))}
-                            </Form.Control>
-                        </Form.Group>
+                <Button variant="primary" onClick={handleShow}>
+                    Create topic
+                </Button>
+                {topics.map((topic, index) => (
+                    <Row key={index} className="mt-3">
+                        <Col>
+                            <Card bg="dark">
+                                <Card.Header>{topic.movieName}</Card.Header>
+                                <Card.Body>
+                                    <blockquote className="blockquote mb-0">
+                                        <Link to={`/topic/${topic._id}`}>
+                                            <p>{topic.name}</p>
+                                        </Link>
+                                        <footer className="blockquote-footer">
+                                            created {moment(topic.createdAt).fromNow()} by {topic.author}
+                                        </footer>
+                                    </blockquote>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                ))}
 
-                        <Form.Group controlId="authorInput">
-                            <Form.Label>Your Name</Form.Label>
-                            <Form.Control type="text" placeholder="Enter your name" value={author} onChange={(event) => setAuthor(event.target.value)} required pattern=".*\S+.*" title="This field is required" />
-                        </Form.Group>
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" type="Submit" form="topicForm" onClick={handleClick}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </Container >
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Create a topic</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form id="topicForm">
+                            <Form.Group controlId="topicNameInput">
+                                <Form.Label>Topic</Form.Label>
+                                <Form.Control type="text" placeholder="Enter topic" value={topicName} onChange={(event) => setTopicName(event.target.value)} required pattern=".*\S+.*" title="This field is required" />
+                            </Form.Group>
+
+                            <Form.Group controlId="movieSelect">
+                                <Form.Label>Movie</Form.Label>
+                                <Form.Control as="select" value={movieName} onChange={(event) => { setMovieName(event.target.value) }} required>
+                                    <option value="" disabled selected>Select your option</option>
+                                    {movieNames.map((movieName, index) => (
+                                        <option key={index}>{movieName.title}</option>
+                                    ))}
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Group controlId="authorInput">
+                                <Form.Label>Your Name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your name" value={author} onChange={(event) => setAuthor(event.target.value)} required pattern=".*\S+.*" title="This field is required" />
+                            </Form.Group>
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" type="Submit" form="topicForm" onClick={handleClick}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </Container >
+        </div>
     )
 }
 

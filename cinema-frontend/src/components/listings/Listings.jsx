@@ -22,17 +22,23 @@ const Listings = () => {
     };
 
     return (
-        <Container fluid>
-            <h1>Listings page</h1>
+        <div>
+            <div className="page-header">
+                <h1>Listings page</h1>
+            </div>
 
-            <Row>
-                {movies.map((movie) => (
-                    <Col sm={3}>
-                        <Link to={`/movie/${movie.title}`}><img src={movie.poster} width="300rem" /></Link>
-                    </Col>
-                ))}
-            </Row>
-        </Container>
+            <Container fluid>
+
+
+                <Row>
+                    {movies.map((movie) => (
+                        <Col sm={3}>
+                            <Link to={`/movie/${movie.title}`}><img src={movie.poster} width="300rem" /></Link>
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        </div>
     )
 }
 export default Listings

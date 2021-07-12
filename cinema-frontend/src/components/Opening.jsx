@@ -1,10 +1,11 @@
 import { Container } from 'react-bootstrap';
-import './Opening.css';
+import '../Styles/Opening.css';
+import '../App.css'
 
 const Opening = () => {
     return (
         <div>
-            <div class="header">
+            <div class="page-header">
                 <h1>Opening Hours</h1>
             </div>
             <br />
