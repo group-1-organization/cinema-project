@@ -38,6 +38,7 @@ const Movie = ({ setTime, setTitle }) => {
             console.log(error);
         })
     };
+
     if (error) {
         return (
             <p>error</p>
@@ -47,11 +48,11 @@ const Movie = ({ setTime, setTitle }) => {
     } else {
         return (
             <Container>
-                <Row key={movie._id} className="border-bottom py-3">
-                    <img src={`/${movie.poster}`} width="400" height="500" alt={movie.poster} />
-                </Row>
-                <Row>
-                    <Col sm={9} md={10}>
+                <Row className="mt-3">
+                    <Col md={6}>
+                        <Image src={`/${poster}`} alt={poster} fluid />
+                    </Col>
+                    <Col md={6}>
                         <h3>{movie.title}</h3>
                         <p>
                             Actors : {actors.map((actor, index) => (
@@ -63,13 +64,12 @@ const Movie = ({ setTime, setTitle }) => {
                         </p>
                         <div>
                             {showings.map((showing) => (
-                                <Showings showing={showing} movie={movie} setTime={setTime} setTitle={setTitle} />
+                            <Showings showing={showing} movie={movie} setTime={setTime} setTitle={setTitle} />
                             ))}
                         </div>
                     </Col>
                 </Row>
             </Container>
-
         )
     }
 }
