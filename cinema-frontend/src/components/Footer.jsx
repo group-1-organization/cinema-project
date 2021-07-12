@@ -6,14 +6,20 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className="footer">
-            <div>
+            <div className="mb-0">
                 <Row>
-                    <Col>
+                    <Col className="App">
                         <h4>Where to find us</h4>
-                        <p>Bentley Bridge Park</p>
+                        <ul className="list-unstyled">
+                            <li >Bentley Bridge Park</li>
+                            <li>Wednesfield Way</li>
+                            <li>Wolverhampton</li>
+                            <li>WV11 1TZ</li>
+                        </ul>
+                        {/* <p>Bentley Bridge Park</p>
                         <p>Wednesfield Way</p>
                         <p>Wolverhampton</p>
-                        <p>WV11 1TZ</p>
+                        <p>WV11 1TZ</p> */}
                     </Col>
                     <Col>
                         <h4>Find out more</h4>
