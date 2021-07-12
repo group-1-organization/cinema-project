@@ -26,7 +26,7 @@ const Listings = () => {
             <div className="page-header">
                 <h1>Listings page</h1>
             </div>
-
+            <br />
             <Container fluid>
 
 
