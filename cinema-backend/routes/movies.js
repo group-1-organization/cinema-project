@@ -2,6 +2,14 @@ const express = require('express');
 const router = express.Router();
 const Movie = require('../models/Movie');
 
+
+//test route
+router.get('/test', async (req, res) => {
+    console.log("Test Response");
+    res.send("hello from the test");
+})
+
+
 //create movie
 router.post('/movies', async (req, res) => {
     try {

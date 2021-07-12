@@ -13,9 +13,11 @@ const venueroutes = require('./routes/venues')
 
 const { mongodbConnectionString } = require('./const.json');
 
+const app = express();
+
 mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        const app = express();
+
 
         app.use(cors());
 
@@ -31,8 +33,11 @@ mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTop
 
         app.use('/cinema', venueroutes)
 
-        app.listen(5000, () => {
-            console.log("server has started");
-        });
+    });
 
-    })
+const server = app.listen(5000, () => {
+    console.log("server has started");
+
+})
+
+module.exports = server;
