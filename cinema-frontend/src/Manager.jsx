@@ -16,7 +16,7 @@ import Topic from './components/discussion-board/Topic';
 import Places from './components/placestogo/Places';
 import Bookings from './components/bookings/Bookings'
 import SearchPage from './components/SearchPage';
-import NewListings from './components/UpComing/NewListings';
+import NewListings from './components/listings/NewListings'
 import Movie from './components/listings/Movie';
 import ContactUs from './components/ContactUs';
 import { useState } from 'react';
