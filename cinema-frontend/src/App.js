@@ -1,4 +1,5 @@
 import './App.css';
+import Manager from './Manager';
 
 function App() {
   return (
