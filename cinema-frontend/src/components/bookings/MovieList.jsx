@@ -9,7 +9,7 @@ const MovieList = ({ setSelectedMovie, title }) => {
 
     useEffect(() => {
         getMovies();
-
+        setSelectedMovie(title);
     }, []);
 
 
@@ -33,9 +33,8 @@ const MovieList = ({ setSelectedMovie, title }) => {
             <option> Select a Movie to See Times</option>
         </Form.Control>)
     } else {
-        console.log(title);
         return (
-            <Form.Control as="select" defaultValue={title} onLoad={setSelectedMovie(title)} onChange={(e) => { setSelectedMovie(e.target.value) }}>
+            <Form.Control as="select" defaultValue={title} onChange={(e) => { setSelectedMovie(e.target.value) }}>
                 <option>-</option>
                 {movies.map((movies, i) => {
                     if (movies.title == title) {

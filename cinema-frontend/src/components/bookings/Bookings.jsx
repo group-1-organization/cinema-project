@@ -24,35 +24,56 @@ const Bookings = ({ time, title }) => {
     const [selectConsessions, setSelectConsessions] = useState(0);
     const [price, setPrice] = useState(0);
     const [booking, setBooking] = useState({});
+    const [payed, setPayed] = useState(false);
 
     const [show, setShow] = useState(false);
+    const [showProblem, setShowProblem] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleCloseProblem = () => setShowProblem(false);
+    const handleShowProblem = () => setShowProblem(true);
+
+
+    console.log(selectedMovie);
+    console.log(selectedTime);
+
+    useEffect(() => {
+        if (payed == true) {
+            PayedSent();
+        }
+
+    }, [payed])
+
 
     const Booking = async () => {
-        if (selectedMovie == '-') {
-            console.log("select a movie");
+        let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 11.00);
+        setPrice(Price);
+        if (selectedMovie == '-' || selectedTime == '-' || selectName.length < 2 || selectAdult == 0 & selectchild == 0 & selectConsessions == 0) {
+            handleShowProblem();
         } else {
-            let booking = {
-                movie: selectedMovie,
-                screening: selectedTime,
-                booker: selectName,
-                adults: selectAdult,
-                children: selectchild,
-                concessions: selectConsessions,
-                noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
-            }
-            let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 9.00);
-            setPrice(Price);
-            booking.price = price;
-            setBooking(booking);
-            await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
-                console.log(response));
             handleShow();
         }
 
     };
+
+    const PayedSent = async () => {
+        let booking = {
+            movie: selectedMovie,
+            screening: selectedTime,
+            booker: selectName,
+            adults: selectAdult,
+            children: selectchild,
+            concessions: selectConsessions,
+            noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
+        }
+        booking.price = price;
+        setBooking(booking);
+        await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
+            console.log(response));
+        setPayed(false);
+    }
+
 
     return (
         <Container>
@@ -84,17 +105,17 @@ const Bookings = ({ time, title }) => {
                 </Form.Group>
 
                 <Form.Group controlId="Adult">
-                    <Form.Label>Adults tickets</Form.Label>
+                    <Form.Label>Adults tickets £11.00</Form.Label>
                     <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
                 </Form.Group>
 
                 <Form.Group controlId="Children">
-                    <Form.Label>Child tickets</Form.Label>
+                    <Form.Label>Child tickets £8.50</Form.Label>
                     <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
                 </Form.Group>
 
                 <Form.Group controlId="Concession">
-                    <Form.Label>Concession tickets</Form.Label>
+                    <Form.Label>Concession tickets £9.00</Form.Label>
                     <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
                 </Form.Group>
                 <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
@@ -105,7 +126,20 @@ const Bookings = ({ time, title }) => {
                     <Modal.Title>Select your payment method</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Payment booking={booking} price={price} closeModal={handleClose} />
+                    <center> Adults x{selectAdult}</center>
+                    <center> Children x{selectchild}</center>
+                    <center> Concession x{selectConsessions}</center>
+                    <center>Total Price = £{price}</center>
+                    <br />
+                    <Payment setPayed={setPayed} booking={booking} price={price} closeModal={handleClose} />
+                </Modal.Body>
+            </Modal>
+            <Modal show={showProblem} onHide={handleCloseProblem}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Enter all Fields</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Button variant="primary" type="button" onClick={handleCloseProblem}> close</Button>
                 </Modal.Body>
             </Modal>
 

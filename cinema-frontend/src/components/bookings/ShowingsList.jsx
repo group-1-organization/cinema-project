@@ -25,6 +25,9 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
             console.log(error)
         })
     })
+    useEffect(() => {
+        setSelectedTime(time)
+    }, [])
 
     useEffect(() => {
         if (selectedMovie != '-') {
@@ -46,8 +49,8 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
         </Form.Control>)
     } else {
         return (
-            <Form.Control as="select" defaultValue={time} onLoad={setSelectedTime(time)} onChange={(e) => { setSelectedTime(e.target.value) }}>
-
+            <Form.Control as="select" defaultValue={time} onChange={(e) => { setSelectedTime(e.target.value) }}>
+                <option>Select a Time</option>
                 {movieTime.map((shows, i) => {
 
                     if (shows == time) {
