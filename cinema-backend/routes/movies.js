@@ -21,10 +21,21 @@ router.post('/movies', async (req, res) => {
     }
 })
 
-//get all movies
+//get all movies with showings
 router.get('/movies', async (req, res) => {
     try {
-        const movies = await Movie.find();
+        const movies = await Movie.find({ showings: { $exists: true, $ne: null } });
+        res.send(movies);
+    } catch {
+        res.status(404);
+        res.send({ error: "movie doesn't exist" });
+    }
+})
+
+//get all movies without showings
+router.get('/newmovies', async (req, res) => {
+    try {
+        const movies = await Movie.find({ showings: { $exists: false } });
         res.send(movies);
     } catch {
         res.status(404);
@@ -35,7 +46,7 @@ router.get('/movies', async (req, res) => {
 //get all movie titles
 router.get('/movies/titles', async (req, res) => {
     try {
-        const movies = await Movie.find().select('title');
+        const movies = await Movie.find({ showings: { $exists: true, $ne: null } }).select('title');
         res.send(movies);
     } catch {
         res.status(404);

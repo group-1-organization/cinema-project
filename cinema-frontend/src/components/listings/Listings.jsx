@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Image from 'react-bootstrap/Image';
 
 const Listings = () => {
 
@@ -22,13 +23,15 @@ const Listings = () => {
     };
 
     return (
-        <Container fluid>
+        <Container>
             <h1>Listings page</h1>
 
-            <Row>
-                {movies.map((movie) => (
-                    <Col sm={3}>
-                        <Link to={`/movie/${movie.title}`}><img src={movie.poster} width="300rem" /></Link>
+            <Row xs={1} sm={3} lg={4}>
+                {movies.map((movie, i) => (
+                    <Col key={i} className="mt-4">
+                        <Link to={`/movie/${movie.title}`}>
+                            <Image src={movie.poster} fluid />
+                        </Link>
                     </Col>
                 ))}
             </Row>

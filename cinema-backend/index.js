@@ -12,7 +12,9 @@ const cors = require('cors');
 const newmovieroutes = require('./routes/newmovies')
 const venueroutes = require('./routes/venues')
 
-mongoose.connect('mongodb+srv://James:jbmdbc@cluster0.h5n6v.mongodb.net/cinema?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+const { mongodbConnectionString } = require('../cinema-frontend/src/const.json');
+
+mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         const app = express();
 
