@@ -13,7 +13,6 @@ import Payment from "./Payment";
 
 
 
-
 const Bookings = ({ time, title }) => {
 
     const [selectedMovie, setSelectedMovie] = useState('-');
@@ -49,7 +48,7 @@ const Bookings = ({ time, title }) => {
     const Booking = async () => {
         let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 11.00);
         setPrice(Price);
-        if (selectedMovie == '-' || selectedTime == '-' || selectName.length < 2 || selectAdult == 0 & selectchild == 0 & selectConsessions == 0) {
+        if (selectedMovie == '-' || selectedTime == '-' || selectName.length < 2 || selectAdult < 1 & selectchild < 1 & selectConsessions < 1) {
             handleShowProblem();
         } else {
             handleShow();
@@ -106,17 +105,17 @@ const Bookings = ({ time, title }) => {
 
                 <Form.Group controlId="Adult">
                     <Form.Label>Adults tickets £11.00</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
+                    <Form.Control type="Number min = 0" placeholder="0" onChange={(e) => { setSelectAdult(Math.abs(e.target.value)) }} />
                 </Form.Group>
 
                 <Form.Group controlId="Children">
                     <Form.Label>Child tickets £8.50</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
+                    <Form.Control type="Number min = 0" placeholder="0" onChange={(e) => { setSelectChild(Math.abs(e.target.value)) }} />
                 </Form.Group>
 
                 <Form.Group controlId="Concession">
                     <Form.Label>Concession tickets £9.00</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
+                    <Form.Control type="Number min = 0 " placeholder="0" onChange={(e) => { setSelectConsessions(Math.abs((e.target.value))) }} />
                 </Form.Group>
                 <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
             </Form>
