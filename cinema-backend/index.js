@@ -9,10 +9,9 @@ const commentroutes = require('./routes/comments');
 const ratingroutes = require('./routes/ratings');
 
 const cors = require('cors');
-const newmovieroutes = require('./routes/newmovies')
 const venueroutes = require('./routes/venues')
 
-const { mongodbConnectionString } = require('../cinema-frontend/src/const.json');
+const { mongodbConnectionString } = require('./const.json');
 
 mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -29,8 +28,6 @@ mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTop
         app.use('/cinema', topicroutes);
         app.use('/cinema', commentroutes);
         app.use('/cinema', ratingroutes);
-
-        app.use('/cinema', newmovieroutes);
 
         app.use('/cinema', venueroutes)
 
