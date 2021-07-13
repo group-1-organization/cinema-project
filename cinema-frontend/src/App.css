@@ -73,5 +73,15 @@
   color: black;
 }
 
+.screen-card {
+  text-align: center;
+    background: #051124;
+    color: white;
+    /* border-color: white; */
+}
+
+.button-colour {
+  background: #0068c8;
+}
 
 

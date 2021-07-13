@@ -10,7 +10,7 @@ const Venue = ({ venue }) => {
 
     return (
         <Col className="mt-4">
-            <Card className="h-100">
+            <Card className="h-100 black-font">
                 <Card.Img variant="top" src={venue.picture} style={{ width: "100%" }} />
                 <Card.Body>
                     <Card.Title>{venue.name}</Card.Title>
