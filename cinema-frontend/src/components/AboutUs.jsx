@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/esm/Nav';
 import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -80,42 +81,44 @@ const AboutUs = () => {
             </center>
             <br />
             <br />
-            <Container>
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="consistent-height">
-                    <Row>
-                        <Col sm={3}>
-                            <Nav variant="pills" className="flex-column">
-                                <Nav.Item>
-                                    <Nav.Link eventKey="first">What Is SCRUM?</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">Implimentaion</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="third">Find Out More</Nav.Link>
-                                </Nav.Item>
-                                <br />
-                            </Nav>
-                        </Col>
-                        <Col sm={9}>
-                            <Tab.Content>
-                                <Tab.Pane eventKey="first">
-                                    Scrum gets its name from Rugby - where a team tries to go the distance as a unit, passing the ball back and forth.
-                                    It is Lightweight and Simple to understand but Difficult to master.
-                                    The scrum framework is iteritive and will produce a potentially shippable increment at the end of every sprint. A potentially shippable increment means that it will add functionality on what was there previously, therefore adding value. The additional code should be "shippable" (it shouldn't be half broken, it should be ready to distribute).
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    During this project, we used Jira to implement our SCRUM. We split the
-                                    project into stories and tasks at the start of our project to ensure that all aspects of the project were covered, then each of these tasks/stories would be placed into an appropriate epic, for organisation. Then each of the tasks/stories was given a description, story points, and priorities based on the feedback from the team, these are then organized into sprints each week, and tasks were talked about and checkout out into in progress by each member. Git what integrated into our scrum to ensure that we would know if it had been merged or not and therefore could be placed into done.
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="third">
-                                    <p>Scrum.org, the Home of Scrum, was founded by Scrum co-creator Ken Schwaber as a mission-based organization to help people and teams solve complex problems. They do this by enabling people to apply Professional Scrum through training courses, certifications and ongoing learning all based on a common competency model.</p>
-                                    <center><a href="https://www.scrum.org/" target="_blank">www.scrum.org</a></center>
-                                </Tab.Pane>
-                            </Tab.Content>
-                        </Col>
-                    </Row>
-                </Tab.Container>
+            <Container className="black-font">
+                <Jumbotron>
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="consistent-height">
+                        <Row>
+                            <Col sm={3}>
+                                <Nav variant="pills" className="flex-column">
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="first">What Is SCRUM?</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="second">Implementation</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="third">Find Out More</Nav.Link>
+                                    </Nav.Item>
+                                    <br />
+                                </Nav>
+                            </Col>
+                            <Col sm={9}>
+                                <Tab.Content>
+                                    <Tab.Pane eventKey="first">
+                                        Scrum gets its name from Rugby - where a team tries to go the distance as a unit, passing the ball back and forth.
+                                        It is Lightweight and Simple to understand but Difficult to master.
+                                        The scrum framework is iteritive and will produce a potentially shippable increment at the end of every sprint. A potentially shippable increment means that it will add functionality on what was there previously, therefore adding value. The additional code should be "shippable" (it shouldn't be half broken, it should be ready to distribute).
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="second">
+                                        During this project, we used Jira to implement our SCRUM. We split the
+                                        project into stories and tasks at the start of our project to ensure that all aspects of the project were covered, then each of these tasks/stories would be placed into an appropriate epic, for organisation. Then each of the tasks/stories was given a description, story points, and priorities based on the feedback from the team, these are then organized into sprints each week, and tasks were talked about and checkout out into in progress by each member. Git what integrated into our scrum to ensure that we would know if it had been merged or not and therefore could be placed into done.
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="third">
+                                        <p>Scrum.org, the Home of Scrum, was founded by Scrum co-creator Ken Schwaber as a mission-based organization to help people and teams solve complex problems. They do this by enabling people to apply Professional Scrum through training courses, certifications and ongoing learning all based on a common competency model.</p>
+                                        <center><a href="https://www.scrum.org/" target="_blank">www.scrum.org</a></center>
+                                    </Tab.Pane>
+                                </Tab.Content>
+                            </Col>
+                        </Row>
+                    </Tab.Container>
+                </Jumbotron>
             </Container>
 
 
