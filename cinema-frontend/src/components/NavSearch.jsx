@@ -27,7 +27,7 @@ const NavSearch = () => {
                     <FormControl type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term" onFocus={(disappear) => disappear.target.placeholder = ''}
                         onBlur={(reappear) => reappear.target.placeholder = 'Search Term'} />
                 </FormGroup>
-                <Link to={searchQuery} aria-label="search-link" ><Button aria-label="search-btn" variant="outline-success" type="button" id="movieSearchSubmit" >Search Term</Button></Link>
+                <Link to={searchQuery} aria-label="search-link" ><Button aria-label="search-btn" className="button-colour adj-search" type="button" id="movieSearchSubmit" >Search Term</Button></Link>
             </Form>
         </>
     );

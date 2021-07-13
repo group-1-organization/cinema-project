@@ -85,8 +85,8 @@ const Bookings = ({ time, title }) => {
             <Container>
                 <div>
                     <p align="center">
-                        <Link to={"/listing"}><Button variant="primary" >See Movies and Showings Here </Button></Link>
-                        <Link to={"/screens"}><Button variant="primary" >View screens</Button></Link>
+                        <Link to={"/listing"}><Button className="button-colour adj-button" >See Movies and Showings Here </Button></Link>
+                        <Link to={"/screens"}><Button className="button-colour" >View screens</Button></Link>
                     </p>
 
 
@@ -124,7 +124,7 @@ const Bookings = ({ time, title }) => {
                         <Form.Label>Concession tickets £9.00</Form.Label>
                         <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
                     </Form.Group>
-                    <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
+                    <Button className="button-colour" type="button" onClick={Booking} >Submit</Button>
                 </Form>
 
                 <Modal show={show} onHide={handleClose}>
