@@ -94,4 +94,25 @@
   margin-left: 5px;
 }
 
+.table-format {
+  text-align: center;
+  background: #051124;
+  color: white;
+  font-size: large;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hide-border {
+   border-top : 1px solid Transparent!important;  
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
 
