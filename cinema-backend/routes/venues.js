@@ -13,7 +13,7 @@ router.post('/venue', async (req, res) => {
             contact: req.body.contact,
             offer: req.body.offer,
         });
-        console.log("Log: " + venue);
+        // console.log("Log: " + venue);
         await venue.save();
         res.send(venue);
     } catch {

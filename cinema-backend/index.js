@@ -13,26 +13,29 @@ const venueroutes = require('./routes/venues')
 
 const { mongodbConnectionString } = require('./const.json');
 
+const app = express();
+
+app.use(cors());
+
+app.use(express.json());
+
+app.use('/cinema', movieroutes);
+app.use('/cinema', bookingroutes);
+app.use('/cinema', topicroutes);
+app.use('/cinema', commentroutes);
+app.use('/cinema', ratingroutes);
+app.use('/cinema', venueroutes)
+
 mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        const app = express();
 
-        app.use(cors());
+        //if error       
 
-        app.use(express.json());
+    });
 
-        app.use('/cinema', movieroutes);
+const server = app.listen(5000, () => {
+    console.log("server has started");
 
-        app.use('/cinema', bookingroutes);
+})
 
-        app.use('/cinema', topicroutes);
-        app.use('/cinema', commentroutes);
-        app.use('/cinema', ratingroutes);
-
-        app.use('/cinema', venueroutes)
-
-        app.listen(5000, () => {
-            console.log("server has started");
-        });
-
-    })
+module.exports = server;

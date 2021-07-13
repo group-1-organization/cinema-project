@@ -10,7 +10,7 @@ router.post('/ratings', async (req, res) => {
             movieName: req.body.movieName,
             rating: req.body.rating
         });
-        console.log("Log: " + rating);
+        // console.log("Log: " + rating);
         await rating.save();
         res.send(rating);
     } catch {
