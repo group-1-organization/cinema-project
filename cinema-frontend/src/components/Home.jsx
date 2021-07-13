@@ -2,55 +2,51 @@ import Container from 'react-bootstrap/Container';
 import { Carousel } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { CardDeck } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
 import '../Styles/Home.css'
 
 const Home = () => {
     return (
         <div>
             <div class="logo-header">
-                <img src="/images/BannerResize.png"
+                <Image src="/images/BannerResize.png"
                     alt="QA Cinema banner"
-                    class="logo-center" />
+                    class="logo-center" fluid />
             </div>
-            <br />
-            <Container>
-                <Carousel>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="/images/AQP2.jpg"
-                            alt="A Quiet Place 2 banner"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="/images/ITH2.png"
-                            alt="In The Heights banner"
-                        />
-
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="/images/BW.jpg"
-                            alt="Black Widow banner"
-                        />
-
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </Container>
+            <Carousel>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="/images/f9-banner.jpg"
+                        alt="A Quiet Place 2 banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="/images/bw-banner.jpg"
+                        alt="In The Heights banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="/images/sj-banner.jpg"
+                        alt="Black Widow banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
             <br />
             <div class="text-colour">
                 <Container>
                     <CardDeck>
-                        <Card>
+                        <Card bg="dark" text="light">
                             <Card.Img variant="top" src="/images/premiumdecor.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>QA Cinema</Card.Title>
@@ -59,7 +55,7 @@ const Home = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card>
+                        <Card bg="dark" text="light">
                             <Card.Img variant="top" src="/images/hire.jpeg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Private hire!</Card.Title>
@@ -68,7 +64,7 @@ const Home = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card>
+                        <Card bg="dark" text="light">
                             <Card.Img variant="top" src="/images/safety.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Covid safety guidelines</Card.Title>
