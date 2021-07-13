@@ -82,6 +82,16 @@
 
 .button-colour {
   background: #0068c8;
+  border-color: #0068c8;
+  color: white;
+}
+
+.adj-button {
+  margin-right: 5px;
+}
+
+.adj-search {
+  margin-left: 5px;
 }
 
 

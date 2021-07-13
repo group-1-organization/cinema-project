@@ -42,7 +42,7 @@ const Places = () => {
                         Here is just a few of the great local venues!
                     </h6>
                     <p>
-                        <Link to={"/gettingthere"}><Button variant="outline-dark" >How to find us</Button></Link>
+                        <Link to={"/gettingthere"}><Button className="button-colour" >How to find us</Button></Link>
                     </p>
                 </center>
 

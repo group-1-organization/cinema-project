@@ -69,6 +69,7 @@ const Screens = () => {
                                 onClick={() => setPremOpen(!premOpen)}
                                 aria-controls="collapse-premium-plan"
                                 aria-expanded={premOpen}
+                                className="button-colour"
                             >
                                 View Premium screen seating plan
                             </Button>

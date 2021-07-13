@@ -38,7 +38,7 @@ const Classifications = () => {
                             offer reassuring counterbalances to any violence, threat or
                             horror. If a work is particularly suitable for pre-school
                             children, this will be indicated in the Ratings Info.</p>
-                        <Button onClick={() => setUOpen(!uOpen)}>More Information</Button>
+                        <Button className="button-colour" onClick={() => setUOpen(!uOpen)}>More Information</Button>
                         <Collapse in={uOpen}>
                             <div>
                                 <ul>
@@ -66,7 +66,7 @@ const Classifications = () => {
                             should not unsettle a child aged around eight or older. Unaccompanied children of
                             any age may watch, but parents are advised to consider whether the content may
                             upset younger, or more sensitive, children.</p>
-                        <Button onClick={() => setPgOpen(!pgOpen)}>More Information</Button>
+                        <Button className="button-colour" onClick={() => setPgOpen(!pgOpen)}>More Information</Button>
                         <Collapse in={pgOpen}>
                             <div>
                                 <ul>
@@ -96,7 +96,7 @@ const Classifications = () => {
                             under 12 to view a 12A film should consider whether the film is suitable for that
                             child. To help them decide, we recommend that they check the Ratings Info for that
                             film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
-                        <Button onClick={() => setTwelveOpen(!twelveOpen)}>More Information</Button>
+                        <Button className="button-colour" onClick={() => setTwelveOpen(!twelveOpen)}>More Information</Button>
                         <Collapse in={twelveOpen}>
                             <div>
                                 <ul>
@@ -122,7 +122,7 @@ const Classifications = () => {
                         <p>
                             No one younger than 15 may see a 15 film in a cinema. No one younger than 15 may rent
                             or buy a 15 rated video work.</p>
-                        <Button onClick={() => setFifteenOpen(!fifteenOpen)}>More Information</Button>
+                        <Button className="button-colour" onClick={() => setFifteenOpen(!fifteenOpen)}>More Information</Button>
                         <Collapse in={fifteenOpen}>
                             <div>
                                 <ul>
@@ -151,7 +151,7 @@ const Classifications = () => {
                             No one younger than 18 may see an 18 film in a cinema. No one younger than 18 may
                             rent or buy an 18 rated video work. Adults should be free to choose their own
                             entertainment. Exceptions are below:</p>
-                        <Button onClick={() => setEighteenOpen(!eighteenOpen)}>More Information</Button>
+                        <Button className="button-colour" onClick={() => setEighteenOpen(!eighteenOpen)}>More Information</Button>
                         <Collapse in={eighteenOpen}>
                             <div>
                                 <ul>

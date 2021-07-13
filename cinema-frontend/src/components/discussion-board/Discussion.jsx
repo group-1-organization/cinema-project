@@ -66,7 +66,7 @@ const Discussion = () => {
 
                 <h3>Topics</h3>
 
-                <Button variant="primary" onClick={handleShow}>
+                <Button className="button-colour" onClick={handleShow}>
                     Create topic
                 </Button>
                 {topics.map((topic, index) => (

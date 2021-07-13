@@ -39,29 +39,29 @@ const AboutUs = () => {
                                 <Tab.Pane eventKey="first">
                                     Amandeep is a QA consultant with a hurt thumb who rules us with and iron fist, he is a good leader and i dont have a gun to my head i promise
                                     <center>
-                                        <Button variant="outline-dark" href="https://github.com/AmanBassi" target="_blank">GitHub</Button>
-                                        <Button variant="outline-dark" href="https://www.qa.com/" target="_blank">Company</Button>
+                                        <Button className="button-colour adj-button" href="https://github.com/AmanBassi" target="_blank">GitHub</Button>
+                                        <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
                                     </center>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     James is a QA consultant who is the gerneral of our forces, he has won may battles against our sworn enemies the Autobots, james is also known a Star Scream
                                     <center>
-                                        <Button variant="outline-dark" href="https://github.com/JamesBarnett44" target="_blank">GitHub</Button>
-                                        <Button variant="outline-dark" href="https://www.qa.com/" target="_blank">Company</Button>
+                                        <Button className="button-colour adj-button" href="https://github.com/JamesBarnett44" target="_blank">GitHub</Button>
+                                        <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
                                     </center>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
                                     Richard is a QA consultant with a face that looks like a scottish singer or some Edsel said who knowns if this is true but he is unhappy that its a scottish one
                                     <center>
-                                        <Button variant="outline-dark" href="https://github.com/sgtnamder" target="_blank">GitHub</Button>
-                                        <Button variant="outline-dark" href="https://www.qa.com/" target="_blank">Company</Button>
+                                        <Button className="button-colour adj-button" href="https://github.com/sgtnamder" target="_blank">GitHub</Button>
+                                        <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
                                     </center>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
                                     Scott is a Sad and Sexy man with deep and long relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
                                     <center>
-                                        <Button variant="outline-dark" href="https://github.com/Diakoptes24" target="_blank">GitHub</Button>
-                                        <Button variant="outline-dark" href="https://www.qa.com/" target="_blank">Company</Button>
+                                        <Button className="button-colour adj-button" href="https://github.com/Diakoptes24" target="_blank">GitHub</Button>
+                                        <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
                                     </center>
                                 </Tab.Pane>
                             </Tab.Content>
@@ -75,8 +75,8 @@ const AboutUs = () => {
             <Container>
                 <center>
                     <p>If you want to contact us directly you can do so using the Contact Page or follow the link below</p>
-                    <p>Any Feedback is Welecomed</p>
-                    <Link to={"/contact"}><Button >Contact Us</Button></Link>
+                    <p>Any feedback is welcomed</p>
+                    <Link to={"/contact"}><Button className="button-colour">Contact Us</Button></Link>
                 </center>
 
 
