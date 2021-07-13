@@ -41,6 +41,7 @@ const Footer = () => {
                         <br />
                     </Col>
                 </Row>
+
             </div>
             <div>
                 <p>QA Cinema &copy; 2021</p>

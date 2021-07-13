@@ -16,7 +16,7 @@ const Showings = ({ showing, movie, setTime, setTitle }) => {
 
 
     return (
-        <Link to="/bookings" ><Button className="mr-3" variant="primary" onClick={linkbooking}>{showing} </Button></Link>
+        <Link to="/bookings" ><Button className="mr-3 button-colour" onClick={linkbooking}>{showing} </Button></Link>
     );
 }
 
