@@ -116,5 +116,15 @@
   text-align: left;
 }
 
+.row-col {
+  background-color: white;
+}
+
+.about-image {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+
 
 

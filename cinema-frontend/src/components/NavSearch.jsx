@@ -23,10 +23,10 @@ const NavSearch = () => {
     return (
         <>
             <Form inline>
-                <FormGroup>
-                    <FormControl type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term" onFocus={(disappear) => disappear.target.placeholder = ''}
-                        onBlur={(reappear) => reappear.target.placeholder = 'Search Term'} />
-                </FormGroup>
+
+                <FormControl type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term" onFocus={(disappear) => disappear.target.placeholder = ''}
+                    onBlur={(reappear) => reappear.target.placeholder = 'Search Term'} />
+
                 <Link to={searchQuery} aria-label="search-link" ><Button aria-label="search-btn" className="button-colour adj-search" type="button" id="movieSearchSubmit" >Search Term</Button></Link>
             </Form>
         </>

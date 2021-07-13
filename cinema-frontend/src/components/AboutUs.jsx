@@ -7,6 +7,9 @@ import Nav from 'react-bootstrap/esm/Nav';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Link } from 'react-router-dom';
+import { Tabs } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
+
 import '../App.css';
 
 const AboutUs = () => {
@@ -16,7 +19,7 @@ const AboutUs = () => {
                 <h1>About Us</h1>
             </center>
             <Container className="mt-4">
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                {/* <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column">
@@ -58,7 +61,7 @@ const AboutUs = () => {
                                     </center>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
-                                    Scott is a Sad and Sexy man with deep and long relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
+                                    Scott is a Sad and Sexy man with a deep and long relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
                                     <center>
                                         <Button className="button-colour adj-button" href="https://github.com/Diakoptes24" target="_blank">GitHub</Button>
                                         <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
@@ -67,8 +70,65 @@ const AboutUs = () => {
                             </Tab.Content>
                         </Col>
                     </Row>
-                </Tab.Container>
+                </Tab.Container> */}
+                <Tabs defaultActiveKey="amandeep" id="about-tab" className="nav-justified" >
+                    <Tab eventKey="amandeep" title="Amandeep">
+
+                        <br />
+                        <center>
+                            <Image src="amandeep.png" className="about-image" />
+                            <br />
+                            <br />
+                            Amandeep is a QA consultant with a wounded thumb, who rules us with an iron fist, he is a good leader and I dont have a gun to my head I promise. Vive le resistance! Down with the Bassi regime!
+                            <br />
+                            <br />
+                            <Button className="button-colour adj-button" href="https://github.com/AmanBassi" target="_blank">GitHub</Button>
+                            <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
+                        </center>
+                    </Tab>
+                    <Tab eventKey="james" title="James">
+                        <br />
+                        <center>
+                            <Image src="james.png" className="about-image" />
+                            <br />
+                            <br />
+                            James is a QA consultant and the general of our forces, he has won many battles against our sworn enemies the Autobots, James is also known a Star Scream
+                            <br />
+                            <br />
+                            <Button className="button-colour adj-button" href="https://github.com/JamesBarnett44" target="_blank">GitHub</Button>
+                            <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
+                        </center>
+                    </Tab>
+                    <Tab eventKey="richard" title="Richard">
+                        <br />
+                        <center>
+                            <Image src="richard.png" className="about-image" />
+                            <br />
+                            <br />
+                            Richard is a QA consultant with a face that looks like a scottish singer or whatever Edsel said, who knows if this is true but he is unhappy that it's a scottish one
+                            <br />
+                            <br />
+                            <Button className="button-colour adj-button" href="https://github.com/sgtnamder" target="_blank">GitHub</Button>
+                            <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
+                        </center>
+                    </Tab>
+                    <Tab eventKey="scott" title="Scott">
+                        <br />
+                        <center>
+                            <Image src="scott.png" className="about-image" />
+                            <br />
+                            <br />
+                            Scott is a Sad and Sexy man with a deep and long standing relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
+                            <br />
+                            <br />
+                            <Button className="button-colour adj-button" href="https://github.com/Diakoptes24" target="_blank">GitHub</Button>
+                            <Button className="button-colour" href="https://www.qa.com/" target="_blank">Company</Button>
+                        </center>
+                    </Tab>
+                </Tabs>
             </Container>
+
+            <br />
             <Container>
                 <center>
                     <p>If you want to contact us directly you can do so using the Contact Page or follow the link below</p>
@@ -77,15 +137,17 @@ const AboutUs = () => {
                     <Link to={"/contact"}><Button className="button-colour">Contact Us</Button></Link>
 
                 </center>
+                <br />
+                <hr className="row-col" />
             </Container>
-            <center className="page-header">
+
+            <center>
                 <h2>SCRUM</h2>
             </center>
             <br />
-            <br />
-            <Container className="black-font">
-                <Jumbotron>
-                    <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="consistent-height">
+            <Container>
+                <Jumbotron className="bg-dark" border-color="white">
+                    <Tab.Container defaultActiveKey="first" className="consistent-height" bg-dark>
                         <Row>
                             <Col sm={3}>
                                 <Nav variant="pills" className="flex-column">
