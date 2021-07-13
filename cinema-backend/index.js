@@ -15,23 +15,21 @@ const { mongodbConnectionString } = require('./const.json');
 
 const app = express();
 
+app.use(cors());
+
+app.use(express.json());
+
+app.use('/cinema', movieroutes);
+app.use('/cinema', bookingroutes);
+app.use('/cinema', topicroutes);
+app.use('/cinema', commentroutes);
+app.use('/cinema', ratingroutes);
+app.use('/cinema', venueroutes)
+
 mongoose.connect(mongodbConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
 
-
-        app.use(cors());
-
-        app.use(express.json());
-
-        app.use('/cinema', movieroutes);
-
-        app.use('/cinema', bookingroutes);
-
-        app.use('/cinema', topicroutes);
-        app.use('/cinema', commentroutes);
-        app.use('/cinema', ratingroutes);
-
-        app.use('/cinema', venueroutes)
+        //if error       
 
     });
 

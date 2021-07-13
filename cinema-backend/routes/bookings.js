@@ -13,7 +13,7 @@ router.post('/bookings', async (req, res) => {
             concessions: req.body.concessions,
             noOfSeats: req.body.noOfSeats
         });
-        console.log("Log: " + booking);
+        // console.log("Log: " + booking);
         await booking.save();
         res.send(booking);
     } catch {
@@ -25,7 +25,7 @@ router.post('/bookings', async (req, res) => {
 router.get('/bookings', async (req, res) => {
     try {
         const booking = await Booking.find();
-        console.log("Bookings: " + booking);
+        // console.log("Bookings: " + booking);
         res.send(booking);
     } catch {
         res.status(404);

@@ -5,7 +5,7 @@ const Movie = require('../models/Movie');
 
 //test route
 router.get('/test', async (req, res) => {
-    console.log("Test Response");
+    // console.log("Test Response");
     res.send("hello from the test");
 })
 
@@ -20,7 +20,7 @@ router.post('/movies', async (req, res) => {
             director: req.body.director,
             showings: req.body.showings
         });
-        console.log("Log: " + movie);
+        // console.log("Log: " + movie);
         await movie.save();
         res.send(movie);
     } catch {
@@ -81,7 +81,7 @@ router.get('/movies/name/:title', async (req, res) => {
             if (err) {
                 console.error('An error occurred:', err);
             } else {
-                console.log(movie);
+                // console.log(movie);
                 res.send(movie);
             }
         }
@@ -111,7 +111,7 @@ router.delete('/movies/:id', async (req, res) => {
     try {
         const movie = await Movie.findById(req.params.id);
         await movie.deleteOne();
-        res.send(movie);
+        res.send(`${movie.title} deleted`);
     } catch {
         res.status(404);
         res.send({ error: "movie doesn't exist" });

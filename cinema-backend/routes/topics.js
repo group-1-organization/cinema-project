@@ -11,7 +11,7 @@ router.post('/topics', async (req, res) => {
             movieName: req.body.movieName,
             author: req.body.author
         });
-        console.log("Log: " + topic);
+        // console.log("Log: " + topic);
         await topic.save();
         res.send(topic);
     } catch {
