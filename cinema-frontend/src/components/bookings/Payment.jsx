@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-const Payment = ({ booking, price, closeModal }) => {
+const Payment = ({ booking, price, closeModal, setPayed }) => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => {
@@ -31,6 +31,7 @@ const Payment = ({ booking, price, closeModal }) => {
 
     const onApprove = (data, actions) => {
         setShow(true);
+        setPayed(true);
         return actions.order.capture();
     };
 

@@ -15,13 +15,11 @@ const Places = () => {
 
     useEffect(() => {
         getVenues();
-    });
+    }, []);
 
     const getVenues = () => {
         axios.get("http://localhost:5000/cinema/venue").then((response) => {
             setVenue(response.data);
-            console.log(response.data);
-            console.log(venue);
         }).catch((error) => {
             console.log(error);
         })
