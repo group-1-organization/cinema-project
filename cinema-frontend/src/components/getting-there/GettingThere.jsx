@@ -14,7 +14,7 @@ const GettingThere = () => {
             <br />
             <Container>
 
-                <Image src="cinema.jpg" fluid />
+                <Image src="/images/cinema.jpg" fluid />
                 <h2>Address</h2>
                 <p>
                     Bentley Bridge Park <br />

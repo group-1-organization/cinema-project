@@ -25,7 +25,7 @@ const Classifications = () => {
             <Container fluid>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="u.png" width="200rem" alt="universal" />
+                        <img src="/images/u.png" width="200rem" alt="universal" />
                     </Col>
                     <Col sm={10}>
                         <h3>Universal - Suitable for all</h3>
@@ -56,7 +56,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="pg.png" width="200rem" alt="parentalguidance" />
+                        <img src="/images/pg.png" width="200rem" alt="parentalguidance" />
                     </Col>
                     <Col sm={10}>
                         <h3>PG Parental Guidance</h3>
@@ -84,7 +84,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="12a.png" width="200rem" alt="12andover" />
+                        <img src="/images/12a.png" width="200rem" alt="12andover" />
                     </Col>
                     <Col sm={10}>
                         <h3>12A/12 – Suitable for 12 years and over</h3>
@@ -114,7 +114,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="15.png" width="200rem" alt="15andover" />
+                        <img src="/images/15.png" width="200rem" alt="15andover" />
                     </Col>
                     <Col sm={10}>
                         <h3>15 – Suitable only for 15 years and over</h3>
@@ -142,7 +142,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="18.png" width="200rem" alt="18andover" />
+                        <img src="/images/18.png" width="200rem" alt="18andover" />
                     </Col>
                     <Col sm={10}>
                         <h3>18 – Suitable only for adults</h3>
@@ -165,7 +165,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="r18.png" width="200rem" alt="r18" />
+                        <img src="/images/r18.png" width="200rem" alt="r18" />
                     </Col>
                     <Col sm={10}>
                         <h3>R18</h3>

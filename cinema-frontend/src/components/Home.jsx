@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <div class="logo-header">
-                <img src="BannerResize.png"
+                <img src="/images/BannerResize.png"
                     alt="QA Cinema banner"
                     class="logo-center" />
             </div>
@@ -18,7 +18,7 @@ const Home = () => {
                     <Carousel.Item interval={2000}>
                         <img
                             className="d-block w-100"
-                            src="AQP2.jpg"
+                            src="/images/AQP2.jpg"
                             alt="A Quiet Place 2 banner"
                         />
                         <Carousel.Caption>
@@ -27,7 +27,7 @@ const Home = () => {
                     <Carousel.Item interval={2000}>
                         <img
                             className="d-block w-100"
-                            src="ITH2.png"
+                            src="/images/ITH2.png"
                             alt="In The Heights banner"
                         />
 
@@ -37,7 +37,7 @@ const Home = () => {
                     <Carousel.Item interval={2000}>
                         <img
                             className="d-block w-100"
-                            src="BW.jpg"
+                            src="/images/BW.jpg"
                             alt="Black Widow banner"
                         />
 
@@ -51,7 +51,7 @@ const Home = () => {
                 <Container>
                     <CardDeck>
                         <Card>
-                            <Card.Img variant="top" src="premiumdecor.jpg" width="348" height="220" />
+                            <Card.Img variant="top" src="/images/premiumdecor.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>QA Cinema</Card.Title>
                                 <Card.Text>
@@ -60,7 +60,7 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src="hire.jpeg" width="348" height="220" />
+                            <Card.Img variant="top" src="/images/hire.jpeg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Private hire!</Card.Title>
                                 <Card.Text>
@@ -69,7 +69,7 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src="safety.jpg" width="348" height="220" />
+                            <Card.Img variant="top" src="/images/safety.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Covid safety guidelines</Card.Title>
                                 <Card.Text>
