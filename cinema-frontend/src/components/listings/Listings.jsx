@@ -36,7 +36,7 @@ const Listings = () => {
                     {movies.map((movie, i) => (
                         <Col key={i} className="mt-4">
                             <Link to={`/movie/${movie.title}`}>
-                                <Image src={movie.poster} fluid />
+                                <Image src={`/images/${movie.poster}`} fluid />
                             </Link>
                         </Col>
                     ))}

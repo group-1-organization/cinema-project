@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer">
             <div className="mb-0">
                 <Row>
-                    <Col className="App">
+                    <Col sm={4}>
                         <h4>Where to find us</h4>
                         <ul className="list-unstyled">
                             <li >Bentley Bridge Park</li>
@@ -21,7 +21,7 @@ const Footer = () => {
                         <p>Wolverhampton</p>
                         <p>WV11 1TZ</p> */}
                     </Col>
-                    <Col>
+                    <Col sm={4}>
                         <h4>Find out more</h4>
                         <Link to={'/'}>Home</Link>
                         <br />
@@ -29,7 +29,7 @@ const Footer = () => {
                         <br />
                         <Link to={'/contact'}>Contact Us</Link>
                     </Col>
-                    <Col>
+                    <Col sm={4}>
                         <h4>Follow Us</h4>
                         <a href="https://www.facebook.com/QALtd/">Facebook</a>
                         <br />

@@ -1,9 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container';
-import Link from 'react-router-dom/Link';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -50,7 +48,7 @@ const Movie = ({ setTime, setTitle }) => {
             <Container>
                 <Row className="mt-3">
                     <Col md={6}>
-                        <Image src={`/${poster}`} alt={poster} fluid />
+                        <Image src={`/images/${poster}`} alt={poster} fluid />
                     </Col>
                     <Col md={6}>
                         <h3>{movie.title}</h3>
@@ -64,7 +62,7 @@ const Movie = ({ setTime, setTitle }) => {
                         </p>
                         <div>
                             {showings.map((showing) => (
-                            <Showings showing={showing} movie={movie} setTime={setTime} setTitle={setTitle} />
+                                <Showings showing={showing} movie={movie} setTime={setTime} setTitle={setTitle} />
                             ))}
                         </div>
                     </Col>

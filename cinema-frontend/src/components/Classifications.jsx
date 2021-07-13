@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 import Collapse from 'react-bootstrap/Collapse';
 import { useState } from 'react';
 import '../App.css';
@@ -14,18 +15,18 @@ const Classifications = () => {
     const [fifteenOpen, setFifteenOpen] = useState(false);
     const [eighteenOpen, setEighteenOpen] = useState(false);
 
-    return (
-        <div>
-            <div class="page-header">
-                <h1> Film Classifications </h1>
-            </div>
+    return (<>
+        <div class="page-header">
+            <h1> Film Classifications </h1>
+        </div>
+        <Container>
             <br />
             <h4>For more information on  the film ratings system go <a href="https://www.bbfc.co.uk/" target="_blank" rel="noreferrer">here</a></h4>
             <br />
             <Container fluid>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="u.png" width="200rem" alt="universal" />
+                        <Image src="/images/u.png" alt="universal" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>Universal - Suitable for all</h3>
@@ -56,7 +57,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="pg.png" width="200rem" alt="parentalguidance" />
+                        <Image src="/images/pg.png" alt="parentalguidance" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>PG Parental Guidance</h3>
@@ -84,7 +85,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="12a.png" width="200rem" alt="12andover" />
+                        <Image src="/images/12a.png" alt="12andover" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>12A/12 – Suitable for 12 years and over</h3>
@@ -114,7 +115,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="15.png" width="200rem" alt="15andover" />
+                        <Image src="/images/15.png" alt="15andover" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>15 – Suitable only for 15 years and over</h3>
@@ -142,7 +143,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="18.png" width="200rem" alt="18andover" />
+                        <Image src="/images/18.png" alt="18andover" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>18 – Suitable only for adults</h3>
@@ -165,7 +166,7 @@ const Classifications = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col sm={2}>
-                        <img src="r18.png" width="200rem" alt="r18" />
+                        <Image src="/images/r18.png" alt="r18" fluid />
                     </Col>
                     <Col sm={10}>
                         <h3>R18</h3>
@@ -178,7 +179,8 @@ const Classifications = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </Container>
+    </>
     );
 }
 

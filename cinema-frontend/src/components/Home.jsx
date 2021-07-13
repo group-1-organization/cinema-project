@@ -1,57 +1,55 @@
 import Container from 'react-bootstrap/Container';
 import { Carousel } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
-import { CardDeck } from 'react-bootstrap';
-import '../Styles/Home.css'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import '../Styles/Home.css';
 
 const Home = () => {
     return (
         <div>
             <div class="logo-header">
-                <img src="BannerResize.png"
+                <Image src="/images/BannerResize.png"
                     alt="QA Cinema banner"
-                    class="logo-center" />
+                    class="logo-center" fluid />
             </div>
+            <Carousel>
+                <Carousel.Item interval={2000}>
+                    <Image
+                        className="d-block w-100"
+                        src="/images/f9-banner.jpg"
+                        alt="A Quiet Place 2 banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <Image
+                        className="d-block w-100"
+                        src="/images/bw-banner.jpg"
+                        alt="In The Heights banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <Image
+                        className="d-block w-100"
+                        src="/images/sj-banner.jpg"
+                        alt="Black Widow banner"
+                    />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
             <br />
             <Container>
-                <Carousel>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="AQP2.jpg"
-                            alt="A Quiet Place 2 banner"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="ITH2.png"
-                            alt="In The Heights banner"
-                        />
 
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={2000}>
-                        <img
-                            className="d-block w-100"
-                            src="BW.jpg"
-                            alt="Black Widow banner"
-                        />
-
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </Container>
-            <br />
-            <div class="text-colour">
-                <Container>
-                    <CardDeck>
-                        <Card>
-                            <Card.Img variant="top" src="premiumdecor.jpg" width="348" height="220" />
+                <Row>
+                    <Col md={6} lg={4} className="d-flex align-items-stretch">
+                        <Card bg="dark" text="light" className="mt-4">
+                            <Card.Img variant="top" src="/images/premiumdecor.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>QA Cinema</Card.Title>
                                 <Card.Text>
@@ -59,8 +57,10 @@ const Home = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card>
-                            <Card.Img variant="top" src="hire.jpeg" width="348" height="220" />
+                    </Col>
+                    <Col md={6} lg={4} className="d-flex align-items-stretch">
+                        <Card bg="dark" text="light" className="mt-4">
+                            <Card.Img variant="top" src="/images/hire.jpeg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Private hire!</Card.Title>
                                 <Card.Text>
@@ -68,8 +68,10 @@ const Home = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card>
-                            <Card.Img variant="top" src="safety.jpg" width="348" height="220" />
+                    </Col>
+                    <Col md={6} lg={4} className="d-flex align-items-stretch">
+                        <Card bg="dark" text="light" className="mt-4">
+                            <Card.Img variant="top" src="/images/safety.jpg" width="348" height="220" />
                             <Card.Body>
                                 <Card.Title>Covid safety guidelines</Card.Title>
                                 <Card.Text>
@@ -77,10 +79,10 @@ const Home = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </CardDeck>
-                </Container>
-            </div>
-        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div >
     )
 }
 
