@@ -55,61 +55,64 @@ const Bookings = () => {
     };
 
     return (
-        <Container>
-            <Jumbotron>
-                <center>
-                    <h1>Booking</h1>
-                    <p>
-                        Enter your details below to get the relevent data inputs to book
+        <div>
+            <div className="page-header">
+                <h1>Make a booking</h1>
+            </div>
+
+            <br />
+            <Container>
+                <div>
+                    <p align="center">
+                        <Link to={"/listing"}><Button variant="primary" >See Movies and Showings Here </Button></Link>
+                        <Link to={"/screens"}><Button variant="primary" >View screens</Button></Link>
                     </p>
-                    <p>
-                        <Link to={"/listing"}><Button variant="outline-dark" >See Movies and Showings Here</Button></Link>
-                    </p>
-                </center>
-            </Jumbotron>
-            <Form id="Bookingform">
-                <Form.Group controlId="SelectMovie">
-                    <Form.Label>Select a Movie</Form.Label>
-                    <MovieList setSelectedMovie={setSelectedMovie} />
-                </Form.Group>
 
-                <Form.Group controlId="SelectTime">
-                    <Form.Label>Select Time</Form.Label>
-                    <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} />
-                </Form.Group>
+                </div>
+                <Form id="Bookingform">
+                    <Form.Group controlId="SelectMovie">
+                        <Form.Label>Select a Movie</Form.Label>
+                        <MovieList setSelectedMovie={setSelectedMovie} />
+                    </Form.Group>
 
-                <Form.Group controlId="Name">
-                    <Form.Label>Name for the Booking</Form.Label>
-                    <Form.Control type="text" placeholder="Your Name" onChange={(e) => { setSelectName(e.target.value) }} />
-                </Form.Group>
+                    <Form.Group controlId="SelectTime">
+                        <Form.Label>Select Time</Form.Label>
+                        <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} />
+                    </Form.Group>
 
-                <Form.Group controlId="Adult">
-                    <Form.Label>Adults tickets</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
-                </Form.Group>
+                    <Form.Group controlId="Name">
+                        <Form.Label>Name for the Booking</Form.Label>
+                        <Form.Control type="text" placeholder="Your Name" onChange={(e) => { setSelectName(e.target.value) }} />
+                    </Form.Group>
 
-                <Form.Group controlId="Children">
-                    <Form.Label>Child tickets</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
-                </Form.Group>
+                    <Form.Group controlId="Adult">
+                        <Form.Label>Adults tickets</Form.Label>
+                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
+                    </Form.Group>
 
-                <Form.Group controlId="Concession">
-                    <Form.Label>Concession tickets</Form.Label>
-                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
-                </Form.Group>
-                <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
-            </Form>
+                    <Form.Group controlId="Children">
+                        <Form.Label>Child tickets</Form.Label>
+                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
+                    </Form.Group>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Select your payment method</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Payment booking={booking} price={price} closeModal={handleClose} />
-                </Modal.Body>
-            </Modal>
+                    <Form.Group controlId="Concession">
+                        <Form.Label>Concession tickets</Form.Label>
+                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
+                    </Form.Group>
+                    <Button variant="primary" type="button" onClick={Booking} >Submit</Button>
+                </Form>
 
-        </Container>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Select your payment method</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Payment booking={booking} price={price} closeModal={handleClose} />
+                    </Modal.Body>
+                </Modal>
+
+            </Container>
+        </div>
     );
 }
 

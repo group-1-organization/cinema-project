@@ -30,26 +30,32 @@ const Places = () => {
 
 
     return (
+        <div>
+            <div className="page-header">
+                <h1>Places to go</h1>
+            </div>
+            <br />
 
-        <Container>
-            <Jumbotron>
+            <Container>
+
                 <center>
-                    <h1>Places to Go</h1>
+
+                    <h6>
+                        Here is just a few of the great local venues!
+                    </h6>
                     <p>
-                        A few local restraunts and Services close by, Check them out!!!
-                    </p>
-                    <p>
-                        <Link to={"/gettingthere"}><Button variant="outline-dark" >Getting Here</Button></Link>
+                        <Link to={"/gettingthere"}><Button variant="outline-dark" >How to find us</Button></Link>
                     </p>
                 </center>
 
-            </Jumbotron>
-            <Row xs={1} lg={3}>
-                {venue.map((venue) => (
-                    <Venue venue={venue} />
-                ))}
-            </Row>
-        </Container >
+
+                <Row xs={1} lg={3}>
+                    {venue.map((venue) => (
+                        <Venue venue={venue} />
+                    ))}
+                </Row>
+            </Container >
+        </div>
 
     );
 }
