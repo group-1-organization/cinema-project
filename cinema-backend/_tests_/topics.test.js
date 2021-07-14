@@ -38,9 +38,7 @@ describe(`Topics testing`, () => {
         chai.request(app).post('/cinema/topics').send({
             "name": "test topic",
             "movieName": "testmovie",
-            "author": "createTest",
-            "createdAt": "2021-07-12T12:30:46.369Z",
-            "updatedAt": "2021-07-12T12:30:46.369Z",
+            "author": "createTest"
         }).end((error, response) => {
             if (error) {
                 console.log(`Something went wrong`);
@@ -96,24 +94,27 @@ describe(`Topics testing`, () => {
                 if (err) {
                     console.error('An error occurred:', err);
                 } else {
-                    chai.request(app).patch(`/cinema/topics/${topic._id}`).send({ "name": "the name has been updated" }).end((error, response) => {
-                        if (error) {
-                            console.log(`Something went wrong`);
-                            done(error);
-                        }
-                        expect(response).to.have.status(200);
-                        expect(response).to.not.be.null;
-                        const topic = response.body;
-                        console.log(topic.text);
-                        expect(topic).to.be.a("object");
-                        expect(topic).to.contain.keys("author");
-                        expect(topic.author).to.be.a("string");
-                        expect(topic.author).to.equal("updateTest");
-                        expect(topic).to.contain.keys("name");
-                        expect(topic.name).to.be.a("string");
-                        expect(topic.name).to.equal("the name has been updated");
-                        done();
-                    })
+                    chai.request(app).patch(`/cinema/topics/${topic._id}`).send(
+                        {
+                            "name": "the name has been updated",
+                            "movieName": "newmovie",
+                        }).end((error, response) => {
+                            if (error) {
+                                console.log(`Something went wrong`);
+                                done(error);
+                            }
+                            expect(response).to.have.status(200);
+                            expect(response).to.not.be.null;
+                            const topic = response.body;
+                            expect(topic).to.be.a("object");
+                            expect(topic).to.contain.keys("author");
+                            expect(topic.author).to.be.a("string");
+                            expect(topic.author).to.equal("updateTest");
+                            expect(topic).to.contain.keys("name");
+                            expect(topic.name).to.be.a("string");
+                            expect(topic.name).to.equal("the name has been updated");
+                            done();
+                        })
                 }
             })
     })

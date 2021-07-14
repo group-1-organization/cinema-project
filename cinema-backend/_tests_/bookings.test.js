@@ -96,7 +96,15 @@ describe(`Bookings testing`, () => {
                 if (err) {
                     console.error('An error occurred:', err);
                 } else {
-                    chai.request(app).patch(`/cinema/bookings/${booking._id}`).send({ "movie": "the movie has been updated" }).end((error, response) => {
+                    chai.request(app).patch(`/cinema/bookings/${booking._id}`).send({
+                        "movie": "the movie has been updated",
+                        "date": "newdate",
+                        "screening": "10:00",
+                        "adults": 2,
+                        "children": 1,
+                        "concessions": 1,
+                        "noOfSeats": 4
+                    }).end((error, response) => {
                         if (error) {
                             console.log(`Something went wrong`);
                             done(error);
@@ -104,7 +112,6 @@ describe(`Bookings testing`, () => {
                         expect(response).to.have.status(200);
                         expect(response).to.not.be.null;
                         const booking = response.body;
-                        console.log(booking.text);
                         expect(booking).to.be.a("object");
                         expect(booking).to.contain.keys("booker");
                         expect(booking.booker).to.be.a("string");

@@ -13,7 +13,6 @@ router.post('/venue', async (req, res) => {
             contact: req.body.contact,
             offer: req.body.offer,
         });
-        // console.log("Log: " + venue);
         await venue.save();
         res.send(venue);
     } catch {
@@ -38,7 +37,6 @@ router.get('/venue', async (req, res) => {
 
 //update venue
 router.patch('/venue/:id', async (req, res) => {
-    // console.log(req.body);
     try {
         let venue = await Venue.findById(req.params.id);
         if (req.body.name) { venue.name = req.body.name };
