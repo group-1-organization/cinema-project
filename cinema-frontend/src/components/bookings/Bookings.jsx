@@ -1,18 +1,15 @@
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { useEffect, useState } from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { useEffect, useState } from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal'
-import axios from "axios"
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-import ShowingsList from "./ShowingsList";
-import MovieList from "./MovieList";
-import Payment from "./Payment";
-
-
-
+import ShowingsList from './ShowingsList';
+import MovieList from './MovieList';
+import Payment from './Payment';
 
 const Bookings = ({ time, title }) => {
 
@@ -34,17 +31,14 @@ const Bookings = ({ time, title }) => {
     const handleCloseProblem = () => setShowProblem(false);
     const handleShowProblem = () => setShowProblem(true);
 
-
-    console.log(selectedMovie);
-    console.log(selectedTime);
+    // console.log(selectedMovie);
+    // console.log(selectedTime);
 
     useEffect(() => {
         if (payed == true) {
             PayedSent();
         }
-
     }, [payed])
-
 
     const Booking = async () => {
         let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 11.00);
@@ -74,58 +68,58 @@ const Bookings = ({ time, title }) => {
         setPayed(false);
     }
 
-
     return (
         <div>
             <div className="page-header">
                 <h1>Make a booking</h1>
             </div>
-
             <br />
             <Container>
                 <div>
                     <p align="center">
-                        <Link to={"/listing"}><Button className="button-colour adj-button" >See Movies and Showings Here </Button></Link>
-                        <Link to={"/screens"}><Button className="button-colour" >View screens</Button></Link>
+                        <Link to={"/listing"}><Button className="button-colour adj-button mt-4" >See Movies and Showings Here </Button></Link>
+                        <Link to={"/screens"}><Button className="button-colour mt-4" >View screens</Button></Link>
                     </p>
-
-
                 </div>
+                <Row>
+                    <Col lg={{ span: 8, offset: 2 }}>
+                        <Form id="Bookingform">
+                            <Form.Group controlId="SelectMovie">
+                                <Form.Label>Select a Movie</Form.Label>
+                                <MovieList setSelectedMovie={setSelectedMovie} title={title} />
+                            </Form.Group>
 
+                            <Form.Group controlId="SelectTime">
+                                <Form.Label>Select Time</Form.Label>
+                                <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} time={time} />
+                            </Form.Group>
 
+                            <Form.Group controlId="Name">
+                                <Form.Label>Name for the Booking</Form.Label>
+                                <Form.Control type="text" placeholder="Your Name" onChange={(e) => { setSelectName(e.target.value) }} />
+                            </Form.Group>
 
-                <Form id="Bookingform">
-                    <Form.Group controlId="SelectMovie">
-                        <Form.Label>Select a Movie</Form.Label>
-                        <MovieList setSelectedMovie={setSelectedMovie} title={title} />
-                    </Form.Group>
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="Adult">
+                                    <Form.Label className="text-nowrap">Adults tickets £11.00</Form.Label>
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
+                                </Form.Group>
 
-                    <Form.Group controlId="SelectTime">
-                        <Form.Label>Select Time</Form.Label>
-                        <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} time={time} />
-                    </Form.Group>
+                                <Form.Group as={Col} controlId="Children">
+                                    <Form.Label className="text-nowrap">Child tickets £8.50</Form.Label>
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
+                                </Form.Group>
 
-                    <Form.Group controlId="Name">
-                        <Form.Label>Name for the Booking</Form.Label>
-                        <Form.Control type="text" placeholder="Your Name" onChange={(e) => { setSelectName(e.target.value) }} />
-                    </Form.Group>
+                                <Form.Group as={Col} controlId="Concession">
+                                    <Form.Label className="text-nowrap">Concession tickets £9.00</Form.Label>
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
+                                </Form.Group>
+                            </Form.Row>
 
-                    <Form.Group controlId="Adult">
-                        <Form.Label>Adults tickets £11.00</Form.Label>
-                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
-                    </Form.Group>
-
-                    <Form.Group controlId="Children">
-                        <Form.Label>Child tickets £8.50</Form.Label>
-                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
-                    </Form.Group>
-
-                    <Form.Group controlId="Concession">
-                        <Form.Label>Concession tickets £9.00</Form.Label>
-                        <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
-                    </Form.Group>
-                    <Button className="button-colour" type="button" onClick={Booking} >Submit</Button>
-                </Form>
+                            <Button className="button-colour" type="button" onClick={Booking} >Submit</Button>
+                        </Form>
+                    </Col>
+                </Row>
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
@@ -148,9 +142,7 @@ const Bookings = ({ time, title }) => {
                         <Button variant="primary" type="button" onClick={handleCloseProblem}> close</Button>
                     </Modal.Body>
                 </Modal>
-
             </Container>
-
         </div >
     );
 }
