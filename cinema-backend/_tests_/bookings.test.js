@@ -90,6 +90,23 @@ describe(`Bookings testing`, () => {
         })
     })
 
+    it(`should get a booking by id`, (done) => {
+        chai.request(app).get('/cinema/bookings/60ed991415bfb84cb09976cb').end((error, response) => {
+            if (error) {
+                console.log(`Something went wrong`);
+                done(error);
+            }
+            expect(response).to.have.status(200);
+            expect(response).to.not.be.null;
+            const booking = response.body;
+            expect(booking).to.be.a("object");
+            expect(booking).to.contain.keys("movie");
+            expect(booking.movie).to.be.a("string");
+            expect(booking.movie).to.equal("A Quiet Place Part II");
+            done();
+        })
+    })
+
     it(`should update the booking in the db`, (done) => {
         Booking.findOne(
             { 'booker': 'updateTest' }, (err, booking) => {
