@@ -10,11 +10,14 @@ import { Link } from 'react-router-dom';
 import ShowingsList from './ShowingsList';
 import MovieList from './MovieList';
 import Payment from './Payment';
+import Date from './Date';
+
 
 const Bookings = ({ time, title }) => {
 
     const [selectedMovie, setSelectedMovie] = useState('-');
-    const [selectedTime, setSelectedTime] = useState('')
+    const [selectedDate, setSelectedDate] = useState('-')
+    const [selectedTime, setSelectedTime] = useState('');
     const [selectName, setSelectName] = useState('');
     const [selectAdult, setSelectAdult] = useState(0);
     const [selectchild, setSelectChild] = useState(0);
@@ -38,31 +41,35 @@ const Bookings = ({ time, title }) => {
         if (payed == true) {
             PayedSent();
         }
-    }, [payed])
+    }, [payed]);
 
     const Booking = async () => {
+        console.log(selectedTime);
         let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 11.00);
         setPrice(Price);
-        if (selectedMovie == '-' || selectedTime == '-' || selectName.length < 2 || selectAdult == 0 & selectchild == 0 & selectConsessions == 0) {
+        if (selectedMovie == '-' || selectedDate == '-' || selectedTime == 'Select a Time' || selectedTime == '' || selectName.length < 2 || selectAdult == 0 & selectchild == 0 & selectConsessions == 0) {
             handleShowProblem();
         } else {
             handleShow();
+            let booking = {
+                movie: selectedMovie,
+                date: selectedDate,
+                screening: selectedTime,
+                booker: selectName,
+                adults: selectAdult,
+                children: selectchild,
+                concessions: selectConsessions,
+                noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
+            }
+            booking.price = price;
+            setBooking(booking);
         }
-
     };
 
+
+
+
     const PayedSent = async () => {
-        let booking = {
-            movie: selectedMovie,
-            screening: selectedTime,
-            booker: selectName,
-            adults: selectAdult,
-            children: selectchild,
-            concessions: selectConsessions,
-            noOfSeats: parseInt(selectConsessions) + parseInt(selectchild) + parseInt(selectAdult)
-        }
-        booking.price = price;
-        setBooking(booking);
         await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>
             console.log(response));
         setPayed(false);
@@ -91,6 +98,11 @@ const Bookings = ({ time, title }) => {
 
                             <Form.Group controlId="SelectTime">
                                 <Form.Label>Select Time</Form.Label>
+                                <Date setSelectedDate={setSelectedDate} />
+                            </Form.Group>
+
+                            <Form.Group controlId="SelectTime">
+                                <Form.Label>Select Time</Form.Label>
                                 <ShowingsList selectedMovie={selectedMovie} setSelectedTime={setSelectedTime} time={time} />
                             </Form.Group>
 
@@ -102,17 +114,17 @@ const Bookings = ({ time, title }) => {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="Adult">
                                     <Form.Label className="text-nowrap">Adults tickets £11.00</Form.Label>
-                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(e.target.value) }} />
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectAdult(Math.abs(e.target.value)) }} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="Children">
                                     <Form.Label className="text-nowrap">Child tickets £8.50</Form.Label>
-                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(e.target.value) }} />
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectChild(Math.abs(e.target.value)) }} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="Concession">
                                     <Form.Label className="text-nowrap">Concession tickets £9.00</Form.Label>
-                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(e.target.value) }} />
+                                    <Form.Control type="Number" placeholder="0" onChange={(e) => { setSelectConsessions(Math.abs(e.target.value)) }} />
                                 </Form.Group>
                             </Form.Row>
 

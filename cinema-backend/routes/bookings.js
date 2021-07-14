@@ -6,6 +6,7 @@ router.post('/bookings', async (req, res) => {
     try {
         const booking = new Booking({
             movie: req.body.movie,
+            date: req.body.date,
             screening: req.body.screening,
             booker: req.body.booker,
             adults: req.body.adults,
@@ -48,6 +49,7 @@ router.patch('/bookings/:id', async (req, res) => {
     try {
         let booking = await Booking.findById(req.params.id);
         if (req.body.movie) { booking.movie = req.body.movie };
+        if (req.body.date) { booking.date = req.body.date };
         if (req.body.screening) { booking.screening = req.body.screening };
         if (req.body.booker) { booking.movie = req.body.booker };
         if (req.body.adults) { booking.movie = req.body.adults };
