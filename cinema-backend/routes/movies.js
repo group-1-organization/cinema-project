@@ -90,7 +90,7 @@ router.get('/movies/name/:title', async (req, res) => {
 
 //update movie
 router.patch('/movies/:id', async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     try {
         let movie = await Movie.findById(req.params.id);
         if (req.body.title) { movie.title = req.body.title };

@@ -42,4 +42,29 @@ router.get('/topics/:id', async (req, res) => {
     }
 })
 
+//update topic
+router.patch('/topics/:id', async (req, res) => {
+    try {
+        let topic = await Topic.findById(req.params.id);
+        if (req.body.name) { topic.name = req.body.name };
+        await topic.save();
+        res.send(topic);
+    } catch {
+        res.status(404);
+        res.send({ error: 'topic does not exist' })
+    }
+});
+
+//delete topic
+router.delete('/topics/:id', async (req, res) => {
+    try {
+        const topic = await Topic.findById(req.params.id);
+        await topic.deleteOne();
+        res.send(`Topic ${topic.name} created by ${topic.author} at ${topic.createdAt} deleted`);
+    } catch {
+        res.status(404);
+        res.send({ error: "topic doesn't exist" });
+    }
+});
+
 module.exports = router;

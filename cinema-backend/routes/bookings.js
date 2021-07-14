@@ -45,7 +45,7 @@ router.get('/bookings/:id', async (req, res) => {
 })
 
 router.patch('/bookings/:id', async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     try {
         let booking = await Booking.findById(req.params.id);
         if (req.body.movie) { booking.movie = req.body.movie };
@@ -68,7 +68,8 @@ router.delete('/bookings/:id', async (req, res) => {
     try {
         const booking = await Booking.findById(req.params.id);
         await booking.deleteOne();
-        res.send(booking);
+        // res.send(booking);
+        res.send(`Booking by ${booking.booker} for ${booking.movie} deleted`);
     } catch {
         res.status(404);
         res.send({ error: "booking doesn't exist" });
