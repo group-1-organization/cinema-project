@@ -32,4 +32,29 @@ router.get('/comments/:id', async (req, res) => {
     }
 })
 
+//update comment
+router.patch('/comments/:id', async (req, res) => {
+    try {
+        let comment = await Comment.findById(req.params.id);
+        if (req.body.message) { comment.message = req.body.message };
+        await comment.save();
+        res.send(comment);
+    } catch {
+        res.status(404);
+        res.send({ error: 'comment does not exist' })
+    }
+});
+
+//delete comment
+router.delete('/comments/:id', async (req, res) => {
+    try {
+        const comment = await Comment.findById(req.params.id);
+        await comment.deleteOne();
+        res.send(`Comment by ${comment.author} at ${comment.createdAt} deleted`);
+    } catch {
+        res.status(404);
+        res.send({ error: "comment doesn't exist" });
+    }
+});
+
 module.exports = router;

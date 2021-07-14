@@ -8,17 +8,37 @@ const Comment = require('../models/Comment');
 
 describe(`Comments testing`, () => {
 
+    before(async () => {
+        let deleteTest = Comment({
+            "topicId": "60ed7a4e1c58f2564c86a39e",
+            "message": "testing testing",
+            "author": "deleteTest"
+        })
+
+        let updateTest = Comment({
+            "topicId": "60ed7a4e1c58f2564c86a39e",
+            "message": "testing testing",
+            "author": "updateTest"
+        })
+        await deleteTest.save();
+        await updateTest.save();
+    })
+
     after(() => {
-        Comment.deleteMany({ 'author': 'James' }, function (err) {
+        Comment.deleteMany({ 'author': 'createTest' }, function (err) {
             if (err) return handleError(err);
         });
-    })
+
+        Comment.deleteMany({ 'author': 'updateTest' }, function (err) {
+            if (err) return handleError(err);
+        });
+    });
 
     it(`should create a comment`, (done) => {
         chai.request(app).post('/cinema/comments').send({
             "topicId": "60ed7a4e1c58f2564c86a39e",
             "message": "testing testing",
-            "author": "James"
+            "author": "createTest"
         }).end((error, response) => {
             if (error) {
                 console.log(`Something went wrong`);
@@ -30,7 +50,7 @@ describe(`Comments testing`, () => {
             expect(comment).to.be.a("object");
             expect(comment).to.contain.keys("author");
             expect(comment.author).to.be.a("string");
-            expect(comment.author).to.equal("James");
+            expect(comment.author).to.equal("createTest");
             done();
         })
     })
@@ -54,6 +74,51 @@ describe(`Comments testing`, () => {
         done();
     })
 
+    it(`should update the comment in the db`, (done) => {
+        Comment.findOne(
+            { 'author': 'updateTest' }, (err, comment) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).patch(`/cinema/comments/${comment._id}`).send({ "message": "the message has been updated" }).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response).to.not.be.null;
+                        const comment = response.body;
+                        console.log(comment.text);
+                        expect(comment).to.be.a("object");
+                        expect(comment).to.contain.keys("author");
+                        expect(comment.author).to.be.a("string");
+                        expect(comment.author).to.equal("updateTest");
+                        expect(comment).to.contain.keys("message");
+                        expect(comment.message).to.be.a("string");
+                        expect(comment.message).to.equal("the message has been updated");
+                        done();
+                    })
+                }
+            })
+    })
 
-
+    it(`should delete the comment in the db`, (done) => {
+        Comment.findOne(
+            { 'author': 'deleteTest' }, (err, comment) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).delete(`/cinema/comments/${comment._id}`).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response.text).to.equal(`Comment by ${comment.author} at ${comment.createdAt} deleted`);
+                        expect(response).to.not.be.null;
+                        done();
+                    })
+                }
+            })
+    })
 })
