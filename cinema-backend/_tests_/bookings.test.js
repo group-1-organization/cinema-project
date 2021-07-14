@@ -11,6 +11,7 @@ describe(`Bookings testing`, () => {
     before(async () => {
         let deleteTest = Booking({
             "movie": "testmovie",
+            "date": "date",
             "screening": "12:00",
             "booker": "deleteTest",
             "adults": 1,
@@ -21,6 +22,7 @@ describe(`Bookings testing`, () => {
 
         let updateTest = Booking({
             "movie": "testmovie",
+            "date": "date",
             "screening": "12:00",
             "booker": "updateTest",
             "adults": 1,
@@ -46,6 +48,7 @@ describe(`Bookings testing`, () => {
     it(`should create a booking`, (done) => {
         chai.request(app).post('/cinema/bookings').send({
             "movie": "testmovie",
+            "date": "date",
             "screening": "12:00",
             "booker": "createTest",
             "adults": 1,
