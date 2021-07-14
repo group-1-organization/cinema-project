@@ -38,7 +38,7 @@ router.get('/venue', async (req, res) => {
 
 //update venue
 router.patch('/venue/:id', async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     try {
         let venue = await Venue.findById(req.params.id);
         if (req.body.name) { venue.name = req.body.name };
@@ -60,7 +60,7 @@ router.delete('/venue/:id', async (req, res) => {
     try {
         const venue = await Venue.findById(req.params.id);
         await venue.deleteOne();
-        res.send(venue);
+        res.send(`${venue.name} deleted`);
     } catch {
         res.status(404);
         res.send({ error: "venue doesn't exist" });

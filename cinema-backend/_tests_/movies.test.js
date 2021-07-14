@@ -8,31 +8,43 @@ const Movie = require('../models/Movie');
 
 describe(`Movies testing`, () => {
 
-    before(() => {
-        let exampleMovie = Movie({
+    before(async () => {
+        let deleteTest = Movie({
             "actors": [
-                "Emily Blunt",
-                "Djimon Hounsou",
-                "Cillian Murphy",
-                "Noah Jupe",
-                "Millicent Simmonds"
+                "actor1",
+                "actor2"
             ],
-            "showings": [
-                "16:30",
-                "18:00",
-                "20:00"
-            ],
-            "title": "A Quiet Place Part II big ol' test",
-            "poster": "aqp.jpg",
-            "director": "John Krasinski"
+            "showings": [],
+            "title": "deleteTest",
+            "poster": "test.jpg",
+            "director": "testdirector"
         })
-        // exampleMovie.save().then(() => console.log('complete'));
+
+        let updateTest = Movie({
+            "actors": [
+                "actor1",
+                "actor2"
+            ],
+            "showings": [],
+            "title": "updateTest",
+            "poster": "test.jpg",
+            "director": "testdirector"
+        })
+        await deleteTest.save();
+        await updateTest.save();
+        // deleteTest.save().then(() => console.log('test data saved'));
+        // updateTest.save().then(() => console.log('test data saved'));
     })
 
     after(() => {
-        Movie.deleteMany({ 'title': 'testtitle' }, function (err) {
+        Movie.deleteMany({ 'title': 'createTest' }, function (err) {
             if (err) return handleError(err);
         });
+
+        Movie.deleteMany({ 'title': 'updateTest' }, function (err) {
+            if (err) return handleError(err);
+        });
+
     })
 
     it(`should return string when '/test' is accessed`, (done) => {
@@ -57,12 +69,10 @@ describe(`Movies testing`, () => {
             expect(response).to.have.status(200);
             expect(response).to.not.be.null;
             const body = response.body;
-            // console.log("RESPONSE" + response.text);
             body.map((movie) => {
                 expect(movie).to.be.a("object");
                 expect(movie).to.contain.keys("title");
                 expect(movie).to.contain.keys("showings");
-                // expect(movie.showings).to.be.an('array').that.is.not.empty;
                 expect(movie.title).to.be.a("string");
             })
             done();
@@ -95,7 +105,7 @@ describe(`Movies testing`, () => {
                 "actor2"
             ],
             "showings": [],
-            "title": "testtitle",
+            "title": "createTest",
             "poster": "test.jpg",
             "director": "testdirector",
         }).end((error, response) => {
@@ -109,7 +119,7 @@ describe(`Movies testing`, () => {
             expect(movie).to.be.a("object");
             expect(movie).to.contain.keys("title");
             expect(movie.title).to.be.a("string");
-            expect(movie.title).to.equal("testtitle");
+            expect(movie.title).to.equal("createTest");
             done();
         })
     })
@@ -185,28 +195,50 @@ describe(`Movies testing`, () => {
         })
     })
 
-
-
-
-    //TODO
-
-    it.skip(`should delete the movie in the db`, (done) => {
-        chai.request('localhost:5000').delete('/cinema/movies/60ec2b8fe0e83670f9f2a507').end((error, response) => {
-            if (error) {
-                console.log(`Something went wrong`);
-                done(error);
-            }
-            expect
-        })
+    it(`should update the movie in the db`, (done) => {
+        Movie.findOne(
+            { 'title': 'updateTest' }, (err, movie) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).patch(`/cinema/movies/${movie._id}`).send({ "director": "the director has been updated" }).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response).to.not.be.null;
+                        const movie = response.body;
+                        expect(movie).to.be.a("object");
+                        expect(movie).to.contain.keys("title");
+                        expect(movie.title).to.be.a("string");
+                        expect(movie.title).to.equal("updateTest");
+                        expect(movie).to.contain.keys("director");
+                        expect(movie.director).to.be.a("string");
+                        expect(movie.director).to.equal("the director has been updated");
+                        done();
+                    })
+                }
+            })
     })
 
-    it.skip(`should update the movie in the db`, (done) => {
-        chai.request('localhost:5000').patch('/cinema/movies/60ec2b8fe0e83670f9f2a507').end((error, response) => {
-            if (error) {
-                console.log(`Something went wrong`);
-                done(error);
-            }
-            expect
-        })
+    it(`should delete the movie in the db`, (done) => {
+        Movie.findOne(
+            { 'title': 'deleteTest' }, (err, movie) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).delete(`/cinema/movies/${movie._id}`).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response.text).to.equal(`${movie.title} deleted`);
+                        expect(response).to.not.be.null;
+                        done();
+                    })
+                }
+            })
     })
 })

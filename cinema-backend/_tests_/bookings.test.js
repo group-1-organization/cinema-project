@@ -8,8 +8,36 @@ const Booking = require('../models/Booking');
 
 describe(`Bookings testing`, () => {
 
+    before(async () => {
+        let deleteTest = Booking({
+            "movie": "testmovie",
+            "screening": "12:00",
+            "booker": "deleteTest",
+            "adults": 1,
+            "children": 0,
+            "concessions": 1,
+            "noOfSeats": 2
+        })
+
+        let updateTest = Booking({
+            "movie": "testmovie",
+            "screening": "12:00",
+            "booker": "updateTest",
+            "adults": 1,
+            "children": 0,
+            "concessions": 1,
+            "noOfSeats": 2
+        })
+        await deleteTest.save();
+        await updateTest.save();
+    })
+
     after(() => {
-        Booking.deleteMany({ "movie": "testmovie" }, function (err) {
+        Booking.deleteMany({ 'booker': 'createTest' }, function (err) {
+            if (err) return handleError(err);
+        });
+
+        Booking.deleteMany({ 'booker': 'updateTest' }, function (err) {
             if (err) return handleError(err);
         });
     });
@@ -19,7 +47,7 @@ describe(`Bookings testing`, () => {
         chai.request(app).post('/cinema/bookings').send({
             "movie": "testmovie",
             "screening": "12:00",
-            "booker": "John",
+            "booker": "createTest",
             "adults": 1,
             "children": 0,
             "concessions": 1,
@@ -33,9 +61,9 @@ describe(`Bookings testing`, () => {
             expect(response).to.not.be.null;
             const booking = response.body;
             expect(booking).to.be.a("object");
-            expect(booking).to.contain.keys("movie");
-            expect(booking.movie).to.be.a("string");
-            expect(booking.movie).to.equal("testmovie");
+            expect(booking).to.contain.keys("booker");
+            expect(booking.booker).to.be.a("string");
+            expect(booking.booker).to.equal("createTest");
             done();
         })
     })
@@ -59,26 +87,51 @@ describe(`Bookings testing`, () => {
         })
     })
 
-
-    //TODO
-
-    it.skip(`should update the booking in the db`, (done) => {
-        chai.request('localhost:5000').patch('/cinema/bookings/60ec2b8fe0e83670f9f2a507').end((error, response) => {
-            if (error) {
-                console.log(`Something went wrong`);
-                done(error);
-            }
-            expect
-        })
+    it(`should update the booking in the db`, (done) => {
+        Booking.findOne(
+            { 'booker': 'updateTest' }, (err, booking) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).patch(`/cinema/bookings/${booking._id}`).send({ "movie": "the movie has been updated" }).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response).to.not.be.null;
+                        const booking = response.body;
+                        console.log(booking.text);
+                        expect(booking).to.be.a("object");
+                        expect(booking).to.contain.keys("booker");
+                        expect(booking.booker).to.be.a("string");
+                        expect(booking.booker).to.equal("updateTest");
+                        expect(booking).to.contain.keys("movie");
+                        expect(booking.movie).to.be.a("string");
+                        expect(booking.movie).to.equal("the movie has been updated");
+                        done();
+                    })
+                }
+            })
     })
 
-    it.skip(`should delete the booking in the db`, (done) => {
-        chai.request('localhost:5000').delete('/cinema/bookings/60ec2b8fe0e83670f9f2a507').end((error, response) => {
-            if (error) {
-                console.log(`Something went wrong`);
-                done(error);
-            }
-            expect
-        })
+    it(`should delete the booking in the db`, (done) => {
+        Booking.findOne(
+            { 'booker': 'deleteTest' }, (err, booking) => {
+                if (err) {
+                    console.error('An error occurred:', err);
+                } else {
+                    chai.request(app).delete(`/cinema/bookings/${booking._id}`).end((error, response) => {
+                        if (error) {
+                            console.log(`Something went wrong`);
+                            done(error);
+                        }
+                        expect(response).to.have.status(200);
+                        expect(response.text).to.equal(`Booking by ${booking.booker} for ${booking.movie} deleted`);
+                        expect(response).to.not.be.null;
+                        done();
+                    })
+                }
+            })
     })
 })
