@@ -104,7 +104,6 @@ describe(`Topics testing`, () => {
                         expect(response).to.have.status(200);
                         expect(response).to.not.be.null;
                         const topic = response.body;
-                        console.log(topic.text);
                         expect(topic).to.be.a("object");
                         expect(topic).to.contain.keys("author");
                         expect(topic.author).to.be.a("string");

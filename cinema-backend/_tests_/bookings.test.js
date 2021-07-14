@@ -104,7 +104,6 @@ describe(`Bookings testing`, () => {
                         expect(response).to.have.status(200);
                         expect(response).to.not.be.null;
                         const booking = response.body;
-                        console.log(booking.text);
                         expect(booking).to.be.a("object");
                         expect(booking).to.contain.keys("booker");
                         expect(booking.booker).to.be.a("string");

@@ -88,7 +88,6 @@ describe(`Comments testing`, () => {
                         expect(response).to.have.status(200);
                         expect(response).to.not.be.null;
                         const comment = response.body;
-                        console.log(comment.text);
                         expect(comment).to.be.a("object");
                         expect(comment).to.contain.keys("author");
                         expect(comment.author).to.be.a("string");

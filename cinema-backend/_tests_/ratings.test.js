@@ -111,7 +111,6 @@ describe(`Ratings testing`, () => {
                         expect(response).to.have.status(200);
                         expect(response).to.not.be.null;
                         const rating = response.body;
-                        console.log(rating.text);
                         expect(rating).to.be.a("object");
                         expect(rating).to.contain.keys("movieName");
                         expect(rating.movieName).to.be.a("string");
