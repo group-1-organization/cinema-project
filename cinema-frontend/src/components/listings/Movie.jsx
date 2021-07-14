@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import Showings from './Showings';
 
 const Movie = ({ setTime, setTitle }) => {
@@ -17,7 +16,6 @@ const Movie = ({ setTime, setTitle }) => {
     const [actors, setActors] = useState(["a1", "a2"]);
     const [showings, setShowings] = useState(["a1", "a2"]);
     const [poster, setPoster] = useState("");
-
 
     useEffect(() => {
         getMovie();
