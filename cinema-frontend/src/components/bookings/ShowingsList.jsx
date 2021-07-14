@@ -52,7 +52,6 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
             <Form.Control as="select" defaultValue={time} onChange={(e) => { setSelectedTime(e.target.value) }}>
                 <option>Select a Time</option>
                 {movieTime.map((shows, i) => {
-
                     if (shows == time) {
                         return (
                             <option selected key={i} > {shows}</option>

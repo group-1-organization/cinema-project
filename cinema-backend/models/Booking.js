@@ -7,6 +7,11 @@ const bookingSchema = new Schema({
         minlength: 2,
         required: true
     },
+    date: {
+        type: String,
+        minlength: 2,
+        required: true
+    },
     screening: {
         type: String,
         minlength: 1,
