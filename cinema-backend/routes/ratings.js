@@ -19,7 +19,7 @@ router.post('/ratings', async (req, res) => {
     }
 })
 
-//get rating
+//get all ratings
 router.get('/ratings', async (req, res) => {
     try {
         const rating = await Rating.find();
@@ -55,5 +55,30 @@ router.get('/ratings/movie/:name', async (req, res) => {
         res.send({ error: "rating doesn't exist" });
     }
 })
+
+//update rating
+router.patch('/ratings/:id', async (req, res) => {
+    try {
+        let rating = await Rating.findById(req.params.id);
+        if (req.body.rating) { rating.rating = req.body.rating };
+        await rating.save();
+        res.send(rating);
+    } catch {
+        res.status(404);
+        res.send({ error: 'rating does not exist' })
+    }
+});
+
+//delete rating
+router.delete('/ratings/:id', async (req, res) => {
+    try {
+        const rating = await Rating.findById(req.params.id);
+        await rating.deleteOne();
+        res.send(`Rating of ${rating.movieName} deleted`);
+    } catch {
+        res.status(404);
+        res.send({ error: "rating doesn't exist" });
+    }
+});
 
 module.exports = router;
