@@ -16,6 +16,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "deleteTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector"
         })
@@ -27,6 +28,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "updateTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector"
         })
@@ -104,6 +106,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "createTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector",
         }).end((error, response) => {
@@ -202,6 +205,7 @@ describe(`Movies testing`, () => {
                     chai.request(app).patch(`/cinema/movies/${movie._id}`).send({
                         "actors": ["actor1", "actor2", "actor3"],
                         "showings": ["a showing"],
+                        "description": "newdescription",
                         "poster": "newpic.jpg",
                         "director": "updateddirector",
                     }).end((error, response) => {

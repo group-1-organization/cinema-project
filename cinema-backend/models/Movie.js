@@ -7,6 +7,11 @@ const movieSchema = new Schema({
         minlength: 2,
         required: true
     },
+    description: {
+        type: String,
+        minlength: 2,
+        required: true
+    },
     poster: {
         type: String,
         minlength: 2,
