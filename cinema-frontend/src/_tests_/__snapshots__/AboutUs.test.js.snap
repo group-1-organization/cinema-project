@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Us page matches snapshot 1`] = `
+<div>
+  <center
+    className="page-header"
+  >
+    <h1>
+      About Us
+    </h1>
+  </center>
+  <div
+    className="mt-4 container"
+  >
+    <nav
+      className="nav-justified nav nav-tabs"
+      onKeyDown={[Function]}
+      role="tablist"
+    >
+      <a
+        aria-controls="about-tab-tabpane-amandeep"
+        aria-selected={true}
+        className="nav-item nav-link active"
+        data-rb-event-key="amandeep"
+        href="#"
+        id="about-tab-tab-amandeep"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Amandeep
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-james"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="james"
+        href="#"
+        id="about-tab-tab-james"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        James
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-richard"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="richard"
+        href="#"
+        id="about-tab-tab-richard"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Richard
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-scott"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="scott"
+        href="#"
+        id="about-tab-tab-scott"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Scott
+      </a>
+    </nav>
+    <div
+      className="tab-content"
+    >
+      <div
+        aria-hidden={false}
+        aria-labelledby="about-tab-tab-amandeep"
+        className="fade tab-pane active show"
+        id="about-tab-tabpane-amandeep"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="amandeep.png"
+          />
+          <br />
+          <br />
+          Amandeep is a QA consultant with a wounded thumb, who rules us with an iron fist, he is a good leader and I dont have a gun to my head I promise. Vive le resistance! Down with the Bassi regime!
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/AmanBassi"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-james"
+        className="fade tab-pane"
+        id="about-tab-tabpane-james"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="james.png"
+          />
+          <br />
+          <br />
+          James is a QA consultant and the general of our forces, he has won many battles against our sworn enemies the Autobots, James is also known a Star Scream
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/JamesBarnett44"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-richard"
+        className="fade tab-pane"
+        id="about-tab-tabpane-richard"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="richard.png"
+          />
+          <br />
+          <br />
+          Richard is a QA consultant with a face that looks like a scottish singer or whatever Edsel said, who knows if this is true but he is unhappy that it's a scottish one
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/sgtnamder"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-scott"
+        className="fade tab-pane"
+        id="about-tab-tabpane-scott"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="scott.png"
+          />
+          <br />
+          <br />
+          Scott is a Sad and Sexy man with a deep and long standing relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/Diakoptes24"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <center>
+      <p>
+        If you want to contact us directly you can do so using the Contact Page or follow the link below
+      </p>
+      <p>
+        Any feedback is welcomed
+      </p>
+      <a
+        href="/contact"
+        onClick={[Function]}
+      >
+        <button
+          className="button-colour btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Contact Us
+        </button>
+      </a>
+    </center>
+    <br />
+    <hr
+      className="row-col"
+    />
+  </div>
+  <center>
+    <h2>
+      SCRUM
+    </h2>
+  </center>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      border-color="white"
+      className="bg-dark jumbotron"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-3"
+        >
+          <div
+            className="flex-column nav nav-pills"
+            onKeyDown={[Function]}
+            role="tablist"
+          >
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={true}
+                className="nav-link active"
+                data-rb-event-key="first"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                What Is SCRUM?
+              </a>
+            </div>
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={false}
+                className="nav-link"
+                data-rb-event-key="second"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                Implementation
+              </a>
+            </div>
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={false}
+                className="nav-link"
+                data-rb-event-key="third"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                Find Out More
+              </a>
+            </div>
+            <br />
+          </div>
+        </div>
+        <div
+          className="col-sm-9"
+        >
+          <div
+            className="tab-content"
+          >
+            <div
+              aria-hidden={false}
+              aria-labelledby={null}
+              className="fade tab-pane active show"
+              id={null}
+              role="tabpanel"
+            >
+              Scrum gets its name from Rugby - where a team tries to go the distance as a unit, passing the ball back and forth. It is Lightweight and Simple to understand but Difficult to master. The scrum framework is iteritive and will produce a potentially shippable increment at the end of every sprint. A potentially shippable increment means that it will add functionality on what was there previously, therefore adding value. The additional code should be "shippable" (it shouldn't be half broken, it should be ready to distribute).
+            </div>
+            <div
+              aria-hidden={true}
+              aria-labelledby={null}
+              className="fade tab-pane"
+              id={null}
+              role="tabpanel"
+            >
+              During this project, we used Jira to implement our SCRUM. We split the project into stories and tasks at the start of our project to ensure that all aspects of the project were covered, then each of these tasks/stories would be placed into an appropriate epic, for organisation. Then each of the tasks/stories was given a description, story points, and priorities based on the feedback from the team, these are then organized into sprints each week, and tasks were talked about and checkout out into in progress by each member. Git what integrated into our scrum to ensure that we would know if it had been merged or not and therefore could be placed into done.
+            </div>
+            <div
+              aria-hidden={true}
+              aria-labelledby={null}
+              className="fade tab-pane"
+              id={null}
+              role="tabpanel"
+            >
+              <p>
+                Scrum.org, the Home of Scrum, was founded by Scrum co-creator Ken Schwaber as a mission-based organization to help people and teams solve complex problems. They do this by enabling people to apply Professional Scrum through training courses, certifications and ongoing learning all based on a common competency model.
+              </p>
+              <center>
+                <a
+                  href="https://www.scrum.org/"
+                  target="_blank"
+                >
+                  www.scrum.org
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

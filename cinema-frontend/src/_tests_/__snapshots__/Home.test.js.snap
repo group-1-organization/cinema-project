@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage matches snapshot 1`] = `
+<div>
+  <div
+    class="logo-header"
+  >
+    <img
+      alt="QA Cinema banner"
+      class="logo-center"
+      className="img-fluid"
+      src="/images/BannerResize.png"
+    />
+  </div>
+  <div
+    className="carousel slide"
+    onKeyDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+  >
+    <ol
+      className="carousel-indicators"
+    >
+      <li
+        className="active"
+        onClick={[Function]}
+      />
+      <li
+        onClick={[Function]}
+      />
+      <li
+        onClick={[Function]}
+      />
+    </ol>
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="active carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="A Quiet Place 2 banner"
+          className="d-block w-100"
+          src="/images/f9-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+      <div
+        className="carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="In The Heights banner"
+          className="d-block w-100"
+          src="/images/bw-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+      <div
+        className="carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="Black Widow banner"
+          className="d-block w-100"
+          src="/images/sj-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+    </div>
+    <a
+      className="carousel-control-prev"
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="carousel-control-next"
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/premiumdecor.jpg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              QA Cinema
+            </div>
+            <p
+              className="card-text"
+            >
+              QA Cinema provides you with the latest, biggest films at afforable prices; With comfortable seating and reasonably priced food & drink to boot, what reason is there not to come spend an evening with us? Here at QACinema.com you can browse the latest films, those still to come, book tickets and find out more about us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/hire.jpeg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Private hire!
+            </div>
+            <p
+              className="card-text"
+            >
+              Bothered by all the strange plebians in the cinema? Want to place some games on that big screen instead? Then consider hiring one of our screens privately for you and your friends, with prices starting from just £100!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/safety.jpg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Covid safety guidelines
+            </div>
+            <p
+              className="card-text"
+            >
+              As a result of the pandemic, we have set safety measures in place to help keep our customers safe, including numerous sanitising stations and socially distanced seating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

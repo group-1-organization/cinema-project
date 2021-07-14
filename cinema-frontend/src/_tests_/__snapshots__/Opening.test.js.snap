@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Opening page matches snapshot 1`] = `
+<div>
+  <div
+    class="page-header"
+  >
+    <h1>
+      Opening Hours
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <table
+      className="table-format table table-borderless"
+    >
+      <tbody>
+        <tr>
+          <td>
+            Monday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Tuesday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wednesday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Thursday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Friday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Saturday:
+          </td>
+          <td>
+            9:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td
+            className={true}
+          >
+            Sunday:
+          </td>
+          <td>
+            9:00 - 23:00
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,1982 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Us page matches snapshot 1`] = `
+<div>
+  <center
+    className="page-header"
+  >
+    <h1>
+      About Us
+    </h1>
+  </center>
+  <div
+    className="mt-4 container"
+  >
+    <nav
+      className="nav-justified nav nav-tabs"
+      onKeyDown={[Function]}
+      role="tablist"
+    >
+      <a
+        aria-controls="about-tab-tabpane-amandeep"
+        aria-selected={true}
+        className="nav-item nav-link active"
+        data-rb-event-key="amandeep"
+        href="#"
+        id="about-tab-tab-amandeep"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Amandeep
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-james"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="james"
+        href="#"
+        id="about-tab-tab-james"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        James
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-richard"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="richard"
+        href="#"
+        id="about-tab-tab-richard"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Richard
+      </a>
+      <a
+        aria-controls="about-tab-tabpane-scott"
+        aria-selected={false}
+        className="nav-item nav-link"
+        data-rb-event-key="scott"
+        href="#"
+        id="about-tab-tab-scott"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        Scott
+      </a>
+    </nav>
+    <div
+      className="tab-content"
+    >
+      <div
+        aria-hidden={false}
+        aria-labelledby="about-tab-tab-amandeep"
+        className="fade tab-pane active show"
+        id="about-tab-tabpane-amandeep"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="amandeep.png"
+          />
+          <br />
+          <br />
+          Amandeep is a QA consultant with a wounded thumb, who rules us with an iron fist, he is a good leader and I dont have a gun to my head I promise. Vive le resistance! Down with the Bassi regime!
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/AmanBassi"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-james"
+        className="fade tab-pane"
+        id="about-tab-tabpane-james"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="james.png"
+          />
+          <br />
+          <br />
+          James is a QA consultant and the general of our forces, he has won many battles against our sworn enemies the Autobots, James is also known a Star Scream
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/JamesBarnett44"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-richard"
+        className="fade tab-pane"
+        id="about-tab-tabpane-richard"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="richard.png"
+          />
+          <br />
+          <br />
+          Richard is a QA consultant with a face that looks like a scottish singer or whatever Edsel said, who knows if this is true but he is unhappy that it's a scottish one
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/sgtnamder"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="about-tab-tab-scott"
+        className="fade tab-pane"
+        id="about-tab-tabpane-scott"
+        role="tabpanel"
+      >
+        <br />
+        <center>
+          <img
+            className="about-image"
+            src="scott.png"
+          />
+          <br />
+          <br />
+          Scott is a Sad and Sexy man with a deep and long standing relationship with kevin... "Kevin sits daydreaming at his computer, thinking about Scott in those cute kittycat ears. It was last evening when Kevin brought those doggy biscuits and seductively ate them off his toes. He is brought to a rude awakening when he hears Scott scream "Kevin is a feeder". He reaches under the desk and grabs a pack of dog biscuits. It's feeding time..."
+          <br />
+          <br />
+          <a
+            className="button-colour adj-button btn btn-primary"
+            href="https://github.com/Diakoptes24"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            GitHub
+          </a>
+          <a
+            className="button-colour btn btn-primary"
+            href="https://www.qa.com/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            target="_blank"
+          >
+            Company
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <center>
+      <p>
+        If you want to contact us directly you can do so using the Contact Page or follow the link below
+      </p>
+      <p>
+        Any feedback is welcomed
+      </p>
+      <a
+        href="/contact"
+        onClick={[Function]}
+      >
+        <button
+          className="button-colour btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Contact Us
+        </button>
+      </a>
+    </center>
+    <br />
+    <hr
+      className="row-col"
+    />
+  </div>
+  <center>
+    <h2>
+      SCRUM
+    </h2>
+  </center>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      border-color="white"
+      className="bg-dark jumbotron"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-3"
+        >
+          <div
+            className="flex-column nav nav-pills"
+            onKeyDown={[Function]}
+            role="tablist"
+          >
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={true}
+                className="nav-link active"
+                data-rb-event-key="first"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                What Is SCRUM?
+              </a>
+            </div>
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={false}
+                className="nav-link"
+                data-rb-event-key="second"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                Implementation
+              </a>
+            </div>
+            <div
+              className="nav-item"
+            >
+              <a
+                aria-selected={false}
+                className="nav-link"
+                data-rb-event-key="third"
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="tab"
+              >
+                Find Out More
+              </a>
+            </div>
+            <br />
+          </div>
+        </div>
+        <div
+          className="col-sm-9"
+        >
+          <div
+            className="tab-content"
+          >
+            <div
+              aria-hidden={false}
+              aria-labelledby={null}
+              className="fade tab-pane active show"
+              id={null}
+              role="tabpanel"
+            >
+              Scrum gets its name from Rugby - where a team tries to go the distance as a unit, passing the ball back and forth. It is Lightweight and Simple to understand but Difficult to master. The scrum framework is iteritive and will produce a potentially shippable increment at the end of every sprint. A potentially shippable increment means that it will add functionality on what was there previously, therefore adding value. The additional code should be "shippable" (it shouldn't be half broken, it should be ready to distribute).
+            </div>
+            <div
+              aria-hidden={true}
+              aria-labelledby={null}
+              className="fade tab-pane"
+              id={null}
+              role="tabpanel"
+            >
+              During this project, we used Jira to implement our SCRUM. We split the project into stories and tasks at the start of our project to ensure that all aspects of the project were covered, then each of these tasks/stories would be placed into an appropriate epic, for organisation. Then each of the tasks/stories was given a description, story points, and priorities based on the feedback from the team, these are then organized into sprints each week, and tasks were talked about and checkout out into in progress by each member. Git what integrated into our scrum to ensure that we would know if it had been merged or not and therefore could be placed into done.
+            </div>
+            <div
+              aria-hidden={true}
+              aria-labelledby={null}
+              className="fade tab-pane"
+              id={null}
+              role="tabpanel"
+            >
+              <p>
+                Scrum.org, the Home of Scrum, was founded by Scrum co-creator Ken Schwaber as a mission-based organization to help people and teams solve complex problems. They do this by enabling people to apply Professional Scrum through training courses, certifications and ongoing learning all based on a common competency model.
+              </p>
+              <center>
+                <a
+                  href="https://www.scrum.org/"
+                  target="_blank"
+                >
+                  www.scrum.org
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Classifications page matches snapshot 1`] = `
+Array [
+  <div
+    class="page-header"
+  >
+    <h1>
+       Film Classifications 
+    </h1>
+  </div>,
+  <div
+    className="container"
+  >
+    <br />
+    <h4>
+      For more information on  the film ratings system go 
+      <a
+        href="https://www.bbfc.co.uk/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        here
+      </a>
+    </h4>
+    <br />
+    <div
+      className="container-fluid"
+    >
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="universal"
+            className="img-fluid"
+            src="/images/u.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            Universal - Suitable for all
+          </h3>
+          <p>
+            A U film should be suitable for audiences aged four years and over, although it is impossible to predict what might upset any particular child. U films should be set within a positive framework and should offer reassuring counterbalances to any violence, threat or horror. If a work is particularly suitable for pre-school children, this will be indicated in the Ratings Info.
+          </p>
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            More Information
+          </button>
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <ul>
+              <li>
+                Potentially dangerous behaviour must be clearly disapproved of. No emphasis on realistic or easily accessible weapons.
+              </li>
+              <li>
+                Discriminatory language or behaviour is unlikely to be acceptable unless clearly disapproved of
+              </li>
+              <li>
+                References to illegal drugs or drug misuse must be infrequent and innocuous, or have a clear educational purpose or anti-drug message.
+              </li>
+              <li>
+                Infrequent use only of very mild bad language.
+              </li>
+              <li>
+                Occasional nudity, with no sexual context.
+              </li>
+              <li>
+                Scary or potentially unsettling sequences should be mild, brief and unlikely to cause undue anxiety. The outcome should be reassuring.
+              </li>
+              <li>
+                Violence will generally be very mild. Mild violence may be acceptable if it is justified by context (for example, comedic, animated, wholly unrealistic).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="parentalguidance"
+            className="img-fluid"
+            src="/images/pg.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            PG Parental Guidance
+          </h3>
+          <p>
+            General viewing, but some scenes may be unsuitable for young children. A PG film should not unsettle a child aged around eight or older. Unaccompanied children of any age may watch, but parents are advised to consider whether the content may upset younger, or more sensitive, children.
+          </p>
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            More Information
+          </button>
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <ul>
+              <li>
+                No detail of potentially dangerous behaviour. No glamorisation of realistic or easily accessible weapons 
+              </li>
+              <li>
+                Discrimination by a character with whom children can readily identify is unlikely to be acceptable.
+              </li>
+              <li>
+                References to illegal drugs or drug misuse must be innocuous or carry a suitable anti-drug message.
+              </li>
+              <li>
+                Mild bad language only.
+              </li>
+              <li>
+                There may be nudity with no sexual context.
+              </li>
+              <li>
+                Situations should not be prolonged or intense. Setting and comedy may be mitigating factors.
+              </li>
+              <li>
+                There may be moderate violence, without detail, if justified by its context.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="12andover"
+            className="img-fluid"
+            src="/images/12a.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            12A/12 – Suitable for 12 years and over
+          </h3>
+          <p>
+            Films classified 12A and video works classified 12 contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. To help them decide, we recommend that they check the Ratings Info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.
+          </p>
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            More Information
+          </button>
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <ul>
+              <li>
+                No promotion of potentially dangerous behaviour.
+              </li>
+              <li>
+                Discriminatory language or behaviour must not be endorsed by the work as a whole.
+              </li>
+              <li>
+                Misuse of drugs must be infrequent and should not be glamorised or give detailed instruction.
+              </li>
+              <li>
+                There may be moderate bad language. Strong language may be permitted, depending on context.
+              </li>
+              <li>
+                There may be nudity/ sexual content, but in a sexual context it must be brief and discreet.
+              </li>
+              <li>
+                There may be moderate physical and psychological threat and horror sequences.
+              </li>
+              <li>
+                There may be moderate violence but it should not dwell on detail.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="15andover"
+            className="img-fluid"
+            src="/images/15.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            15 – Suitable only for 15 years and over
+          </h3>
+          <p>
+            No one younger than 15 may see a 15 film in a cinema. No one younger than 15 may rent or buy a 15 rated video work.
+          </p>
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            More Information
+          </button>
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <ul>
+              <li>
+                Dangerous behaviour should not dwell on detail which could be copied.
+              </li>
+              <li>
+                Discriminatory language or behaviour must not be endorsed by the work as a whole.
+              </li>
+              <li>
+                Drug taking may be shown but the work as a whole must not promote or encourage drug misuse.
+              </li>
+              <li>
+                There may be strong language. Very strong language may be permitted, depending on context.
+              </li>
+              <li>
+                There are no constraints on nudity in a non-sexual or educational context. Sexual nudity may be permitted but strong detail is likely to be brief or presented in a comic context.
+              </li>
+              <li>
+                Sexual activity may be portrayed, but usually without strong detail.
+              </li>
+              <li>
+                There may be strong verbal references to sexual violence.
+              </li>
+              <li>
+                There may be strong threat and horror. A sustained focus on sadistic threat is unlikely to be acceptable.
+              </li>
+              <li>
+                Violence may be strong but should not dwell on the infliction of pain or injury.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="18andover"
+            className="img-fluid"
+            src="/images/18.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            18 – Suitable only for adults
+          </h3>
+          <p>
+            No one younger than 18 may see an 18 film in a cinema. No one younger than 18 may rent or buy an 18 rated video work. Adults should be free to choose their own entertainment. Exceptions are below:
+          </p>
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            More Information
+          </button>
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <ul>
+              <li>
+                where the material is in breach of the criminal law, or has been created through the commission of a criminal offence
+              </li>
+              <li>
+                where material or treatment appears to us to risk harm to individuals or, through their behaviour, to society. 
+              </li>
+              <li>
+                where there are more explicit images of sexual activity in the context of a sex work.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 row"
+      >
+        <div
+          className="col-sm-2"
+        >
+          <img
+            alt="r18"
+            className="img-fluid"
+            src="/images/r18.png"
+          />
+        </div>
+        <div
+          className="col-sm-10"
+        >
+          <h3>
+            R18
+          </h3>
+          <p>
+            The R18 category is a special and legally-restricted classification primarily for explicit works of consenting sex or strong fetish material involving adults. Films may only be shown to adults in specially licensed cinemas, and video works may be supplied to adults only in licensed sex shops. R18 video works may not be supplied by mail order.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Comment form matches snapshot 1`] = `
+<form
+  className=""
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="authorInput"
+    >
+      Your Name
+    </label>
+    <input
+      className="form-control"
+      id="authorInput"
+      onChange={[Function]}
+      pattern=".*\\\\S+.*"
+      placeholder="Enter your name"
+      required={true}
+      title="This field is required"
+      type="text"
+      value=""
+    />
+    <div
+      className="invalid-feedback"
+    >
+      Please choose a username.
+    </div>
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="commentTextarea"
+    >
+      Message
+    </label>
+    <textarea
+      className="form-control"
+      id="commentTextarea"
+      onChange={[Function]}
+      pattern=".*\\\\S+.*"
+      required={true}
+      rows={3}
+      title="This field is required"
+      value=""
+    />
+  </div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="Submit"
+  >
+    Submit
+  </button>
+</form>
+`;
+
+exports[`Comment matches snapshot 1`] = `
+<div
+  className="border-bottom m-3"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        <strong>
+          Amandeep
+        </strong>
+      </p>
+    </div>
+    <div
+      className="col"
+    >
+      <small
+        className="float-right"
+      >
+        8 hours ago
+      </small>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        Comments ****
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Comments matches snapshot 1`] = `null`;
+
+exports[`Discussion page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Discussion board
+    </h1>
+  </div>
+  <div
+    className="container"
+  >
+    <h3>
+      Topics
+    </h3>
+    <button
+      className="button-colour btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Create topic
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Footer matches snapshot 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="mb-0"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Where to find us
+        </h4>
+        <ul
+          className="list-unstyled"
+        >
+          <li>
+            Bentley Bridge Park
+          </li>
+          <li>
+            Wednesfield Way
+          </li>
+          <li>
+            Wolverhampton
+          </li>
+          <li>
+            WV11 1TZ
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Find out more
+        </h4>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <br />
+        <a
+          href="/aboutus"
+          onClick={[Function]}
+        >
+          About Us
+        </a>
+        <br />
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </div>
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Follow Us
+        </h4>
+        <a
+          href="https://www.facebook.com/QALtd/"
+        >
+          Facebook
+        </a>
+        <br />
+        <a
+          href="https://twitter.com/QA_Ltd"
+        >
+          Twitter
+        </a>
+        <br />
+        <a
+          href="https://www.instagram.com/qalimited/?hl=en"
+        >
+          Instagram
+        </a>
+        <br />
+        <a
+          href="https://www.youtube.com/channel/UCr5kx6_fYtqx0LLD7aW2zIg"
+        >
+          YouTube
+        </a>
+        <br />
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>
+      QA Cinema © 2021
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Getting there page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      How to find us
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col-md-6"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <img
+            className="card-img-top"
+            src="/images/cinema.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-6"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <img
+            className="card-img-top"
+            src="/images/cineworld-outside.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Address
+            </div>
+            <p
+              className="card-text"
+            >
+              Bentley Bridge Park 
+              <br />
+              Wednesfield Way 
+              <br />
+              Wolverhampton 
+              <br />
+              WV11 1TZ
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Directions
+            </div>
+            <div
+              className="mb-2 text-muted card-subtitle h6"
+            >
+              Bus
+            </div>
+            <p
+              className="card-text"
+            >
+              Buses 59, 561, 562, 613 stop near the cinema. There are also the 69, 89, 25 and 28 lines from the bus station.
+            </p>
+            <div
+              className="mb-2 text-muted card-subtitle h6"
+            >
+              Train
+            </div>
+            <p
+              className="card-text"
+            >
+              Nearest station Wolverhampton. Take bus from bus station close by.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Parking
+            </div>
+            <p
+              className="card-text"
+            >
+              Free parking available is available nearby the cinema.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Map
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "650px",
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                onClick={[Function]}
+                onMouseDownCapture={[Function]}
+                onMouseMove={[Function]}
+                style={
+                  Object {
+                    "height": "100%",
+                    "margin": 0,
+                    "padding": 0,
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "margin": 0,
+                      "padding": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "height": "50%",
+                      "left": "50%",
+                      "margin": 0,
+                      "padding": 0,
+                      "position": "absolute",
+                      "top": "50%",
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "margin": 0,
+                        "padding": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "height": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "top": 0,
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "backgroundColor": "white",
+                            "border": "5px solid #f44336",
+                            "borderRadius": 40,
+                            "color": "#3f51b5",
+                            "fontSize": 16,
+                            "fontWeight": "bold",
+                            "height": 40,
+                            "left": -20,
+                            "padding": 4,
+                            "position": "absolute",
+                            "textAlign": "center",
+                            "top": -20,
+                            "width": 40,
+                          }
+                        }
+                      >
+                        QA
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header matches snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
+>
+  <a
+    className="nav-link"
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      className=""
+      src="/images/qa-logo.png"
+      width="50"
+    />
+     
+  </a>
+  <button
+    aria-controls="responsive-navbar-nav"
+    aria-label="Toggle navigation"
+    className="navbar-toggler collapsed"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    aria-expanded={null}
+    className="navbar-collapse collapse"
+    id="responsive-navbar-nav"
+  >
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/listing"
+          onClick={[Function]}
+        >
+          Listings
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/upcoming"
+          onClick={[Function]}
+        >
+          Upcoming
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/bookings"
+          onClick={[Function]}
+        >
+          Bookings
+        </a>
+      </div>
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="navbarScrollingDropdown"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Info
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/discussion"
+          onClick={[Function]}
+        >
+          Discussion Board
+        </a>
+      </div>
+    </div>
+    <form
+      className="form-inline"
+    >
+      <input
+        className="form-control"
+        id="movieSearch"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onInput={[Function]}
+        placeholder="Search Term"
+        type="text"
+      />
+      <a
+        aria-label="search-link"
+        href="/"
+        onClick={[Function]}
+      >
+        <button
+          aria-label="search-btn"
+          className="button-colour adj-search btn btn-primary"
+          disabled={false}
+          id="movieSearchSubmit"
+          type="button"
+        >
+          Search Term
+        </button>
+      </a>
+    </form>
+  </div>
+</nav>
+`;
+
+exports[`Homepage matches snapshot 1`] = `
+<div>
+  <div
+    class="logo-header"
+  >
+    <img
+      alt="QA Cinema banner"
+      class="logo-center"
+      className="img-fluid"
+      src="/images/BannerResize.png"
+    />
+  </div>
+  <div
+    className="carousel slide"
+    onKeyDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+  >
+    <ol
+      className="carousel-indicators"
+    >
+      <li
+        className="active"
+        onClick={[Function]}
+      />
+      <li
+        onClick={[Function]}
+      />
+      <li
+        onClick={[Function]}
+      />
+    </ol>
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="active carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="A Quiet Place 2 banner"
+          className="d-block w-100"
+          src="/images/f9-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+      <div
+        className="carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="In The Heights banner"
+          className="d-block w-100"
+          src="/images/bw-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+      <div
+        className="carousel-item"
+        interval={2000}
+      >
+        <img
+          alt="Black Widow banner"
+          className="d-block w-100"
+          src="/images/sj-banner.jpg"
+        />
+        <div
+          className="carousel-caption"
+        />
+      </div>
+    </div>
+    <a
+      className="carousel-control-prev"
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="carousel-control-next"
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/premiumdecor.jpg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              QA Cinema
+            </div>
+            <p
+              className="card-text"
+            >
+              QA Cinema provides you with the latest, biggest films at afforable prices; With comfortable seating and reasonably priced food & drink to boot, what reason is there not to come spend an evening with us? Here at QACinema.com you can browse the latest films, those still to come, book tickets and find out more about us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/hire.jpeg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Private hire!
+            </div>
+            <p
+              className="card-text"
+            >
+              Bothered by all the strange plebians in the cinema? Want to place some games on that big screen instead? Then consider hiring one of our screens privately for you and your friends, with prices starting from just £100!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="d-flex align-items-stretch col-lg-4 col-md-6"
+      >
+        <div
+          className="mt-4 card bg-dark text-light"
+        >
+          <img
+            className="card-img-top"
+            height="220"
+            src="/images/safety.jpg"
+            width="348"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Covid safety guidelines
+            </div>
+            <p
+              className="card-text"
+            >
+              As a result of the pandemic, we have set safety measures in place to help keep our customers safe, including numerous sanitising stations and socially distanced seating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Listings page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Listings page
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row row-cols-lg-4 row-cols-sm-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Marker matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "border": "5px solid #f44336",
+      "borderRadius": 40,
+      "color": "#3f51b5",
+      "fontSize": 16,
+      "fontWeight": "bold",
+      "height": 40,
+      "left": -20,
+      "padding": 4,
+      "position": "absolute",
+      "textAlign": "center",
+      "top": -20,
+      "width": 40,
+    }
+  }
+>
+  QA
+</div>
+`;
+
+exports[`NavSearch matches snapshot 1`] = `
+<form
+  className="form-inline"
+>
+  <input
+    className="form-control"
+    id="movieSearch"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onInput={[Function]}
+    placeholder="Search Term"
+    type="text"
+  />
+  <a
+    aria-label="search-link"
+    href="/"
+    onClick={[Function]}
+  >
+    <button
+      aria-label="search-btn"
+      className="button-colour adj-search btn btn-primary"
+      disabled={false}
+      id="movieSearchSubmit"
+      type="button"
+    >
+      Search Term
+    </button>
+  </a>
+</form>
+`;
+
+exports[`New Listings page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Listings page
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row row-cols-lg-4 row-cols-sm-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Opening page matches snapshot 1`] = `
+<div>
+  <div
+    class="page-header"
+  >
+    <h1>
+      Opening Hours
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <table
+      className="table-format table table-borderless"
+    >
+      <tbody>
+        <tr>
+          <td>
+            Monday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Tuesday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wednesday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Thursday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Friday:
+          </td>
+          <td>
+            11:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Saturday:
+          </td>
+          <td>
+            9:00 - 23:00
+          </td>
+        </tr>
+        <tr>
+          <td
+            className={true}
+          >
+            Sunday:
+          </td>
+          <td>
+            9:00 - 23:00
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Places page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Places to go
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <center>
+      <h6>
+        Here is just a few of the great local venues!
+      </h6>
+      <p>
+        <a
+          href="/gettingthere"
+          onClick={[Function]}
+        >
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            type="button"
+          >
+            How to find us
+          </button>
+        </a>
+      </p>
+    </center>
+    <div
+      className="row row-cols-lg-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Rating matches snapshot 1`] = `
+<p>
+  Loading...
+</p>
+`;
+
+exports[`Screens page matches snapshot 1`] = `
+<div>
+  <div
+    class="page-header"
+  >
+    <h1>
+      Screens
+    </h1>
+  </div>
+  <br />
+  <div
+    className="black-font"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="screen-card card"
+      >
+        <div
+          className="card-header"
+        >
+          <h2>
+            Standard screens
+          </h2>
+        </div>
+        <div
+          className="card-body"
+        >
+          <p
+            className="card-text"
+          >
+            Our standard screens feature comfortable seating with an arm rest on one side featuring a cup holder, with appreciable leg room and a great soundscape.
+          </p>
+          <br />
+          <img
+            alt="Standard decor"
+            src="standarddecor.jpg"
+          />
+          <br />
+          <br />
+          <button
+            aria-controls="collapse-standard-plan"
+            aria-expanded={false}
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            View Standard screen seating plan
+          </button>
+          <br />
+          <br />
+          <div
+            aria-expanded={null}
+            className="collapse"
+            id="collapse-standard-plan"
+          >
+            <img
+              alt="Standard seating"
+              src="standardseating.png"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        className="screen-card card"
+      >
+        <div
+          className="card-header"
+        >
+          <h2>
+            Premium screens
+          </h2>
+        </div>
+        <div
+          className="card-body"
+        >
+          <p
+            className="card-text"
+          >
+            Our premium screens feature extra comfortable seating with reclining chairs, an arm rest on each side both featuring a cup holder, and cushions for extra support. They also feature significant leg room, an excellent soundscape, and a smaller room for a more initimate feel.
+          </p>
+          <br />
+          <img
+            alt="Premium decor"
+            src="premiumdecor.jpg"
+          />
+          <br />
+          <br />
+          <button
+            aria-controls="collapse-premium-plan"
+            aria-expanded={false}
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            View Premium screen seating plan
+          </button>
+          <br />
+          <br />
+          <div
+            aria-expanded={null}
+            className="collapse"
+            id="collapse-premium-plan"
+          >
+            <img
+              alt="Premium seating"
+              src="deluxeseating.PNG"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search page matches snapshot 1`] = `
+Array [
+  " ",
+  <h2>
+    No matches found
+  </h2>,
+]
+`;
+
+exports[`Showings matches snapshot 1`] = `
+<a
+  href="/bookings"
+  onClick={[Function]}
+>
+  <button
+    className="mr-3 button-colour btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+     
+  </button>
+</a>
+`;
+
+exports[`Venue matches snapshot 1`] = `
+<div
+  className="mt-4 col"
+>
+  <div
+    className="h-100 card bg-dark"
+  >
+    <img
+      className="card-img-top"
+      src="/images/KFC.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        KFC
+      </div>
+      <p
+        className="card-text"
+      >
+        KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky that specializes in fried chicken
+      </p>
+    </div>
+    <div
+      className="list-group-flush list-group"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Opening Times: 
+        9.00 - 10.30
+      </div>
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Offers: 
+        N/A
+      </div>
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Contact Number: 
+        0344 800 2400
+      </div>
+    </div>
+  </div>
+</div>
+`;

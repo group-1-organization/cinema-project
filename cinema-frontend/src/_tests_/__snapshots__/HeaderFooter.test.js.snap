@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer matches snapshot 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="mb-0"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Where to find us
+        </h4>
+        <ul
+          className="list-unstyled"
+        >
+          <li>
+            Bentley Bridge Park
+          </li>
+          <li>
+            Wednesfield Way
+          </li>
+          <li>
+            Wolverhampton
+          </li>
+          <li>
+            WV11 1TZ
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Find out more
+        </h4>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <br />
+        <a
+          href="/aboutus"
+          onClick={[Function]}
+        >
+          About Us
+        </a>
+        <br />
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </div>
+      <div
+        className="col-sm-4"
+      >
+        <h4>
+          Follow Us
+        </h4>
+        <a
+          href="https://www.facebook.com/QALtd/"
+        >
+          Facebook
+        </a>
+        <br />
+        <a
+          href="https://twitter.com/QA_Ltd"
+        >
+          Twitter
+        </a>
+        <br />
+        <a
+          href="https://www.instagram.com/qalimited/?hl=en"
+        >
+          Instagram
+        </a>
+        <br />
+        <a
+          href="https://www.youtube.com/channel/UCr5kx6_fYtqx0LLD7aW2zIg"
+        >
+          YouTube
+        </a>
+        <br />
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>
+      QA Cinema © 2021
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Header matches snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
+>
+  <a
+    className="nav-link"
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      className=""
+      src="/images/qa-logo.png"
+      width="50"
+    />
+     
+  </a>
+  <button
+    aria-controls="responsive-navbar-nav"
+    aria-label="Toggle navigation"
+    className="navbar-toggler collapsed"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    aria-expanded={null}
+    className="navbar-collapse collapse"
+    id="responsive-navbar-nav"
+  >
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/listing"
+          onClick={[Function]}
+        >
+          Listings
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/upcoming"
+          onClick={[Function]}
+        >
+          Upcoming
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/bookings"
+          onClick={[Function]}
+        >
+          Bookings
+        </a>
+      </div>
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="navbarScrollingDropdown"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Info
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/discussion"
+          onClick={[Function]}
+        >
+          Discussion Board
+        </a>
+      </div>
+    </div>
+    <form
+      className="form-inline"
+    >
+      <input
+        className="form-control"
+        id="movieSearch"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onInput={[Function]}
+        placeholder="Search Term"
+        type="text"
+      />
+      <a
+        aria-label="search-link"
+        href="/"
+        onClick={[Function]}
+      >
+        <button
+          aria-label="search-btn"
+          className="button-colour adj-search btn btn-primary"
+          disabled={false}
+          id="movieSearchSubmit"
+          type="button"
+        >
+          Search Term
+        </button>
+      </a>
+    </form>
+  </div>
+</nav>
+`;

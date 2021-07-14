@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavSearch matches snapshot 1`] = `
+<form
+  className="form-inline"
+>
+  <input
+    className="form-control"
+    id="movieSearch"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onInput={[Function]}
+    placeholder="Search Term"
+    type="text"
+  />
+  <a
+    aria-label="search-link"
+    href="/"
+    onClick={[Function]}
+  >
+    <button
+      aria-label="search-btn"
+      className="button-colour adj-search btn btn-primary"
+      disabled={false}
+      id="movieSearchSubmit"
+      type="button"
+    >
+      Search Term
+    </button>
+  </a>
+</form>
+`;
+
+exports[`Search page matches snapshot 1`] = `
+Array [
+  " ",
+  <h2>
+    No matches found
+  </h2>,
+]
+`;

@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens page matches snapshot 1`] = `
+<div>
+  <div
+    class="page-header"
+  >
+    <h1>
+      Screens
+    </h1>
+  </div>
+  <br />
+  <div
+    className="black-font"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="screen-card card"
+      >
+        <div
+          className="card-header"
+        >
+          <h2>
+            Standard screens
+          </h2>
+        </div>
+        <div
+          className="card-body"
+        >
+          <p
+            className="card-text"
+          >
+            Our standard screens feature comfortable seating with an arm rest on one side featuring a cup holder, with appreciable leg room and a great soundscape.
+          </p>
+          <br />
+          <img
+            alt="Standard decor"
+            src="standarddecor.jpg"
+          />
+          <br />
+          <br />
+          <button
+            aria-controls="collapse-standard-plan"
+            aria-expanded={false}
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            View Standard screen seating plan
+          </button>
+          <br />
+          <br />
+          <div
+            aria-expanded={null}
+            className="collapse"
+            id="collapse-standard-plan"
+          >
+            <img
+              alt="Standard seating"
+              src="standardseating.png"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        className="screen-card card"
+      >
+        <div
+          className="card-header"
+        >
+          <h2>
+            Premium screens
+          </h2>
+        </div>
+        <div
+          className="card-body"
+        >
+          <p
+            className="card-text"
+          >
+            Our premium screens feature extra comfortable seating with reclining chairs, an arm rest on each side both featuring a cup holder, and cushions for extra support. They also feature significant leg room, an excellent soundscape, and a smaller room for a more initimate feel.
+          </p>
+          <br />
+          <img
+            alt="Premium decor"
+            src="premiumdecor.jpg"
+          />
+          <br />
+          <br />
+          <button
+            aria-controls="collapse-premium-plan"
+            aria-expanded={false}
+            className="button-colour btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            View Premium screen seating plan
+          </button>
+          <br />
+          <br />
+          <div
+            aria-expanded={null}
+            className="collapse"
+            id="collapse-premium-plan"
+          >
+            <img
+              alt="Premium seating"
+              src="deluxeseating.PNG"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
