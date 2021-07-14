@@ -96,7 +96,15 @@ describe(`Bookings testing`, () => {
                 if (err) {
                     console.error('An error occurred:', err);
                 } else {
-                    chai.request(app).patch(`/cinema/bookings/${booking._id}`).send({ "movie": "the movie has been updated" }).end((error, response) => {
+                    chai.request(app).patch(`/cinema/bookings/${booking._id}`).send({
+                        "movie": "the movie has been updated",
+                        "date": "newdate",
+                        "screening": "10:00",
+                        "adults": 2,
+                        "children": 1,
+                        "concessions": 1,
+                        "noOfSeats": 4
+                    }).end((error, response) => {
                         if (error) {
                             console.log(`Something went wrong`);
                             done(error);

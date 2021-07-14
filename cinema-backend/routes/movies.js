@@ -5,7 +5,6 @@ const Movie = require('../models/Movie');
 
 //test route
 router.get('/test', async (req, res) => {
-    // console.log("Test Response");
     res.send("hello from the test");
 })
 
@@ -20,7 +19,6 @@ router.post('/movies', async (req, res) => {
             director: req.body.director,
             showings: req.body.showings
         });
-        // console.log("Log: " + movie);
         await movie.save();
         res.send(movie);
     } catch {
@@ -81,7 +79,6 @@ router.get('/movies/name/:title', async (req, res) => {
             if (err) {
                 console.error('An error occurred:', err);
             } else {
-                // console.log(movie);
                 res.send(movie);
             }
         }
@@ -90,7 +87,6 @@ router.get('/movies/name/:title', async (req, res) => {
 
 //update movie
 router.patch('/movies/:id', async (req, res) => {
-    // console.log(req.body);
     try {
         let movie = await Movie.findById(req.params.id);
         if (req.body.title) { movie.title = req.body.title };
@@ -118,36 +114,7 @@ router.delete('/movies/:id', async (req, res) => {
     }
 });
 
-// router.get("/movies/find/:query", async (req, res, next) => {
-//     try {
-//         Movie.find((searchResult) => {
-//             $or: [
-//                 { 'title': req.params.query },
-//                 { 'actors': req.params.query },
-//                 { 'director': req.params.query }
-//             ]
-//             res.send(searchResult);
-//         });
-//     } catch {
-//         res.status(404);
-//         res.send({ error: "movie doesn't exist" });;
-//     }
-// });
-
-// router.get("/movies/find/:query", (req, res, next) => {
-//     Movie.find({
-//         title: req.params.query
-//     }, (err, result) => {
-//         if (err) {
-//             next(error);
-//         }
-//         else {
-//             res.send(result);
-//         }
-//     }
-//     )
-// })
-
+//find movie by search query
 router.get("/movies/find/:query", async (req, res, next) => {
     try {
         const searchResult = await Movie.find({
@@ -160,7 +127,7 @@ router.get("/movies/find/:query", async (req, res, next) => {
         res.send(searchResult);
     } catch {
         res.status(404);
-        //         res.send({ error: "movie doesn't exist" });;
+        res.send({ error: "movie doesn't exist" });;
     }
 });
 

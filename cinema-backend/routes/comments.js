@@ -6,13 +6,11 @@ const Comment = require('../models/Comment');
 //create comment
 router.post('/comments', async (req, res) => {
     try {
-        // console.log(req.body);
         const comment = new Comment({
             topicId: req.body.topicId,
             message: req.body.message,
             author: req.body.author
         });
-        // console.log("Log: " + comment);
         await comment.save();
         res.send(comment);
     } catch {

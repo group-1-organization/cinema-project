@@ -14,7 +14,6 @@ router.post('/bookings', async (req, res) => {
             concessions: req.body.concessions,
             noOfSeats: req.body.noOfSeats
         });
-        // console.log("Log: " + booking);
         await booking.save();
         res.send(booking);
     } catch {
@@ -26,7 +25,6 @@ router.post('/bookings', async (req, res) => {
 router.get('/bookings', async (req, res) => {
     try {
         const booking = await Booking.find();
-        // console.log("Bookings: " + booking);
         res.send(booking);
     } catch {
         res.status(404);
@@ -45,16 +43,15 @@ router.get('/bookings/:id', async (req, res) => {
 })
 
 router.patch('/bookings/:id', async (req, res) => {
-    // console.log(req.body);
     try {
         let booking = await Booking.findById(req.params.id);
         if (req.body.movie) { booking.movie = req.body.movie };
         if (req.body.date) { booking.date = req.body.date };
         if (req.body.screening) { booking.screening = req.body.screening };
-        if (req.body.booker) { booking.movie = req.body.booker };
-        if (req.body.adults) { booking.movie = req.body.adults };
-        if (req.body.children) { booking.movie = req.body.children };
-        if (req.body.concessions) { booking.concession = req.body.concessions };
+        if (req.body.booker) { booking.booker = req.body.booker };
+        if (req.body.adults) { booking.adults = req.body.adults };
+        if (req.body.children) { booking.children = req.body.children };
+        if (req.body.concessions) { booking.concessions = req.body.concessions };
         if (req.body.noOfSeats) { booking.noOfSeats = req.body.noOfSeats };
         await booking.save();
         res.send(booking);
@@ -68,7 +65,6 @@ router.delete('/bookings/:id', async (req, res) => {
     try {
         const booking = await Booking.findById(req.params.id);
         await booking.deleteOne();
-        // res.send(booking);
         res.send(`Booking by ${booking.booker} for ${booking.movie} deleted`);
     } catch {
         res.status(404);

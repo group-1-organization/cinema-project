@@ -88,7 +88,13 @@ describe(`Venues testing`, () => {
                 if (err) {
                     console.error('An error occurred:', err);
                 } else {
-                    chai.request(app).patch(`/cinema/venue/${venue._id}`).send({ "description": "the description has been updated" }).end((error, response) => {
+                    chai.request(app).patch(`/cinema/venue/${venue._id}`).send({
+                        "picture": "newpic.jpg",
+                        "opening": "newtimes",
+                        "description": "newdesc",
+                        "contact": "newtel",
+                        "offer": "newoffer"
+                    }).end((error, response) => {
                         if (error) {
                             console.log(`Something went wrong`);
                             done(error);
@@ -102,7 +108,7 @@ describe(`Venues testing`, () => {
                         expect(venue.name).to.equal("updateTest");
                         expect(venue).to.contain.keys("description");
                         expect(venue.description).to.be.a("string");
-                        expect(venue.description).to.equal("the description has been updated");
+                        expect(venue.description).to.equal("newdesc");
                         done();
                     })
                 }

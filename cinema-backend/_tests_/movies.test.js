@@ -32,8 +32,6 @@ describe(`Movies testing`, () => {
         })
         await deleteTest.save();
         await updateTest.save();
-        // deleteTest.save().then(() => console.log('test data saved'));
-        // updateTest.save().then(() => console.log('test data saved'));
     })
 
     after(() => {
@@ -141,7 +139,7 @@ describe(`Movies testing`, () => {
     })
 
     it(`should find a movie by id`, (done) => {
-        chai.request(app).get('/cinema/movies/60ec2b8fe0e83670f9f2a507').end((error, response) => {
+        chai.request(app).get('/cinema/movies/60eee849a9ed4f17e8f98ac8').end((error, response) => {
             if (error) {
                 console.log(`Something went wrong`);
                 done(error);
@@ -201,7 +199,12 @@ describe(`Movies testing`, () => {
                 if (err) {
                     console.error('An error occurred:', err);
                 } else {
-                    chai.request(app).patch(`/cinema/movies/${movie._id}`).send({ "director": "the director has been updated" }).end((error, response) => {
+                    chai.request(app).patch(`/cinema/movies/${movie._id}`).send({
+                        "actors": ["actor1", "actor2", "actor3"],
+                        "showings": ["a showing"],
+                        "poster": "newpic.jpg",
+                        "director": "updateddirector",
+                    }).end((error, response) => {
                         if (error) {
                             console.log(`Something went wrong`);
                             done(error);
@@ -215,7 +218,7 @@ describe(`Movies testing`, () => {
                         expect(movie.title).to.equal("updateTest");
                         expect(movie).to.contain.keys("director");
                         expect(movie.director).to.be.a("string");
-                        expect(movie.director).to.equal("the director has been updated");
+                        expect(movie.director).to.equal("updateddirector");
                         done();
                     })
                 }
