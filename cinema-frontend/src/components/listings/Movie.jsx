@@ -58,6 +58,9 @@ const Movie = ({ setTime, setTitle }) => {
                         <p>
                             Director : {movie.director}
                         </p>
+                        <p>
+                            {movie.description}
+                        </p>
                         <div>
                             {showings.map((showing) => (
                                 <Showings showing={showing} movie={movie} setTime={setTime} setTitle={setTitle} />
