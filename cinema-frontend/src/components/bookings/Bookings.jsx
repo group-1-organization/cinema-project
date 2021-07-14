@@ -12,7 +12,6 @@ import MovieList from './MovieList';
 import Payment from './Payment';
 import Date from './Date';
 
-
 const Bookings = ({ time, title }) => {
 
     const [selectedMovie, setSelectedMovie] = useState('-');
@@ -38,7 +37,7 @@ const Bookings = ({ time, title }) => {
     // console.log(selectedTime);
 
     useEffect(() => {
-        if (payed == true) {
+        if (payed === true) {
             PayedSent();
         }
     }, [payed]);
@@ -47,7 +46,7 @@ const Bookings = ({ time, title }) => {
         console.log(selectedTime);
         let Price = (parseInt(selectConsessions) * 9.00) + (parseInt(selectchild) * 8.50) + (parseInt(selectAdult) * 11.00);
         setPrice(Price);
-        if (selectedMovie == '-' || selectedDate == '-' || selectedTime == 'Select a Time' || selectedTime == '' || selectName.length < 2 || selectAdult == 0 & selectchild == 0 & selectConsessions == 0) {
+        if (selectedMovie === '-' || selectedDate === '-' || selectedTime === 'Select a Time' || selectedTime === '' || selectName.length < 2 || selectAdult === 0 & selectchild === 0 & selectConsessions === 0) {
             handleShowProblem();
         } else {
             handleShow();
@@ -65,9 +64,6 @@ const Bookings = ({ time, title }) => {
             setBooking(booking);
         }
     };
-
-
-
 
     const PayedSent = async () => {
         await axios.post("http://localhost:5000/cinema/bookings", booking).then((response) =>

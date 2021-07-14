@@ -1,13 +1,10 @@
-import { Form } from "react-bootstrap";
 import ContactForm from "./ContactForm";
 import { Container } from "react-bootstrap";
 import { Row, Col, Card } from "react-bootstrap";
 import '../Styles/ContactUs.css'
 import '../App.css'
 
-
 const ContactUs = () => {
-
     return (
         <div>
             <div class="page-header">

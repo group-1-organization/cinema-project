@@ -14,7 +14,8 @@ const Payment = ({ booking, price, closeModal, setPayed }) => {
         setShow(false);
         closeModal();
     }
-    const handleShow = () => setShow(true);
+
+    //const handleShow = () => setShow(true);
 
     const createOrder = (data, actions) => {
         return actions.order.create({

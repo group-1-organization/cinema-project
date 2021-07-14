@@ -2,21 +2,13 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import Form from 'react-bootstrap/Form'
 
-
-
-
 const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
     const [movieTime, setMovieTime] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
 
-
-
-
     const getMoviesByName = (() => {
-
         axios.get("http://localhost:5000/cinema/movies/name/" + selectedMovie).then((response) => {
-
             setLoaded(true);
             setMovieTime(response.data[0].showings);
         }).catch((error) => {
@@ -25,19 +17,16 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
             console.log(error)
         })
     })
+
     useEffect(() => {
         setSelectedTime(time)
     }, [])
 
     useEffect(() => {
-        if (selectedMovie != '-') {
+        if (selectedMovie !== '-') {
             getMoviesByName();
-
-
         }
-
     }, [selectedMovie])
-
 
     if (error) {
         return (<Form.Control as="select">
@@ -52,7 +41,7 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
             <Form.Control as="select" defaultValue={time} onChange={(e) => { setSelectedTime(e.target.value) }}>
                 <option>Select a Time</option>
                 {movieTime.map((shows, i) => {
-                    if (shows == time) {
+                    if (shows === time) {
                         return (
                             <option selected key={i} > {shows}</option>
                         )
@@ -62,8 +51,6 @@ const ShowingsList = ({ selectedMovie, setSelectedTime, time }) => {
                         )
                     };
                 })}
-
-
             </Form.Control >
         )
     }
