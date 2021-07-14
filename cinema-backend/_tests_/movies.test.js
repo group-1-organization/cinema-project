@@ -123,7 +123,7 @@ describe(`Movies testing`, () => {
     })
 
     it(`should get all movie titles`, (done) => {
-        chai.request(app).get('/cinema/movies').end((error, response) => {
+        chai.request(app).get('/cinema/movies/titles').end((error, response) => {
             if (error) {
                 console.log(`Something went wrong`);
                 done(error);
