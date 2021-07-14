@@ -12,7 +12,6 @@ const MovieList = ({ setSelectedMovie, title }) => {
         setSelectedMovie(title);
     }, []);
 
-
     const getMovies = async () => {
         await axios.get("http://localhost:5000/cinema/movies").then((response) => {
             setMovies(response.data);
@@ -37,7 +36,7 @@ const MovieList = ({ setSelectedMovie, title }) => {
             <Form.Control as="select" defaultValue={title} onChange={(e) => { setSelectedMovie(e.target.value) }}>
                 <option>-</option>
                 {movies.map((movies, i) => {
-                    if (movies.title == title) {
+                    if (movies.title === title) {
                         return (
                             <option selected key={i} >{movies.title}</option>
                         )
@@ -47,7 +46,6 @@ const MovieList = ({ setSelectedMovie, title }) => {
                         )
                     };
                 })}
-
             </Form.Control >
         )
     }
