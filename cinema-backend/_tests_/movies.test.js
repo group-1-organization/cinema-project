@@ -16,6 +16,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "deleteTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector"
         })
@@ -27,6 +28,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "updateTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector"
         })
@@ -104,6 +106,7 @@ describe(`Movies testing`, () => {
             ],
             "showings": [],
             "title": "createTest",
+            "description": "testdescription",
             "poster": "test.jpg",
             "director": "testdirector",
         }).end((error, response) => {
@@ -123,7 +126,7 @@ describe(`Movies testing`, () => {
     })
 
     it(`should get all movie titles`, (done) => {
-        chai.request(app).get('/cinema/movies').end((error, response) => {
+        chai.request(app).get('/cinema/movies/titles').end((error, response) => {
             if (error) {
                 console.log(`Something went wrong`);
                 done(error);
@@ -202,6 +205,7 @@ describe(`Movies testing`, () => {
                     chai.request(app).patch(`/cinema/movies/${movie._id}`).send({
                         "actors": ["actor1", "actor2", "actor3"],
                         "showings": ["a showing"],
+                        "description": "newdescription",
                         "poster": "newpic.jpg",
                         "director": "updateddirector",
                     }).end((error, response) => {

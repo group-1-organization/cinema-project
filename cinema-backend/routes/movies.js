@@ -14,6 +14,7 @@ router.post('/movies', async (req, res) => {
     try {
         const movie = new Movie({
             title: req.body.title,
+            description: req.body.description,
             poster: req.body.poster,
             actors: req.body.actors,
             director: req.body.director,
@@ -90,6 +91,7 @@ router.patch('/movies/:id', async (req, res) => {
     try {
         let movie = await Movie.findById(req.params.id);
         if (req.body.title) { movie.title = req.body.title };
+        if (req.body.description) { movie.description = req.body.description };
         if (req.body.poster) { movie.poster = req.body.poster };
         if (req.body.actors) { movie.actors = req.body.actors };
         if (req.body.director) { movie.director = req.body.director };
