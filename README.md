@@ -25,6 +25,15 @@ git clone https://github.com/group-1-organization/cinema-project.git
     * run `npm i` to download packages for the frontend
     * `cd` into the `cinema-backend` folder
     * run `npm i` to download packages for the backend
+4. Configure MongoDB connection
+    * In the `cinema-backend` folder create a file called `const.json` and insert this JSON:
+   
+    ```
+    {
+    "mongodbConnectionString": "mongodb+srv://NAME:PASS@cluster0.h5n6v.mongodb.net/cinema?retryWrites=true&w=majority"
+    }
+    ```
+    Substituting NAME and PASS for your MongoDB credentials.
 
 
 ### Usage
