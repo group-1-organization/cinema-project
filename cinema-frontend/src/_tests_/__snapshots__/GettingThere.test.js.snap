@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Getting there page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      How to find us
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col-md-6"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <img
+            className="card-img-top"
+            src="/images/cinema.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-6"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <img
+            className="card-img-top"
+            src="/images/cineworld-outside.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Address
+            </div>
+            <p
+              className="card-text"
+            >
+              Bentley Bridge Park 
+              <br />
+              Wednesfield Way 
+              <br />
+              Wolverhampton 
+              <br />
+              WV11 1TZ
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Directions
+            </div>
+            <div
+              className="mb-2 text-muted card-subtitle h6"
+            >
+              Bus
+            </div>
+            <p
+              className="card-text"
+            >
+              Buses 59, 561, 562, 613 stop near the cinema. There are also the 69, 89, 25 and 28 lines from the bus station.
+            </p>
+            <div
+              className="mb-2 text-muted card-subtitle h6"
+            >
+              Train
+            </div>
+            <p
+              className="card-text"
+            >
+              Nearest station Wolverhampton. Take bus from bus station close by.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-4 col-md-4"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Parking
+            </div>
+            <p
+              className="card-text"
+            >
+              Free parking available is available nearby the cinema.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="mt-4 col"
+      >
+        <div
+          className="card bg-dark"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Map
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "650px",
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                onClick={[Function]}
+                onMouseDownCapture={[Function]}
+                onMouseMove={[Function]}
+                style={
+                  Object {
+                    "height": "100%",
+                    "margin": 0,
+                    "padding": 0,
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "margin": 0,
+                      "padding": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "height": "50%",
+                      "left": "50%",
+                      "margin": 0,
+                      "padding": 0,
+                      "position": "absolute",
+                      "top": "50%",
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "margin": 0,
+                        "padding": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "height": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "top": 0,
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "backgroundColor": "white",
+                            "border": "5px solid #f44336",
+                            "borderRadius": 40,
+                            "color": "#3f51b5",
+                            "fontSize": 16,
+                            "fontWeight": "bold",
+                            "height": 40,
+                            "left": -20,
+                            "padding": 4,
+                            "position": "absolute",
+                            "textAlign": "center",
+                            "top": -20,
+                            "width": 40,
+                          }
+                        }
+                      >
+                        QA
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Marker matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "border": "5px solid #f44336",
+      "borderRadius": 40,
+      "color": "#3f51b5",
+      "fontSize": 16,
+      "fontWeight": "bold",
+      "height": 40,
+      "left": -20,
+      "padding": 4,
+      "position": "absolute",
+      "textAlign": "center",
+      "top": -20,
+      "width": 40,
+    }
+  }
+>
+  QA
+</div>
+`;
