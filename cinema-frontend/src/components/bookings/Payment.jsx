@@ -50,6 +50,7 @@ const Payment = ({ booking, price, closeModal, setPayed }) => {
                 <Modal.Body>
                     <h2>Thanks {booking.booker}, you have booked:</h2>
                     <h3>Movie: {booking.movie}</h3>
+                    <h3>Date: {booking.date}</h3>
                     <h3>Screening: {booking.screening}</h3>
                 </Modal.Body>
                 <Modal.Footer>
