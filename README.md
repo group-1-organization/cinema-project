@@ -38,7 +38,7 @@ The site can now be accessed on [http://localhost:3000](http://localhost:3000)
 
 From the homepage you can go to any part of the site using the navigation bar or the links in the footer. To book tickets to a movie first go to the listings page:
 
-![listings](Documentation/screenshots/listings.png)
+![listings](Documentation/screenshots/listing.png)
 
 Then click on a movie to see the available showing times:
 
