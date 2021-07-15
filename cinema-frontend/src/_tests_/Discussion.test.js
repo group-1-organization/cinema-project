@@ -92,18 +92,18 @@ test('Rating matches snapshot', () => {
 
 // test('TopicForm matches snapshot', () => {
 
-//     // act(() => {
-//     //   const topic = {
-//     //     _id: "60eecf74bef3502694dca968",
-//     //     name: "2nd Topic",
-//     //     movieName: "In The Heights",
-//     //     author: "Scott",
-//     //     // createdAt: "2021-07-14T11:50:12.108Z",
-//     //     // updatedAt: "2021-07-14T11:50:12.108Z"
+    // act(() => {
+    //   const topic = {
+    //     _id: "60eecf74bef3502694dca968",
+    //     name: "2nd Topic",
+    //     movieName: "In The Heights",
+    //     author: "Scott",
+    //     // createdAt: "2021-07-14T11:50:12.108Z",
+    //     // updatedAt: "2021-07-14T11:50:12.108Z"
 
-//     //   }
-//     //   const tree = renderer.create(<TopicForm topic={topic} />);
-//     // })
+    //   }
+    //   const tree = renderer.create(<TopicForm topic={topic} />);
+    // })
 
 //     const topic = {
 //         _id: "60eecf74bef3502694dca968",
@@ -114,9 +114,11 @@ test('Rating matches snapshot', () => {
 //         updatedAt: "2021-07-14T11:50:12.108Z"
 
 //     }
-//     const tree = renderer.create(<TopicForm topic={topic} />);
+//     act(() => {
+//         const tree = renderer.create(<TopicForm topic={topic} />);
+//     }),
 
-//     expect(tree).toMatchSnapshot();
+//         expect(tree).toMatchSnapshot();
 // });
 
 // test('Topics matches snapshot', () => {
