@@ -54,13 +54,30 @@ After going through the payment process confirmation will be displayed:
 
 ## Running the tests
 
-The project contains seperate tests for the frontend and backend parts of the site. The backend tests can be run from the `cinema-backend` folder with the command `npm test`. The frontend tests can be run with same command from the `cinema-frontend` folder.
+The project contains seperate tests for the frontend and backend parts of the site. The backend tests can be run from the `cinema-backend` folder with the command `npm test`. Code coverage for the backend test can be seen in the HTML file in the `coverage` folder after the tests are run. The frontend tests can be run with `npm test` command from the `cinema-frontend` folder.
 
 ### Frontend Testing 
 
-The Jest testing used for the frontend involves creating and testing against snapshots of the pages, to check that what was rendered was correct. There is also testing for any logic that is not part of the application backend.
+The Jest testing used for the frontend involves creating and testing against snapshots of the pages, to check that what was rendered was correct. There is also testing for any logic that is not part of the application backend. The example below passes data into the Comment component and checks that it renders correctly:
 ```
-example test
+it("renders a comment", () => {
+
+    Date.now = jest.fn(() => new Date("2021-01-02T00:00:00+0000"));
+
+    const comment = {
+        author: "Joni Baez",
+        createdAt: "2021-01-01T00:00:00+0000",
+        message: "comment for comment component test"
+    };
+
+    act(() => {
+        render(<Comment comment={comment} />, container);
+    });
+
+    expect(container.querySelector("strong").textContent).toBe(comment.author);
+    expect(container.querySelector("small").textContent).toBe("a day ago");
+    expect(container.querySelectorAll("p")[1].textContent).toBe(comment.message);
+});
 ```
 
 ### Backend Testing 
