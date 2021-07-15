@@ -20,6 +20,12 @@ exports[`Listings page matches snapshot 1`] = `
 </div>
 `;
 
+exports[`Movie page matches snapshot 1`] = `
+<p>
+  loading...
+</p>
+`;
+
 exports[`New Listings page matches snapshot 1`] = `
 <div>
   <div

@@ -19,9 +19,9 @@ test('Discussion page matches snapshot', () => {
 });
 
 // test('Topic matches snapshot', () => {
-//   const tree = renderer.create(<Topic />);
+//     const tree = renderer.create(<Router><Topic /></Router>);
 
-//   expect(tree).toMatchSnapshot();
+//     expect(tree).toMatchSnapshot();
 // });
 
 
@@ -32,8 +32,8 @@ test('Comment matches snapshot', () => {
         topicId: "60eee716bef3502694dca9ea",
         message: "Comments ****",
         author: "Amandeep",
-        createdAt: "2021-07-14T13:31:18.612Z",
-        updatedAt: "2021-07-14T13:31:18.612Z"
+        // createdAt: "2021-07-14T13:31:18.612Z",
+        // updatedAt: "2021-07-14T13:31:18.612Z"
 
     }
     const tree = renderer.create(<Comment comment={comment} />);
@@ -92,18 +92,18 @@ test('Rating matches snapshot', () => {
 
 // test('TopicForm matches snapshot', () => {
 
-    // act(() => {
-    //   const topic = {
-    //     _id: "60eecf74bef3502694dca968",
-    //     name: "2nd Topic",
-    //     movieName: "In The Heights",
-    //     author: "Scott",
-    //     // createdAt: "2021-07-14T11:50:12.108Z",
-    //     // updatedAt: "2021-07-14T11:50:12.108Z"
+// act(() => {
+//   const topic = {
+//     _id: "60eecf74bef3502694dca968",
+//     name: "2nd Topic",
+//     movieName: "In The Heights",
+//     author: "Scott",
+//     // createdAt: "2021-07-14T11:50:12.108Z",
+//     // updatedAt: "2021-07-14T11:50:12.108Z"
 
-    //   }
-    //   const tree = renderer.create(<TopicForm topic={topic} />);
-    // })
+//   }
+//   const tree = renderer.create(<TopicForm topic={topic} />);
+// })
 
 //     const topic = {
 //         _id: "60eecf74bef3502694dca968",
@@ -124,7 +124,7 @@ test('Rating matches snapshot', () => {
 // test('Topics matches snapshot', () => {
 
 
-//   const tree = renderer.create(<Topics />);
+//     const tree = renderer.create(<Router > <Topics /></Router >);
 
-//   expect(tree).toMatchSnapshot();
+//     expect(tree).toMatchSnapshot();
 // });

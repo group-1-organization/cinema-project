@@ -83,7 +83,7 @@ exports[`Comment matches snapshot 1`] = `
       <small
         className="float-right"
       >
-        19 hours ago
+        a few seconds ago
       </small>
     </div>
   </div>
