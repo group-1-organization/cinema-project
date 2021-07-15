@@ -1,4 +1,4 @@
-import renderer, { act } from 'react-test-renderer';
+// import renderer, { act } from 'react-test-renderer';
 
 // import Bookings from '../components/bookings/Bookings';
 // import Payment from '../components/bookings/Payment';
