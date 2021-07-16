@@ -125,6 +125,7 @@ The build is minified and the filenames include the hashes.
 See the React documentation about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Project Board
+[Jira invite link](https://id.atlassian.com/invite/p/jira-software?id=hBb54fz-Sy-obZQJWO7D2w)
 
 [Project Board](https://ims-scotts.atlassian.net/jira/software/projects/QC/boards/7/backlog)
 
