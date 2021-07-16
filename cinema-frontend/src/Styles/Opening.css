@@ -1,0 +1,23 @@
+.hours {
+    text-align: right;
+}
+
+.col-m-6 {
+    width: 50%;
+    float: left;
+    font-size: large;
+}
+
+.col-mr-6 {
+    width: 40%;
+    float: right;
+    font-size: large;
+}
+
+.col-m-12 {
+    width: 20%;
+}
+
+.op-font-colour {
+    color: white;
+}

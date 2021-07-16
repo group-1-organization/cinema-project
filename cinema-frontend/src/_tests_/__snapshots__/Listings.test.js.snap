@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Listings page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Listings page
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row row-cols-lg-4 row-cols-sm-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Movie page matches snapshot 1`] = `
+<p>
+  loading...
+</p>
+`;
+
+exports[`New Listings page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Listings page
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <div
+      className="row row-cols-lg-4 row-cols-sm-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Showings matches snapshot 1`] = `
+<a
+  href="/bookings"
+  onClick={[Function]}
+>
+  <button
+    className="mr-3 button-colour btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+     
+  </button>
+</a>
+`;

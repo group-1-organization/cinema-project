@@ -1,0 +1,14 @@
+
+.font-colour {
+    color: black;
+}
+
+.card-back {
+    background:white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

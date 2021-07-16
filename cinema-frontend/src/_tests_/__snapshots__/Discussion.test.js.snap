@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment form matches snapshot 1`] = `
+<form
+  className=""
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="authorInput"
+    >
+      Your Name
+    </label>
+    <input
+      className="form-control"
+      id="authorInput"
+      onChange={[Function]}
+      pattern=".*\\\\S+.*"
+      placeholder="Enter your name"
+      required={true}
+      title="This field is required"
+      type="text"
+      value=""
+    />
+    <div
+      className="invalid-feedback"
+    >
+      Please choose a username.
+    </div>
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="commentTextarea"
+    >
+      Message
+    </label>
+    <textarea
+      className="form-control"
+      id="commentTextarea"
+      onChange={[Function]}
+      pattern=".*\\\\S+.*"
+      required={true}
+      rows={3}
+      title="This field is required"
+      value=""
+    />
+  </div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="Submit"
+  >
+    Submit
+  </button>
+</form>
+`;
+
+exports[`Comment matches snapshot 1`] = `
+<div
+  className="border-bottom m-3"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        <strong>
+          Amandeep
+        </strong>
+      </p>
+    </div>
+    <div
+      className="col"
+    >
+      <small
+        className="float-right"
+      >
+        a few seconds ago
+      </small>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        Comments ****
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Comments matches snapshot 1`] = `null`;
+
+exports[`Discussion page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Discussion board
+    </h1>
+  </div>
+  <div
+    className="container"
+  >
+    <h3>
+      Topics
+    </h3>
+    <button
+      className="button-colour btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Create topic
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Rating matches snapshot 1`] = `
+<p>
+  Loading...
+</p>
+`;

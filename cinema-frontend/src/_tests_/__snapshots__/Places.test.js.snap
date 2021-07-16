@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Places page matches snapshot 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <h1>
+      Places to go
+    </h1>
+  </div>
+  <br />
+  <div
+    className="container"
+  >
+    <center>
+      <h6>
+        Here is just a few of the great local venues!
+      </h6>
+      <p>
+        <a
+          href="/gettingthere"
+          onClick={[Function]}
+        >
+          <button
+            className="button-colour btn btn-primary"
+            disabled={false}
+            type="button"
+          >
+            How to find us
+          </button>
+        </a>
+      </p>
+    </center>
+    <div
+      className="row row-cols-lg-3 row-cols-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Venue matches snapshot 1`] = `
+<div
+  className="mt-4 col"
+>
+  <div
+    className="h-100 card bg-dark"
+  >
+    <img
+      className="card-img-top"
+      src="/images/KFC.jpg"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        KFC
+      </div>
+      <p
+        className="card-text"
+      >
+        KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky that specializes in fried chicken
+      </p>
+    </div>
+    <div
+      className="list-group-flush list-group"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Opening Times: 
+        9.00 - 10.30
+      </div>
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Offers: 
+        N/A
+      </div>
+      <div
+        className="bg-dark list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+      >
+        Contact Number: 
+        0344 800 2400
+      </div>
+    </div>
+  </div>
+</div>
+`;
